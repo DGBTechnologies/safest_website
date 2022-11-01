@@ -1,0 +1,9 @@
+/* .container-fluid{
+    padding-right: 8rem !important;
+    padding-left: 7rem !important;
+    padding-top: 4rem;
+} */
+ row p{
+    font: 1.2rem sans-serif;
+    line-height: 1.5rem;
+ }

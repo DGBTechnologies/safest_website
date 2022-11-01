@@ -1,0 +1,11 @@
+
+#local-nav{
+    background-color:white; 
+    position: sticky; 
+    top: 0; 
+    z-index: 6;
+}
+#orderlist{
+    padding-left: 5rem;
+    padding-top: 1.5rem;
+}

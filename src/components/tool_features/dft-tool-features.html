@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>storm-dft</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/src/assets/images/dgb-logo.png"
+    />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="/index.css" />
+    <link
+      rel="stylesheet"
+      href="/src/components/tool_features/dft-tool-features.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script src="https://kit.fontawesome.com/8790af84bd.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="/script.js "></script>
+  </head>
+
+  <body>
+    <div id="nav-placeholder"></div>
+    <div class="content">
+      <nav
+        class="navbar navbar-light bg-light navbar-expand-sm"
+        id="local-nav"
+        style="background-color: white"
+      >
+        <div class="container mt-5">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="#feature1" class="nav-link">Graphical Interface</a>
+            </li>
+            <li class="nav-item">
+              <a href="#feature2" class="nav-link"
+                >Specification of complex measures</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#feature3" class="nav-link"
+                >BDD, Markov and Hybrid analysis</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#feature4" class="nav-link">Formal verification</a>
+            </li>
+            <li class="nav-item">
+              <a href="#feature5" class="nav-link">Approximation of measures</a>
+            </li>
+            <li class="nav-item">
+              <a href="#feature6" class="nav-link">Graphical depiction</a>
+            </li>
+            <li class="nav-item">
+              <a href="#feature7" class="nav-link">Step-by-step simulation</a>
+            </li>
+            <li class="nav-item">
+              <a href="#feature8" class="nav-link">Simplification rules</a>
+            </li>
+            <li class="nav-item">
+              <a href="#feature9" class="nav-link">Modularization</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="col-sm-9 m-auto">
+      <div class="text-center mt-5">
+        <p class="display-1"> Tool Features</p>
+      </div>
+      <!--  feature-1  -->
+      <div class="container-fluid" id="feature1">
+        <div class="row">
+          <div class="col-sm-6">
+            <div style="padding:3rem" class="text-center">
+              <p class="display-5"><strong> Graphical Interface</strong></p>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div style="padding: 3rem" class="text-center">
+              <p class="release-desc" style="text-align: justify">
+                The tool provides a drag-&-drop interface to model fault trees
+                graphically, specify and verify measures of interest, plot
+                results, and do step-by-step simulation of fault trees.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <!--  feature-2  -->
+      <div class="container-fluid" id="feature2">
+        <div class="row">
+          <div class="col-sm-6">
+            <div style="padding: 3rem" class="text-center">
+              <p class="display-5">
+                <strong>Specification of complex measures</strong>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div style="padding: 3rem" class="text-center">
+              <p class="release-desc" style="text-align: justify">
+                Fault trees are composed of basic events and intermediate gates
+                representing different events that may occur leading to the
+                failure of the top-level event. We allow grouping events
+                together using boolean operators, and assigning them unique
+                labels. Using these labels, complex measures can be defined for
+                systems using probabilistic computational tree logic
+                (PCTL)/continuous stochastic logic (CSL).
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <!--  feature-3  -->
+      <div class="container-fluid" id="feature3">
+        <div class="row">
+          <div class="col-sm-6">
+            <div style="padding: 3rem" class="text-center">
+              <p class="display-5">
+                <strong>BDD, Markov and Hybrid analysis</strong>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div style="padding: 3rem" class="text-center">
+              <p class="release-desc" style="text-align: justify">
+                Fault trees are a key model in reliability analysis. Classical
+                static fault trees (SFT) can best be analysed using binary
+                decision diagrams (BDD). Whereas state-based techniques are
+                favorable for the more expressive dynamic fault trees (DFT). We
+                combine the best of both worlds by following Dugan’s approach:
+                dynamic sub-trees are analysed via model checking Markov models
+                and replaced by basic events capturing the obtained failure
+                probabilities. The resulting SFT is then analysed via BDDs. Our
+                implementation of Dugan’s approach significantly outperforms
+                pure Markovian analysis of DFTs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <!--  feature-4  -->
+      <div class="container-fluid" id="feature4">
+        <div class="row">
+          <div class="col-sm-6">
+            <div style="padding: 3rem" class="text-center">
+              <p class="display-5">
+                <strong>Formal verification to compute exact measures</strong>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div style="padding: 3rem" class="text-center">
+              <p class="release-desc" style="text-align: justify">
+                Complex systems usually have dynamic behaviour because of e.g.
+                spare components, failure sequence among components, functional
+                dependencies, etc., The analysis of such systems is usually
+                quite complex which is usually based on simulation or
+                generalization techniques. Unlike others we implement formal
+                verification techniques e.g. probabilistic model-checking, and
+                thus provide exact results on measures of interest. For systems
+                having large state space, we provide an iterative analysis
+                approach providing upper and lower bounds on the exact values of
+                measures as discussed below.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <!--  feature-5  -->
+      <div class="container-fluid" id="feature5">
+        <div class="row">
+          <div class="col-sm-6">
+            <div style="padding: 3rem" class="text-center">
+              <p class="display-5">
+                <strong
+                  >Iterative state-space generation for sound approximation of
+                  measures</strong
+                >
+              </p>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div style="padding: 3rem" class="text-center">
+              <p class="release-desc" style="text-align: justify">
+                In order to compute exact results for measures, first the full
+                state space is constructed, and then analyzed. However, many
+                states in the state space only marginally contribute to the
+                result. If one is interested in an approximation of the MTTF (or
+                the reliability), these states are of minor interest. We
+                implemented the algorithms, proposed by Dr. Matthias Volk et.
+                al., that generate state-space on-the-fly, and then compute an
+                upper and a lower bound to the exact results on a partially
+                unfolded system, which might be much smaller as compared to the
+                fully unfolded system. The approximation is sound ensuring the
+                exact result lies between these two bounds.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <!--  feature-6-->
+      <div class="container-fluid" id="feature6">
+        <div class="row">
+          <div class="col-sm-6">
+            <div style="padding: 3rem" class="text-center">
+              <p class="display-5">
+                <strong
+                  >Graphical depiction of measures varying with time</strong
+                >
+              </p>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div style="padding: 3rem" class="text-center">
+              <p class="release-desc" style="text-align: justify">
+                Reliability measures help figuring out optimal maintenance
+                schedules of systems thus reducing their downtimes and saving
+                cost at the same time. Fault trees that model sub-systems of
+                systems can even predict their health individually thus helping
+                make even more detailed maintenance
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <!--  feature-7  -->
+      <div class="container-fluid" id="feature7">
+        <div class="row">
+          <div class="col-sm-6">
+            <div style="padding: 3rem" class="text-center">
+              <p class="display-5"><strong>Step-by-step simulation</strong></p>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div style="padding: 3rem" class="text-center">
+              <p class="release-desc" style="text-align: justify">
+                The idea is to interactively visualize a sequence of failures in
+                a DFT. The user would start with a usual DFT and could select
+                one of the basic events (BE) that should fail first. Based on
+                this, the status of each DFT element (failed, operational,
+                fail-safe, claiming in SPAREs, etc.) is redetermined and then
+                visualized. Afterwards, another BE can be selected to fail and
+                so forth. The main benefit of this feature is that the idea of
+                DFTs should become much clearer as users can try out the
+                behavior by themselves.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <!--  feature-8  -->
+      <div class="container-fluid" id="feature8">
+        <div class="row">
+          <div class="col-sm-6">
+            <div style="padding: 3rem" class="text-center">
+              <p class="display-5"><strong>Simplification rules</strong></p>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div style="padding: 3rem" class="text-center">
+              <p class="release-desc" style="text-align: justify">
+                Fault trees are a popular industrial technique for reliability
+                modelling and analysis. Their extension with common reliability
+                patterns, such as spare management, functional dependencies, and
+                sequencing — known as dynamic fault trees (DFTs) — has an
+                adverse effect on scalability, prohibiting the analysis of
+                complex, industrial cases by, e.g., probabilistic model
+                checkers. We implemented reduction techniques for DFTs by
+                Sebastian Junges et. al. Experiments on a large set of
+                benchmarks show substantial fault tree simplifications, yielding
+                state space reductions and timing gains of up to two orders of
+                magnitude.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <!--  feature-9  -->
+      <div class="container-fluid" id="feature9">
+        <div class="row">
+          <div class="col-sm-6">
+            <div style="padding: 3rem" class="text-center">
+              <p class="display-5"><strong>Modularization</strong></p>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div style="padding: 3rem" class="text-center">
+              <p class="release-desc" style="text-align: justify">
+                The rendering of large fault trees on canvas sometimes does not
+                give a true picture/understanding of the underlying fault model.
+                We, therefore, allow interactive breakdown of large fault trees
+                into independent modules, static or dynamic, organized in a
+                hierarchical manner. This improves the readability of the model
+                and allows verification of metices on individual models easily.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div id="footerdgb"></div>
+    <script>
+      $(function () {
+        $("#nav-placeholder").load("/src/commonUI/navbar.html");
+      });
+      $(function () {
+        $("#footerdgb").load("/src/commonUI/footer.html");
+      });
+    </script>
+  </body>
+</html>

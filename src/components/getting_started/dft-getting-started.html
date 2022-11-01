@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>storm-dft</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/src/assets/images/dgb-logo.png"
+    />
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="/src/components/getting_started/dft-getting-started.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="/script.js "></script>
+  </head>
+  <body>
+    <div id="nav-placeholder"></div>
+    <div class="content">
+      <nav
+        class="navbar navbar-light bg-light navbar-expand-sm d-flex"
+        style="background-color: white"
+        id="local-nav"
+      >
+        <div class="container mt-2">
+          <ul class="navbar-nav">
+            <li class="nav-item ml-auto">
+              <a href="#" class="nav-link">Installation</a>
+            </li>
+            <li class="nav-item ml-auto">
+              <a href="#" class="nav-link">Hello World</a>
+            </li>
+            <li class="nav-item ml-auto">
+              <a href="#" class="nav-link">Examples</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container-fluid col-sm-10">
+        <div class="row">
+          <p class="display-5 "><strong> Installation Guide:</strong></p>
+          <ol id="orderlist" >
+            <li>
+              <p>
+                Install docker (
+                <a href="http://www.docker.com/products/docker-desktop/">
+                  https://www.docker.com/products/docker-desktop/</a
+                >
+                )
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Download DFT UI images (
+                <a href="https://github.com/storm-dft/dft-ui">
+                  https://github.com/storm-dft/dft-ui </a
+                >)
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Run browser (Currently only Chrome Supported) (
+                <a href="http://127.0.0.1:8081"> http://127.0.0.1:8081 </a>)
+              </p>
+            </li>
+          </ol>
+        </div>
+        <div class="row">
+          <p class="display-5"><strong> Hello World:</strong></p>
+          <br />
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam
+            placeat odio porro repellendus fugiat, repellat nobis recusandae
+            debitis. At iure reiciendis facilis, voluptate maiores rem ullam
+            suscipit placeat nostrum eaque repellat nam. Libero asperiores esse
+            sequi quod vel ipsam non nihil, facilis, soluta doloribus dicta
+            saepe tempore omnis distinctio rerum animi nulla officia? Ipsa,
+            accusantium ducimus. Dicta delectus aliquid non facere quibusdam
+            rerum officiis obcaecati pariatur officia error eaque dolorum
+            expedita ullam architecto voluptas vel dolores optio minus id,
+            tempora corporis labore, iusto nostrum saepe? Ullam doloribus ex
+            tempora suscipit quis, incidunt corrupti a sequi eius repellat nemo
+            ipsam reprehenderit.
+          </p>
+        </div>
+        <div class="row">
+          <p class="display-5 mt-5"><strong> Examples:</strong></p>
+          <br />
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic aut
+            asperiores deleniti ipsa fuga dicta ad nihil animi eum. Deleniti
+            autem, quidem dolore voluptate hic eaque explicabo illo earum! Quo
+            harum illo, atque unde quas modi consequatur quos tempore aspernatur
+            quia impedit pariatur natus et, libero iure rem eos ex aliquam
+            veniam adipisci. Mollitia minus aperiam ea obcaecati possimus
+            repudiandae aut dolore praesentium enim quidem deleniti,
+            voluptatibus iste dolorum rem. Cupiditate illo, vitae quibusdam
+            delectus maxime, possimus numquam, officiis neque alias autem
+            assumenda. Nam repudiandae perferendis impedit iure esse cum dolore.
+            Deleniti accusamus quis aliquam ratione fuga vel? Provident,
+            aliquid.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="footerdgb"></div>
+    <script>
+      $(function () {
+        $("#nav-placeholder").load("/src/commonUI/navbar.html");
+      });
+      $(function () {
+        $("#footerdgb").load("/src/commonUI/footer.html");
+      });
+    </script>
+  </body>
+</html>
