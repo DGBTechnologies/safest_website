@@ -36,10 +36,11 @@
         src="/src/assets/images/dfts.png"
         alt=" "
         width="100%"
-        height="560vh";
+        height="560vh"
+        ;
       />
     </div>
-    <div class="container-fluid col-sm-9" style="text-align: justify">
+    <div class="container-fluid col-sm-9 mt-4" style="text-align: justify">
       <div class="row">
         <p class="display-3">
           <strong> What are (Dynamic) Fualt Trees</strong>
@@ -49,7 +50,9 @@
           self-driving cars safe and operational. The increased constraints
           imposed by international standards together with the ever-growing
           penetration of AI components in high-tech systems make rigorous and
-          powerful risk assessment more important than ever. <br />
+          powerful risk assessment more important than ever.
+        </p>
+        <p>
           Various techniques have been developed throughout the years to analyse
           the safety and reliability of systems. One of the most relevant is
           Fault Tree Analysis (FTA) (Stamatelatos et al., 2002; Ruijters and
@@ -59,7 +62,9 @@
           required for instance by the Federal Aviation Authority (FAA), the
           Nuclear Regulatory Commission (NRC), in ISO 26262 for autonomous
           driving or for software development in aerospace systems (by NASA and
-          ESA).<br />
+          ESA).
+        </p>
+        <p>
           While fault trees are easy to understand and thus, widely used, their
           modelling capabilities are severely limited. This lack of flexibility
           hinders accurate and precise modelling of real-life systems. To
@@ -69,7 +74,9 @@
           limitations. DFTs have been co-developed by NASA to model more complex
           behaviours and dependability patterns. As such, DFTs can capture more
           realistic scenarios needed to handle the growing complexity in, e.g.,
-          self-driving cars, hyperloops and drones. <br />
+          self-driving cars, hyperloops and drones.
+        </p>
+        <p>
           While fault tree models represent how failures occur at system
           component level and how they propagate through sub-systems, eventually
           leading to system level failures, their analysis focuses on computing
@@ -80,30 +87,28 @@
           system is operational), the mean time to failure, the mean time
           between failures, the criticality if components (i.e. to what extent
           does a component failure contribute to a system failure) etc. Various
-          extensions include the cost and impact of failures <br />
+          extensions include the cost and impact of failures
         </p>
       </div>
       <div class="row">
-          <p class="mt-4">
-            <b>Example.</b> Figure 1 depicts a sample dynamic fault tree (on the
-            left) modeling a laptop failure. The laptop fails if either the
-            operating system (OS), the processors or the power are unavailable.
-            Each of these components is further subdivided. For instance, the
-            power is first provided by a plugged connection. If this connection
-            fails, the laptop switches to the internal battery. The plot on the
-            right depicts the unreliability (i.e. the probability that no
-            failure occurred until time T) of the modelled laptop over time and
-            has been automatically generated from the fault tree. <br />
-          </p>
-
-        
+        <p>
+          <b>Example.</b> Figure 1 depicts a sample dynamic fault tree (on the
+          left) modeling a laptop failure. The laptop fails if either the
+          operating system (OS), the processors or the power are unavailable.
+          Each of these components is further subdivided. For instance, the
+          power is first provided by a plugged connection. If this connection
+          fails, the laptop switches to the internal battery. The plot on the
+          right depicts the unreliability (i.e. the probability that no failure
+          occurred until time T) of the modelled laptop over time and has been
+          automatically generated from the fault tree.
+        </p>
       </div>
-      <div class="row ">
+      <div class="row">
         <figure class="col-sm-6">
           <img
             src="/src/assets/images/laptop-failure.png"
             alt="laptop-failure"
-            class="my-5 "
+            class="my-5"
             width="100%"
           />
           <figcaption class="text-center">
@@ -111,21 +116,23 @@
             failure and its reliability over time.
           </figcaption>
         </figure>
-        <figure class="col-sm-6 text-center " style="margin-top: 6rem;">
+        <figure class="col-sm-6 text-center" style="margin-top: 6rem">
           <img
-          src="/src/assets/images/unreliability-graph.png"
-          alt="unreality graph"
-          height="80% "
-        />
-        <figcaption class="text-center">
-          <strong> Figure 2.</strong>
-        </figcaption>
+            src="/src/assets/images/unreliability-graph.png"
+            alt="unreality graph"
+            height="80% "
+          />
+          <figcaption class="text-center">
+            <strong> Figure 2.</strong>
+          </figcaption>
         </figure>
       </div>
       <p>
         <br /><span class="display-5"
           ><strong> Why do we need Dynamic Fault Trees</strong></span
-        ><br /><br>
+        ><br /><br />
+      </p>
+      <p>
         The need for rigorous risk assessments is rapidly increasing. On the one
         hand, international standards -- require rigorous and powerful fault
         tree analysis techniques. For instance, the recent ISO 26262 standard in
@@ -137,7 +144,9 @@
         techniques cannot support the compliance of products to these
         requirements. Alternative, and more powerful means are needed that allow
         flexible modelling, a rich set of metrics, and powerful techniques for
-        advanced analyses such as multiple-point failures of higher degrees.<br />
+        advanced analyses such as multiple-point failures of higher degrees.
+      </p>
+      <p>
         On the other hand, the rapidly increased usage of AI components in
         modern systems necessitates a rigorous risk assessment. Neural networks
         typically come with weak statistical guarantees only (if at all). Small
@@ -150,24 +159,27 @@
         there is a need to specify various levels of degradation (given the
         uncertainty of the AI components) and be able to analyse e.g., “what is
         the probability that the system will come to a halt without going
-        through degradation level A first”.<br />
+        through degradation level A first”.
+      </p>
+      <p>
         Thus, the increased constraints imposed by international standards
         together with the ever-growing penetration of AI components make
         rigorous and powerful risk assessment more important than ever.
-        <br /><br />
-        <span class="display-5"
-          ><strong> New Approach to DFT Analysis </strong></span
-        ><br /><br />
-        <b>The increased modeling power of DFTs comes at a price</b>
-        DFTs are more complex to analyse. This is mainly due to the fact that
-        DFTs incorporate dynamic behaviour, where also the order in which
-        failures occur is important. This significantly increases the number of
-        distinct behaviours which need to be analysed. Various techniques to
-        analyse DFTs have been proposed before (Tang and Dugan, 2004; Montani et
-        al., 2008; Rauzy, 2011), but the majority does not scale to
-        industry-size fault trees, which may comprise hundreds or thousands of
-        fault tree gates.
-        <br />
+      </p>
+      <span class="display-5"
+        ><strong> New Approach to DFT Analysis </strong></span
+      ><br /><br />
+      <p>
+        <b>The increased modeling power of DFTs comes at a price</b> DFTs are
+        more complex to analyse. This is mainly due to the fact that DFTs
+        incorporate dynamic behaviour, where also the order in which failures
+        occur is important. This significantly increases the number of distinct
+        behaviours which need to be analysed. Various techniques to analyse DFTs
+        have been proposed before (Tang and Dugan, 2004; Montani et al., 2008;
+        Rauzy, 2011), but the majority does not scale to industry-size fault
+        trees, which may comprise hundreds or thousands of fault tree gates.
+      </p>
+      <p>
         RWTH Aachen University Germany and Twente University the Netherlands
         have worked on a new fully automated approach to DFT analysis, namely
         via stochastic model checking. Stochastic model checking (Baier and
@@ -176,34 +188,41 @@
         space reduction techniques, such as symmetry reduction, bisimulation
         minimization (Baier and Katoen, 2008, Chap. 7), reduce one model to a
         smaller one that is computationally equivalent. Approximative techniques
-        allow one to approximate analysis results upto arbitrary precision.<br />
+        allow one to approximate analysis results upto arbitrary precision.
+      </p>
+      <p>
         Several advanced methods (Ruijters et al., 2016; Ruijters et al., 2017,
         Volk et al., 2018) have been developed to analyze DFTs that apart from
         increasing the computational efficiency also provide more modeling
         power. Further, a wide variety of different metrics are offered,
         analyzing the system reliability under various scenarios. The combined
         power of these methods allows us to analyse DFTs that were out of scope
-        before (Katoen and Stoelinga, 2017).<br />
+        before (Katoen and Stoelinga, 2017).
+      </p>
+      <p>
         The research results were published in highly ranked journals from both
         computer science and engineering. For instance, our survey paper on
         fault trees (Ruijters and Stoelinga, 2015) was cited over 450 times. The
         publication presenting the underlying model checker (Dehnert et al.,
         2017) was published in the highest ranked conference in the field of
-        formal verification and cited over 300 times<br /><br />
-        <span class="display-5"
-          ><strong> Industrial applications of DFT</strong></span
-        ><br /><br />
-        <b>Several industrial organizations</b>
-        ProRail, NS, Movares, Delta Pi, ESA, the Nuclear Research Group,
-        Arcadis, Thales Alennia Space, Space Systems Finland, Ford, BMW and EDF
-        have participated in academic projects to figure out the real potential
-        of DFT. Together with these companies, the powerful modelling
-        capabilities of DFT and the feasibility of our analysis approaches have
-        been demonstrated in a range of industrial applications. Example
-        applications include railway systems (Ruijters et al., 2016; Volk et
-        al., 2019), smart buildings (Cauchi et al., 2017), autonomous driving
-        (Ghadhab et al., 2019), aerospace systems (Esteve et al., 2012), and
-        energy networks (Khan et al., 2019). <br />
+        formal verification and cited over 300 times
+      </p>
+      <span class="display-5"
+        ><strong> Industrial applications of DFT</strong></span
+      ><br /><br />
+      <p>
+        <b>Several industrial organizations</b> ProRail, NS, Movares, Delta Pi,
+        ESA, the Nuclear Research Group, Arcadis, Thales Alennia Space, Space
+        Systems Finland, Ford, BMW and EDF have participated in academic
+        projects to figure out the real potential of DFT. Together with these
+        companies, the powerful modelling capabilities of DFT and the
+        feasibility of our analysis approaches have been demonstrated in a range
+        of industrial applications. Example applications include railway systems
+        (Ruijters et al., 2016; Volk et al., 2019), smart buildings (Cauchi et
+        al., 2017), autonomous driving (Ghadhab et al., 2019), aerospace systems
+        (Esteve et al., 2012), and energy networks (Khan et al., 2019).
+      </p>
+      <p>
         These applications supported the involved companies in their decision
         making. For example, the cost analysis in (Ruijters et al., 2016) was
         used by ProRail when pursuing a new railroad joint, comparing the costs
@@ -212,7 +231,7 @@
         tree analysis for various assets. The case study (Ghadhab et al, 2019)
         supported BMW in performing an extensive design space exploration,
         comparing several mappings from software onto different hardware
-        architectures. <br />
+        architectures.
       </p>
     </div>
     <div id="footerdgb"></div>
