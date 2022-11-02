@@ -12,6 +12,7 @@
 			/>
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="/index.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
 			rel="stylesheet"
@@ -25,17 +26,61 @@
 			crossorigin="anonymous"
 			/>
 		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 		<link rel="stylesheet" href="/index.css" />
 	</head>
 	<body>
 		<div id="nav-placeholder"></div>
-		<div class="content container-fluid " >
-			<section class="row " style="margin-top: 4.2rem;  height: 100px; background-color: antiquewhite;"></section>
+		<section style="margin-top: 4rem">
+			<div id="mycarousel" class="carousel" data-ride="carousel">
+
+				<ol class="carousel-indicators">
+					<li data-target="#mycarousel" data-slide-to="0" class="active"> </li>
+					<li data-target="#mycarousel" data-slide-to="1"> </li>
+					<li data-target="#mycarousel" data-slide-to="2"> </li>
+				</ol>
+				<div class="carousel-inner" style="height: 400px">
+					<div class="carousel-item active">
+						<div class="overlay-image" style="background-image:url(/src/assets/images/caseStudies.jpg);"></div>
+						<div class="carousel-container">
+							<!-- <h1>Slider 1</h1>
+							<p>THis is slider 1</p>
+							<a href="#" class="btn btn-lg btn-primary">SignUp</a> -->
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="overlay-image" style="background-image:url(/src/assets/images/dfts.png) ;"></div>
+						<div class="carousel-container">
+		
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="overlay-image" style="background-image:url(/src/assets/images/caseStudies.jpg) ;"></div>
+						<div class="carousel-container">
+							
+						</div>
+					</div>
+				</div>
+				<a href="#mycarousel" class="carousel-control-prev" role="button" data-slide="prev">
+					<span class="sr-only">previous</span>
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				</a>
+				<a href="#mycarousel" class="carousel-control-next" role="button" data-slide="next">
+					<span class="sr-only">previous</span>
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				</a>
+			</div>
+		</section>
+		<div class="content container-fluid" >
+			<div class="display-3 mt-5 text-center"><strong >Say Hello To Storm-DFT</strong>
+				<p class="display-5 text-center mt-3" >Probabilistic risk assessment tool</p>
+			</div>
 			<div class="row">
-				<div class="col-sm-6" style="padding: 90px 60px 0px 50px">
-					<div class="display-3 pl-4"><strong >Say Hello <br> To Storm-DFT</strong></div>
-					<p class="display-5" style="font-weight:normal;" >Probabilistic Risk Assessment Tool</p>
-					<p class=" mt-5" style="text-align: justify;">Proper risk analysis is
+				<div class="col-sm-7 m-auto" style="padding: 40px 60px 0px 50px">		
+					<p class=" mt-0" style="text-align: justify;">Proper risk analysis is
 						essential to
 						keep our power plants, trains and self-driving cars safe
 						and operational.
@@ -65,7 +110,7 @@
 						systems, and energy networks have demonstrated the
 						maturity and power of our software tool. </p>
 				</div>
-				<div class="col-sm-3 " style="margin-top: 10rem; ">
+				<div class="col-sm-4 m-auto" style="margin-top: 4rem; ">
 					<div class="grid" style="padding-bottom: 50px; ">
 						<ul id="hexGrid">
 							
@@ -161,13 +206,15 @@
 			<section class="row mt-4" style="  height: 100px; background-color: rgb(149, 106, 49);"></section>
 		</div>
 		<div id="footerdgb"></div>
+
 		<script>
-      $(function () {
-        $("#nav-placeholder").load("/src/commonUI/navbar.html");
-      });
-      $(function () {
-        $("#footerdgb").load("/src/commonUI/footer.html");
-      });
-    </script>
+			$(function () {
+				$("#nav-placeholder").load("/src/commonUI/navbar.html");
+			});
+			$(function () {
+				$("#footerdgb").load("/src/commonUI/footer.html");
+			});
+    	</script>
+	  
 	</body>
 </html>
