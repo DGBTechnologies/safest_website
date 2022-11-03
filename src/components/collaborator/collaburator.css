@@ -1,4 +1,7 @@
 
+* {
+    box-sizing: border-box;
+  }
 
  a {
     text-decoration: none !important;
@@ -40,3 +43,14 @@
  .card-body{
      border: 0.4px rounded solid rgb(235, 234, 234);
  }
+
+
+
+  /* Style the counter cards */
+  #card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #444;
+    color: white;
+  }
