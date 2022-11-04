@@ -19,6 +19,9 @@ a {
      top: 0; 
      z-index: 6;
  }
+ .active{
+    border-bottom: 2px solid blue;
+ }
 /*  .card{
      border:0.4px solid rgb(235, 234, 234) !important;
      border-radius: 8px !important;
