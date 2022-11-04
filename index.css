@@ -426,7 +426,7 @@ body{
   color: #000;
   /* background-color: #d0b991; */
   position: absolute;
-  left: -70px;
+  left: -60px;
   top: 17%;
   border-radius: 8px;
   border-top-left-radius: 0px; 
@@ -493,5 +493,6 @@ body{
   padding: 16px;
   text-align: center;
   background-color: #444;
-  color: white;
+  color: black;
+  background-color: white;
 }
