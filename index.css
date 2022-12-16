@@ -282,77 +282,115 @@ body{
     background: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.5), transparent);
   }
   
+ 
   /*** HOVER EFFECT  **********************************************************************/
   
   .hexLink:hover p, .hexLink:focus p{
-  opacity:1;
-  transition: 0.8s;
-  }
- 
-  .hexIn:hover .img:before,
-  .hexIn:hover .img:after,
-  .hexIn:hover .hexLink {
-    opacity: 1;
-  }
-  
-  
-  /*** HEXAGON SIZING AND EVEN ROW INDENTATION *****************************************************************/
-  @media (min-width:1201px) { /* <- 5-4  hexagons per row */
-    #hexGrid{
-      padding-bottom: 10.4%
+    opacity:1;
+    transition: 0.8s;
     }
-    .hex {
-      width: 40%; /* = 100 / 5 */
+   
+    .hexIn:hover .img:before,
+    .hexIn:hover .img:after,
+    .hexIn:hover .hexLink {
+      opacity: 0.25;
     }
-    .hex:nth-child(4n+1){ /* first hexagon of even rows */
-      margin-left:20%;  /* = width of .hex / 2  to indent even rows */
-    }
-  }
-  
-  @media (max-width: 1200px) and (min-width:901px) { /* <- 4-3  hexagons per row */
-    #hexGrid{
-      padding-bottom: 8.5%;
-      font-size: 13px;
-    }
-    .hex {
-      width: 40%; /* = 100 / 4 */
-    }
-    .hex:nth-child(4n+1){ /* first hexagon of even rows */
-      margin-left:20%;  /* = width of .hex / 2  to indent even rows */
-    }
-  }
-  
-  @media (max-width: 900px) and (min-width:601px) { /* <- 3-2  hexagons per row */
-    #hexGrid{
-      padding-bottom: 8.4%;
-      font-size: 14px;
-    }
-    .hex {
-      width: 40%; /* = 100 / 3 */
-    }
-    .hex:nth-child(4n+1){ /* first hexagon of even rows */
-      margin-left:20%;  /* = width of .hex / 2  to indent even rows */
-    }
-  }
-  
-  @media (max-width: 600px) { /* <- 2-1  hexagons per row */
-    #hexGrid{
-      padding-bottom: 11.2%;
-      font-size: 12px;
-    }
-    .hex {
-      width: 40%; /* = 100 / 3 */
-    }
-    .hex:nth-child(4n+1){ /* first hexagon of even rows */
-      margin-left:20%;  /* = width of .hex / 2  to indent even rows */
-    }
-  }
-  
-  @media (max-width: 400px) {
-      #hexGrid {
-          font-size: 8px;
+    
+    
+    /*** HEXAGON SIZING AND EVEN ROW INDENTATION *****************************************************************/
+    @media (min-width:1201px) { /* <- 5-4  hexagons per row */
+      #hexGrid{
+        padding-bottom: 10.4%
       }
-  }
+      .hex {
+        width: 25%; /* = 100 / 5 */
+      }
+      .hex:nth-child(3n+4){
+        margin-left:12.5%; 
+      }
+      .hex:nth-child(3n+7){ 
+        margin-left:0%; 
+      }
+      .hex:nth-child(3n+10){ 
+        margin-left:0%;  
+      }
+      .hex:nth-child(3n+11){ 
+        margin-left:12.5%;  
+      }
+    }
+    
+    @media (max-width: 1200px) and (min-width:901px) { /* <- 4-3  hexagons per row */
+      #hexGrid{
+        padding-bottom: 8.5%;
+        font-size: 13px;
+      }
+      .hex {
+        width: 25%; /* = 100 / 4 */
+      }
+      .hex:nth-child(3n+4){
+        margin-left:12.5%; 
+      }
+      .hex:nth-child(3n+7){ 
+        margin-left:0%; 
+      }
+      .hex:nth-child(3n+10){ 
+        margin-left:0%;  
+      }
+      .hex:nth-child(3n+11){ 
+        margin-left:12.5%;  
+      }
+    }
+    
+    @media (max-width: 900px) and (min-width:601px) { /* <- 3-2  hexagons per row */
+      #hexGrid{
+        padding-bottom: 8.4%;
+        font-size: 14px;
+      }
+      .hex {
+        width: 25%; /* = 100 / 3 */
+      }
+      .hex:nth-child(3n+4){
+        margin-left:12.5%; 
+      }
+      .hex:nth-child(3n+7){ 
+        margin-left:0%; 
+      }
+      .hex:nth-child(3n+10){ 
+        margin-left:0%;  
+      }
+      .hex:nth-child(3n+11){ 
+        margin-left:12.5%;  
+      }
+    }
+    
+    @media (max-width: 600px) { /* <- 2-1  hexagons per row */
+      #hexGrid{
+        padding-bottom: 11.2%;
+        font-size: 12px;
+      }
+      .hex {
+        width: 25%; /* = 100 / 3 */
+      }
+      .hex:nth-child(3n+4){
+        margin-left:12.5%; 
+      }
+      .hex:nth-child(3n+7){ 
+        margin-left:0%; 
+      }
+      .hex:nth-child(3n+10){ 
+        margin-left:0%;  
+      }
+      .hex:nth-child(3n+11){ 
+        margin-left:12.5%;  
+      }
+    }
+    
+    @media (max-width: 400px) {
+        #hexGrid {
+            font-size: 8px;
+        }
+    }
+    
   
 .carousel-item{
     height: 20rem;

@@ -75,14 +75,14 @@
 			</div>
 		</section>
 		<div class="content container-fluid col-sm-10 m-auto" >
-			<div class="display-3 bg-light text-center">
+			<div class="display-3 text-center mt-3">
 				<strong >Say Hello To Storm-DFT</strong>
 				<h4 class="mt-3" ><i>A dynamic fault-tree analysis tool for probabilistic risk assessment</i></h4>
 			</div>
 			
 			<div class="row">
 				<div class="col-sm-12 m-auto" style="padding: 0px 60px 0px 50px">		
-					<p class=" mt-0" style="text-align: justify;">
+					<p class=" mt-3" style="text-align: justify;">
 						Static faut trees have been used since long to do safety and 
 						reliability analysis of systems, which is essential to keep
 						our power plants, trains and self-driving cars safe 
@@ -100,23 +100,132 @@
 				</div> -->
 				
 			</div>
-			<div class="row">
-				<div class="col-sm-3">
-					
+			
+			<div class="row  m-auto mt-5 bg-light">
+				<div class="col-sm-4 ">
+				<img  src="/src/assets/images/twente.png"  width="300px" >
+				</div>
+				<div class="col-sm-4">
+
+					<p class=" mt-0" style="text-align: justify;">	
+						In collaboration with Twente and RWTH Aachen universities, we
+						developed a fully automatic, scalable, and state-of-the-art 
+						tool for the analysis of dynamic fault trees. It goes beyond
+						the capabilities of existing commercial tools for fault tree 
+						analysis in offering more flexible modelling and analyses.	
+						</p>
+				</div>
+				<div class="col-sm-4">
+				<img  src="/src/assets/images/aachen.png"  width="300px" >
 				</div>
 			</div>
-			
+			<div class="row mt-5">
+				<p class="display-5 text-center">
+				  Why do we need dynamic fault trees?
+				</p>
+				<div  class="col-sm-5 mt-5">
+				  <p class="mt-3">
+				   <h3>Faithful modeling of fault-tolerant and/or fail-operational systems:</h3>
+				  </p>
+				  <p>
+					Because of limited expressiveness, SFTs cannot model dynamic behaviour of systems in which:
+				  </p>
+				  <p>
+					<ul style="list-style-type: disc;">
+					  <li>Components are redundant (Cold, Warm, Hot)
+					  </li>
+					  <li>Components functionality is dependent 
+						  <ul style="list-style-type: circle;">
+							<li><i>two sources generating energy in parallel -- hot spare</i></li>
+						  </ul>
+					  </li>
+					  <li>Components failure have some temporal ordering
+						  <ul style="list-style-type: circle;">
+							<li><i>first component A fails followed by components B and C</i></li>
+						  </ul>
+					  </li>
+					  <li>Components relationship/responsibility/priority change with time
+						  <ul style="list-style-type: circle;">
+							<li><i>a switch automatically changes energy source e.g. from main-grid to generators</i></li>
+						  </ul>
+					  </li>
+					</ul> 
+				  </p>
+				</div>
+				<div class="col-sm-5 m-auto">
+					<img  src="/src/assets/images/DFT.PNG"  width="500px" >
+				</div>
+			  </div>
+		
+			  <div class="row">
+				<div class="col-sm-5 m-auto ">
+					<img
+					src="/src/assets/images/iso-certification.png"
+					alt="iso-certification"
+					width="300px"
+				  />
+				</div>
+				<div  class="col-sm-5 ">
+				  <p>
+				   <h3>Compliance of safety standards</h3>
+				  </p>
+					 ISO 26262:2011 demands rigorous risk assessments in automotive industry:
+				  <p>
+					<ul style="list-style-type:disc;">
+					  <li>“metrics are verifiable and precise enough to differentiate between different system architectures”
+					  </li>
+					  <li>“[for systems where the] concept is based on redundant safety mechanisms, multiple-point failures 
+						of a higher order than two are considered in the analysis” </li>
+					</ul> 
+				  </p>
+				</div>
+
+			  </div>
+		
+		
+			  <div class="row pt-2">
+
+				<div  class="col-sm-5 mt-4">
+				  <p>
+					<h3>Quantification of risk induced by AI/ML components:</h3>
+				  </p>
+				  <p>
+					<li>Rapidly increased usage of AI components in modern systems necessitates a rigorous risk assessment
+					  <ul style="list-style-type: circle;">
+						<li>Neural networks typically come with weak statistical guarantees only (if at all). 
+						  Small perturbations of their inputs may lead to misclassifications that can be catastrophic 
+						  in safety-critical applications
+						</li>
+						<li>The use of AI components also implies the need for reliability metrics that 
+						  go beyond the standard metrics of reliability and availability. 
+						  In particular, there is a need to specify various levels of degradation 
+						  (given the uncertainty of the AI components) and be able to analyse e.g., 
+						  “what is the probability that the system will come to a halt without going 
+						  through degradation level A first”.
+						</li>
+					  </ul>
+					</li>
+				  </p>
+				  
+				</div>
+				<div class="col-sm-7 m-auto" style="margin-top: 32px;" >
+					<img
+					src="/src/assets/images/appi-420.png"
+					alt="iso-certification"
+					width="400px"
+				  />
+				</div>
+			</div>
+
 			<div class="row">
-				<div class="col-sm-7 m-auto" style="padding: 0px 60px 0px 50px">
-					<p class=" mt-0" style="text-align: justify;">	
-					In collaboration with Twente and RWTH Aachen universities, we
-					developed a fully automatic, scalable, and state-of-the-art 
-					tool for the analysis of dynamic fault trees. It goes beyond
-					the capabilities of existing commercial tools for fault tree 
-					analysis in offering more flexible modelling and analyses.	
+				<div class="col-sm-4 m-auto">
+					<p class="display-5 text-center">
+						<strong>
+							Application Domains
+						</strong>
 					</p>
 				</div>
-				<!-- <div class="col-sm-4 m-auto" style="margin-top: 4rem; ">
+				<div class="mt-5 col-sm-7 m-auto">
 					<div class="grid" style="padding-bottom: 50px; ">
 						<ul id="hexGrid">
 							
@@ -124,8 +233,7 @@
 								<div class="hexIn">
 									<a class="hexLink card text-center"
 										href="/src/components/licenses/dft-licenses.html">
-										<div class='img' style='background-image:
-											url(/src/assets/images/bg-higlights.jpg);'></div>
+										<div class='img bg-light' ></div>
 										<div class="card-img-overlay d-flex flex-column
 											justify-content-center align-items-center">
 											<p class="display-7 card-title  text-light fw-bolder">Licenses</p>
@@ -138,8 +246,7 @@
 								<div class="hexIn">
 									<a class="hexLink card text-center"
 									href="/src/components/tool_features/dft-tool-features.html">
-									<div class='img' style='background-image:
-										url(/src/assets/images/bg-higlights.jpg);'></div>
+									<div class='img bg-light' ></div>
 									<div class="card-img-overlay d-flex flex-column
 										justify-content-center align-items-center">
 										<p class="display-7 card-title  text-light fw-bolder">Tool Features</p>
@@ -152,8 +259,7 @@
 								<div class="hexIn">
 									<a class="hexLink card text-center"
 										href="/src/components/support/dft-support.html">
-										<div class='img' style='background-image:
-											url(/src/assets/images/bg-higlights.jpg);'></div>
+										<div class='img bg-light' ></div>
 										<div class="card-img-overlay d-flex flex-column
 											justify-content-center align-items-center">
 											<p class="display-7 card-title  text-light fw-bolder"> Support </p>
@@ -166,9 +272,8 @@
 								<div class="hexIn">
 									<a class="hexLink card text-center"
 										href="/src/components/getting_started/dft-getting-started.html">
-										<div class='img'
-											style='background-image:url(/src/assets/images/bg-highlights-wht.jpg);'></div>
-										<div class="card-img-overlay d-flex flex-column
+										<div class='img bg-light'></div>
+											<div class="card-img-overlay d-flex flex-column
 											justify-content-center align-items-center">
 											<p class="display-7 card-title text-dark fw-bolder">Getting Started</p>
 										</div>
@@ -181,8 +286,7 @@
 								<div class="hexIn">
 									<a class="hexLink card text-center"
 										href="/src/components/case_studies/dft-case-studies.html">
-										<div class='img' style='background-image:
-											url(/src/assets/images/bg-higlights.jpg);'></div>
+										<div class='img bg-light' ></div>
 										<div class="card-img-overlay d-flex flex-column
 											justify-content-center align-items-center">
 											<p class="display-7 card-title  text-light fw-bolder">Case Studies</p>
@@ -194,8 +298,7 @@
 								<div class="hexIn">
 									<a class="hexLink card text-center"
 										href="/src/components/dcumentations/dft-documentations.html">
-										<div class='img' style='background-image:
-											url(/src/assets/images/bg-higlights.jpg);'></div>
+										<div class='img bg-light' ></div>
 										<div class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
 											<p class="display-7 card-title  text-light fw-bolder">Documentations</p>
 									</div>
@@ -203,11 +306,106 @@
 									</a>
 								</div>
 							</li>
-
+							<li class="hex">
+								<div class="hexIn">
+									<a class="hexLink card text-center"
+										href="/src/components/dcumentations/dft-documentations.html">
+										<div class='img bg-light' ></div>
+										<div class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
+											<p class="display-7 card-title  text-light fw-bolder">Documentations</p>
+									</div>
+										
+									</a>
+								</div>
+							</li>
+							<li class="hex">
+								<div class="hexIn">
+									<a class="hexLink card text-center"
+										href="/src/components/dcumentations/dft-documentations.html">
+										<div class='img bg-light' ></div>
+										<div class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
+											<p class="display-7 card-title  text-light fw-bolder">Documentations</p>
+									</div>
+										
+									</a>
+								</div>
+							</li>
+							<li class="hex">
+								<div class="hexIn">
+									<a class="hexLink card text-center"
+										href="/src/components/dcumentations/dft-documentations.html">
+										<div class='img bg-light' ></div>
+										<div class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
+											<p class="display-7 card-title  text-light fw-bolder">Documentations</p>
+									</div>
+										
+									</a>
+								</div>
+							</li>
+							<li class="hex">
+								<div class="hexIn">
+									<a class="hexLink card text-center"
+										href="/src/components/dcumentations/dft-documentations.html">
+										<div class='img bg-light' ></div>
+										<div class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
+											<p class="display-7 card-title  text-light fw-bolder">Documentations</p>
+									</div>
+										
+									</a>
+								</div>
+							</li>
+							<li class="hex">
+								<div class="hexIn">
+									<a class="hexLink card text-center"
+										href="/src/components/dcumentations/dft-documentations.html">
+										<div class='img bg-light' ></div>
+										<div class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
+											<p class="display-7 card-title  text-light fw-bolder">Documentations</p>
+									</div>
+										
+									</a>
+								</div>
+							</li>
+							<li class="hex">
+								<div class="hexIn">
+									<a class="hexLink card text-center"
+										href="/src/components/dcumentations/dft-documentations.html">
+										<div class='img bg-light' ></div>
+										<div class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
+											<p class="display-7 card-title  text-light fw-bolder">Documentations</p>
+									</div>
+										
+									</a>
+								</div>
+							</li>
+							<li class="hex">
+								<div class="hexIn">
+									<a class="hexLink card text-center"
+										href="/src/components/dcumentations/dft-documentations.html">
+										<div class='img bg-light' ></div>
+										<div class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
+											<p class="display-7 card-title  text-light fw-bolder">Documentations</p>
+									</div>
+										
+									</a>
+								</div>
+							</li>
+							
 						</ul>
 					</div>
-					
-				</div> -->
+				</div>
+			</div>
+
+			<div class="row">
+				<p class="display-5 text-center">
+					<strong>
+						Industrial Partners
+					</strong>
+				</p>
+			</div>
+
+			<div class="row">
+				
 			</div>
 			<section>
 				<div class="px-2 px-md-4 carouselBody">
