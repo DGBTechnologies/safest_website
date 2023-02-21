@@ -104,23 +104,23 @@ body{
     position: relative;
   }
   
-  .content h2 {
+  /* .content h2 {
     color: #fff;
     font-size: 8em;
     position: absolute;
     transform: translate(0%, -50%);
-  }
+  } */
   
-  .content h2:nth-child(1) {
+  /* .content h2:nth-child(1) {
     color: transparent;
     -webkit-text-stroke: 2px #03a9f4;
-  }
+  } */
   
-  .content h2:nth-child(2) {
+  /* .content h2:nth-child(2) {
     color: #03a9f4;
     animation: animate 4s ease-in-out infinite;
   }
-  
+   */
   @keyframes animate {
     0%,
     100% {
@@ -537,4 +537,8 @@ body{
   background-color: #444;
   color: black;
   background-color: white;
+}
+
+a.social {
+  text-decoration: none;
 }

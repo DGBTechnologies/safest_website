@@ -5,11 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>storm-dft</title>
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="/src/assets/images/dgb-logo.png"
-    />
+    <link rel="icon" type="image/x-icon" class="h-25" href="/src/assets/images/fav_icon.png" />
+
     <!-- Latest compiled and minified CSS -->
     <link
       rel="stylesheet"
@@ -34,7 +31,7 @@
   <body>
     <nav id="navbar" class="navbar navbar-light bg-light navbar-expand-sm fixed-top" style="background-color:white; overflow:auto" >
     
-      <a class="navbar-brand " href="/index.html"><img src="/src/assets/images/stormDft-logo.png"></a>
+      <a class="navbar-brand " href="/index.html"><img src="/src/assets/images/SAFEST_LOGO_.png" style="width: auto; height: 40px;"></a>
   
       <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#collapse" 
           aria-expanded="false" aria-label="Toggle navigation">
@@ -43,11 +40,11 @@
           
           <div class="navbar-collapse collapse" id="collapse">
               <ul class="navbar-nav ms-auto me-auto">
-                  <li class="nav-item " style="min-width:170px ;"><a href="/src/components/dft_introduction/dft-introduction.html" class="nav-link">Why fault tree analysis</a></li>
                   <li class="nav-item "><a href="/src/components/tool_features/dft-tool-features.html" class="nav-link">Tool Features</a></li>
                   <li class="nav-item  active"><a href="/src/components/getting_started/dft-getting-started.html" class="nav-link">Getting Started</a></li>
-                  <li class="nav-item"><a href="/src/components/licenses/dft-licenses.html" class="nav-link">licenses</a></li>
-                  <li class="nav-item"><a href="/src/components/dcumentations/dft-documentations.html" class="nav-link">Documentations</a></li>
+                  <li class="nav-item"><a href="/src/components/licenses/dft-licenses.html" class="nav-link">Licenses</a></li>
+                  <li class="nav-item"><a href=" /src/components/documentations/dft-documentations.html" class="nav-link">Documentations</a></li>
+                  <li class="nav-item"><a href="/src/components/validation/validation.html" class="nav-link">Validation</a></li>
                   <li class="nav-item"><a href="/src/components/support/dft-support.html" class="nav-link">Support</a></li>
                   <li class="nav-item"><a href="/src/components/case_studies/dft-case-studies.html" class="nav-link">Case Studies</a></li>
                   <li class="nav-item"><a href="/src/components/team/dft-team.html" class="nav-link">Team</a></li>
@@ -59,11 +56,12 @@
               
       </nav> 
     <div class="content py-3 my-4">
-      <nav
+      <!-- <nav
         class="navbar navbar-light bg-light navbar-expand-sm d-flex"
         style="background-color: white"
         id="local-nav"
       >
+      
         <div class="container mt-2">
           
           <ul class="navbar-nav px-5 ms-auto me-auto">
@@ -76,19 +74,35 @@
             
           </ul>
         </div>
-      </nav>
+      </nav> -->
+      <div class="bg-image p-5 text-center shadow-1-strong mb-5 rounded text-white"
+    style="background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/003.webp');">
+    <h1 class="mb-3 h">Experience a hassle-free installation</h1>
+  </div>
       <div class="container-fluid col-sm-10">
-        <div class="row" id="Hello">
-          <p class="display-5"><strong>System Requirements:</strong></p>
-          <br />  
-          <p>
-            <h3> OS   :   Windows  </h3> 
-            <h3> RAM  :   8 GB  (min)</h3>
-            <h3> Browser  :   Chrome </h3>
-          </p>
+        <p class="display-6 pb-4"><strong>System Requirements</strong></p>
+        <div class="row d-flex justify-content-evenly" id="Hello">
+          <a href="https://docs.docker.com/desktop/install/mac-install/#system-requirements" class="card" style="width: 16rem;">
+            <img src="../../assets/images/apple.png" class="p-5 card-img-top" alt="Mac requirements"/>
+              <p class="card-title text-center">
+                Mac
+              </p>
+          </a>
+          <a href="https://docs.docker.com/desktop/install/linux-install/#system-requirements"  class="card" style="width: 16rem;">
+            <img src="../../assets/images/linux.png" class=" p-5 card-img-top" alt="Linux requirements"/>
+              <p class="card-title text-center">
+                Linux
+              </p>
+          </a>
+          <a href="https://docs.docker.com/desktop/install/linux-install/#system-requirements" class="card" style="width: 16rem;">
+            <img  src="../../assets/images/windows.png" class="p-5 card-img-top" alt="Windows requirements"/>
+              <p class="card-title text-center">
+                Windows
+              </p>
+          </a>        
         </div>
-        <div id="installation" class="row">
-          <p class="display-5 "><strong> Installation Guide:</strong></p>
+        <div id="installation" class="row my-5">
+          <p class="display-6 py-4 "><strong> Installation Guide</strong></p>
           <div class="my-1">
             <div class="row">
               <div class="col-md-8">
