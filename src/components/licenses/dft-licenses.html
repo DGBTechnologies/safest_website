@@ -363,35 +363,35 @@
     <div class="container-fluid col-sm-10">
 
 
-      <form class="col-sm-10 m-auto">
+      <form id="javascript_form" class="col-sm-10 m-auto" onsubmit="return myFunction()">
         <div class="mb-3">
           <label for="licenseInputName" class="form-label">Name</label><span
             style="color: red !important; display: inline; float: none;">*</span>
-          <input type="text" class="form-control" placeholder="Name" id="licenseInputName" aria-describedby="nameHelp"
+          <input type="text" name="name" class="form-control" placeholder="Name" id="licenseInputName" aria-describedby="nameHelp"
             required>
         </div>
         <div class="mb-3">
           <label for="inputTitle" class="form-label">Title </label><span
             style="color: red !important; display: inline; float: none;">*</span>
-          <input type="text" class="form-control" placeholder="(e.g. Professor, Assistant Prof.)" id="licenseInputTitle"
+          <input type="text" name="title" class="form-control" placeholder="(e.g. Professor, Assistant Prof.)" id="licenseInputTitle"
             required>
         </div>
         <div class="mb-3">
           <label for="licenseInputTitle" class="form-label">University Name</label><span
             style="color: red !important; display: inline; float: none;">*</span>
-          <input type="text" class="form-control" placeholder="University/Institution Name" id="licenseInputTitle"
+          <input type="text" name="university" class="form-control" placeholder="University/Institution Name" id="licenseInputTitle"
             required>
         </div>
         <div class="mb-3">
           <label for="licenseInputTitle" class="form-label">University Email</label><span
             style="color: red !important; display: inline; float: none;">*</span>
-          <input type="text" class="form-control" placeholder="University/Institution Email" id="licenseInputTitle"
+          <input type="text" name="email" class="form-control" placeholder="University/Institution Email" id="licenseInputTitle"
             required>
         </div>
         <div class="mb-3">
           <label for="licenseInputAddress" class="form-label">University Address</label><span
             style="color: red !important; display: inline; float: none;">*</span>
-          <input type="text" class="form-control" id="licenseInputAddress" placeholder="University/Institution Address"
+          <input type="text" name="email" class="form-control" id="licenseInputAddress" placeholder="University/Institution Address"
             required>
         </div>
 
@@ -399,12 +399,12 @@
           <div class="mb-3 col-sm-6">
             <label for="licenseInputTitle" class="form-label">City</label><span
               style="color: red !important; display: inline; float: none;">*</span>
-            <input type="text" class="form-control" id="licenseInputTitle" placeholder="University/Institution's City"
+            <input type="text" name="city" class="form-control" id="licenseInputTitle" placeholder="University/Institution's City"
               required>
           </div>
           <div class="mb-3 col-sm-6">
             <label for="licenseInputTitle" class="form-label">State</label>
-            <input type="text" class="form-control" placeholder="University/Institution's State" id="licenseInputTitle"
+            <input type="text" name="state" class="form-control" placeholder="University/Institution's State" id="licenseInputTitle"
               required>
           </div>
         </div>
@@ -412,7 +412,7 @@
         <div class="row">
           <div class="mb-3 col-sm-6">
             <label for="licenseInputPostalCode" class="form-label">PostalCode</label>
-            <input type="text" class="form-control" placeholder="City Postal Code" id="licenseInputPostalCode" required>
+            <input type="text" name="postalCode" class="form-control" placeholder="City Postal Code" id="licenseInputPostalCode" required>
           </div>
           <div class="mb-3 col-sm-6">
             <label for="country">Country</label><span
@@ -673,13 +673,13 @@
         <div class="row">
           <div class="mb-3 col-sm-6">
             <label for="phone" class="form-label">Phone Number</label>
-            <input type="number" class="form-control" id="phone" placeholder="Personal Phone no." name="phone">
+            <input type="number" name="phone" class="form-control" id="phone" placeholder="Personal Phone no." name="phone">
           </div>
         </div>
 
 
         <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <input type="checkbox" name="agreeement" class="form-check-input" id="exampleCheck1">
           <!-- <label class="form-check-label" for="exampleCheck1">Check me out</label> -->
           <div>I have read and accept the<a href="" data-bs-toggle="modal" data-bs-target="#exampleModal">license
               Agreement.</a></div>
@@ -687,7 +687,7 @@
         </div>
 
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary"  id="js_send" onclick="myFunction('Academic')">Submit</button>
       </form>
 
     </div>
@@ -743,63 +743,63 @@
   </section>
 
   <section>
-    <form>
+    <form id="javascript_form" onsubmit="return myFunction()">
       <div class="container-fluid col-sm-8 m-auto">
         <div class="mb-3">
           <label for="phone" class="form-label">Name</label><span
             style="color: red !important; display: inline; float: none;">*</span>
-          <input type="tel" class="form-control" placeholder="Name" id="phone" name="phone"
-            pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+          <input type="text" name="com_name" class="form-control" placeholder="Name" id="name"
+            >
         </div>
         <div class="mb-3">
           <label for="fax" class="form-label">Email</label><span
             style="color: red !important; display: inline; float: none;">*</span>
-          <input type="tel" class="form-control" placeholder="Email" id="fax" name="fax">
+          <input type="email" name="com_email" class="form-control" placeholder="Email" id="fax" name="fax">
         </div>
         <div class="mb-3">
           <label for="inputTitle" class="form-label">Job Title</label><span
             style="color: red !important; display: inline; float: none;">*</span>
-          <input type="text" class="form-control" placeholder="Title/Designation at Company" id="licenseInputTitle"
+          <input type="text" name="com_title" class="form-control" placeholder="Title/Designation at Company" id="licenseInputTitle"
             required>
         </div>
         <div class="mb-3">
           <label for="inputTitle" class="form-label">Company Name</label><span
             style="color: red !important; display: inline; float: none;">*</span>
-          <input type="text" class="form-control" placeholder="Company's Name" id="licenseInputTitle" required>
+          <input type="text" name="company" class="form-control" placeholder="Company's Name" id="licenseInputTitle" required>
         </div>
         <div class="mb-3">
           <label for="inputTitle" class="form-label">Website</label><span
             style="color: red !important; display: inline; float: none;">*</span>
-          <input type="text" class="form-control" placeholder="Company's offcial Website" id="licenseInputTitle"
+          <input type="text" name="website" class="form-control" placeholder="Company's offcial Website" id="licenseInputTitle"
             required>
         </div>
         <div class="mb-3">
           <label for="inputTitle" class="form-label">Company Address</label><span
             style="color: red !important; display: inline; float: none;">*</span>
-          <input type="text" class="form-control" placeholder="Company's Address" id="licenseInputTitle" required>
+          <input type="text" name="com_address" class="form-control" placeholder="Company's Address" id="licenseInputTitle" required>
         </div>
         <div class="row">
           <div class="mb-3 col-sm-6">
             <label for="licenseInputTitle" class="form-label">City</label><span
               style="color: red !important; display: inline; float: none;">*</span>
-            <input type="text" class="form-control" id="licenseInputTitle" placeholder="Company's City" required>
+            <input type="text" name="com_city" class="form-control" id="licenseInputTitle" placeholder="Company's City" required>
           </div>
           <div class="mb-3 col-sm-6">
             <label for="licenseInputTitle" class="form-label">State</label>
-            <input type="text" class="form-control" placeholder="Company's State" id="licenseInputTitle" required>
+            <input type="text" name="com_state" class="form-control" placeholder="Company's State" id="licenseInputTitle" required>
           </div>
         </div>
 
         <div class="row">
           <div class="mb-3 col-sm-6">
             <label for="licenseInputPostalCode" class="form-label">PostalCode</label>
-            <input type="text" class="form-control" placeholder="City Postal Code" id="licenseInputPostalCode" required>
+            <input type="text" name="com_postalCode" class="form-control" placeholder="City Postal Code" id="licenseInputPostalCode" required>
           </div>
           <div class="mb-3 col-sm-6">
             <label for="country">Country</label><span
               style="color: red !important; display: inline; float: none;">*</span>
 
-            <select id="country" name="country" class="form-control mt-2" required>
+            <select id="country" name="com_country" class="form-control mt-2" required>
               <option value="Afghanistan">Afghanistan</option>
               <option value="Åland Islands">Åland Islands</option>
               <option value="Albania">Albania</option>
@@ -1054,23 +1054,23 @@
         <div class="row">
           <div class="mb-3 col-sm-6">
             <label for="phone" class="form-label">Phone Number</label>
-            <input type="number" class="form-control" id="phone" placeholder="Personal Phone no." name="phone">
+            <input type="number" name="com_phone" class="form-control" id="phone" placeholder="Personal Phone no." name="phone">
           </div>
         </div>
         <div class="mb-3">
           <label for="fax" class="form-label">Message</label>
-          <textarea class="col-sm-12" id="w3review" name="w3review" rows="4">
+          <textarea class="col-sm-12" id="w3review" name="message" rows="4">
         </textarea>
         </div>
 
         <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <input type="checkbox" name="com_agreement" class="form-check-input" id="exampleCheck1">
           <!-- <label class="form-check-label" for="exampleCheck1">Check me out</label> -->
           <div>I have read and accept the<a href="" data-bs-toggle="modal" data-bs-target="#exampleModal1">license
               Agreement.</a></div>
         </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary" id="js_send" onclick="myFunction('Commercial')">Submit</button>
 
       </div>
 
@@ -1159,7 +1159,26 @@
 
   </section>
 
+  <div id="myModal" class="modal fade">
+    <div class="modal-dialog modal-confirm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="icon-box"> <i class="material-icons">&#xE876;</i> </div>
+          <h4 class="modal-title">Thank you!</h4>
+        </div>
+        <div class="modal-body">
+          <p class="text-center">Your query has been submitted successfully! We'll get back to you as soon as
+            possible.</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-success btn-block" data-dismiss="modal" onclick="$('#myModal').modal('toggle')">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
+
 <div id="footerdgb"></div>
 <script>
   $(function () {
@@ -1170,6 +1189,140 @@
   });
 
 </script>
+
+
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+  crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    //update this with your js_form selector
+    var form_id_js = "javascript_form";
+    var data_js = {
+      // "access_token": "0x3m5jl6ezyde95kkfa12wqb" // sent after you sign up
+      "access_token": "jnhtikq43qqq15mvpgrrs4db" // sent after you sign up
+    };
+
+    function js_onSuccess() {
+      // remove this to avoid redirect
+      // window.location = window.location.pathname + "?message=Email+Successfully+Sent%21&isError=0";
+      $('#myModal').modal('toggle');
+
+    }
+
+    function js_onError(error) {
+      // remove this to avoid redirect
+      // window.location = window.location.pathname + "?message=Email+could+not+be+sent.&isError=1";
+      window.alert("ERROR: Could not send email:\n" + error);
+    }
+
+
+  
+ //sendButton.onclick = js_send;
+
+ function toParams(data_js) {
+      var form_data = [];
+      for (var key in data_js) {
+        form_data.push(encodeURIComponent(key) + "=" + encodeURIComponent(data_js[key]));
+      }
+
+      return form_data.join("&");
+    }
+    
+    function myFunction(licenseType) {
+
+      var sendButton = document.getElementById("js_send");
+      sendButton.disabled = true;
+     
+      var request = new XMLHttpRequest();
+      request.onreadystatechange = function () {
+        if (request.readyState == 4 && request.status == 200) {
+
+          console.log("Success")
+          document.querySelector("#" + form_id_js + " [name='name']").value = '';
+          document.querySelector("#" + form_id_js + " [name='com_name']").value = '';
+          document.querySelector("#" + form_id_js + " [name='title']").value = '';
+          document.querySelector("#" + form_id_js + " [name='com_title']").value = '';
+          document.querySelector("#" + form_id_js + " [name='university']").value = '';
+          document.querySelector("#" + form_id_js + " [name='company']").value = '';
+          document.querySelector("#" + form_id_js + " [name='email']").value = '';
+          document.querySelector("#" + form_id_js + " [name='com_email']").value = '';
+          document.querySelector("#" + form_id_js + " [name='address']").value = '';
+          document.querySelector("#" + form_id_js + " [name='com_address']").value = '';
+          document.querySelector("#" + form_id_js + " [name='city']").value = '';
+          document.querySelector("#" + form_id_js + " [name='com_city']").value = '';
+          document.querySelector("#" + form_id_js + " [name='state']").value = '';
+          document.querySelector("#" + form_id_js + " [name='com_state']").value = '';
+          document.querySelector("#" + form_id_js + " [name='postalCode']").value = '';
+          document.querySelector("#" + form_id_js + " [name='com_postalCode']").value = '';
+          document.querySelector("#" + form_id_js + " [name='country']").value = '';
+          document.querySelector("#" + form_id_js + " [name='com_country']").value = '';
+          document.querySelector("#" + form_id_js + " [name='phone']").value = '';
+          document.querySelector("#" + form_id_js + " [name='com_phone']").value = '';
+          document.querySelector("#" + form_id_js + " [name='agreement']").value = '';
+          document.querySelector("#" + form_id_js + " [name='com_agreement']").value = '';
+
+        } else
+          if (request.readyState == 4) {
+            js_onError(request.response);
+          }
+      };
+      var message;
+      var subject;
+      if(licenseType=='Academic'){
+      subject = document.querySelector("#" + form_id_js + " [name='email']").value +" | " + licenseType+" "+"License Request";
+      message = "Applicant Name:\t" + document.querySelector("#" + form_id_js + " [name='name']").value 
+      message += "\nTitle:\t" + document.querySelector("#" + form_id_js + " [name='title']").value;
+      message += "\nUniversity:\t" + document.querySelector("#" + form_id_js + " [name='university']").value;
+      message += "\nEmail\t" + document.querySelector("#" + form_id_js + " [name='email']").value;
+      message += "\nAddress:\t" + document.querySelector("#" + form_id_js + " [name='address']").value;
+      message += "\nCity:\t" + document.querySelector("#" + form_id_js + " [name='city']").value;
+      message += "\nState:\t" + document.querySelector("#" + form_id_js + " [name='state']").value;
+      message += "\nPost Code:\t" + document.querySelector("#" + form_id_js + " [name='postalCode']").value;
+      message += "\nCountry\t" + document.querySelector("#" + form_id_js + " [name='country']").value;
+      message += "\nPhone:\t" + document.querySelector("#" + form_id_js + " [name='phone']").value;
+      message += "\nAgreement:\t" + document.querySelector("#" + form_id_js + " [name='agreement']").value;
+      }
+      else if(licenseType=='Commercial'){
+      subject = document.querySelector("#" + form_id_js + " [name='com_email']").value +" | " + licenseType+" "+"License Request";
+      message = "Applicant Name:\t" + document.querySelector("#" + form_id_js + " [name='com_name']").value 
+      message += "\nEmail\t" + document.querySelector("#" + form_id_js + " [name='com_email']").value;
+      message += "\nTitle:\t" + document.querySelector("#" + form_id_js + " [name='com_title']").value;
+      message += "\nCompany Name:\t" + document.querySelector("#" + form_id_js + " [name='company']").value;
+      message += "\nWebsite:\t" + document.querySelector("#" + form_id_js + " [name='website']").value;
+      message += "\nCompany ddress:\t" + document.querySelector("#" + form_id_js + " [name='com_address']").value;
+      message += "\nCity:\t" + document.querySelector("#" + form_id_js + " [name='com_city']").value;
+      message += "\nState:\t" + document.querySelector("#" + form_id_js + " [name='com_state']").value;
+      message += "\nCountry\t" + document.querySelector("#" + form_id_js + " [name='com_country']").value;
+      message += "\nPost Code:\t" + document.querySelector("#" + form_id_js + " [name='com_postalCode']").value;
+      message += "\nPhone:\t" + document.querySelector("#" + form_id_js + " [name='com_phone']").value;
+      message += "\nRequest Message:\t" + document.querySelector("#" + form_id_js + " [name='message']").value;
+
+      };
+     
+      data_js['subject'] = subject;
+      data_js['text'] = message;
+      var params = toParams(data_js);
+
+      request.open("POST", "https://postmail.invotes.com/send", true);
+      request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      request.send(params);
+      return false;
+   
+}
+   
+
+  </script>
 </body>
 
 </html>
