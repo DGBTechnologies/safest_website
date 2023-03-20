@@ -10,6 +10,11 @@
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="/index.css" />
   <link rel="stylesheet" href="/src/components/licenses/dft-licenses.css" />
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <!-- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
@@ -52,7 +57,8 @@
 
     </ul>
   </div>
-  <a class="navbar-brand " href="https://www.dgbtek.com"><img src="/src/assets/images/dgb-logo.png" style="width: auto; height: 40px;"></a>
+  <a class="navbar-brand " href="https://www.dgbtek.com"><img src="/src/assets/images/dgb-logo.png"
+      style="width: auto; height: 40px;"></a>
 
 </nav>
 <div class="content">
@@ -267,11 +273,11 @@
         <div class="col-sm-9 m-auto">
           <div class=" row my-4 ">
             <!-- allowed terms -->
-            <div  class="col-sm-6 ">
+            <div class="col-sm-6 ">
 
               <div class="mb-1">
                 <span>
-                <img src="/src/assets/images/green-check.png" alt="research-student" width="3.3%">
+                  <img src="/src/assets/images/green-check.png" alt="research-student" width="3.3%">
                 </span>
                 Free of cost
                 <br>
@@ -312,9 +318,9 @@
                 <span>
                   <img src="/src/assets/images/red-cross.png" alt="research-student" width="3%">
                 </span>
-                The work performed on SAFEST under academic license or the worker may NOT be contracted by any non-academic institution.
+                The work performed on SAFEST under academic license or the worker may NOT be contracted by any
+                non-academic institution.
               </div>
-
             </div>
           </div>
         </div>
@@ -367,52 +373,53 @@
         <div class="mb-3">
           <label for="licenseInputName" class="form-label">Name</label><span
             style="color: red !important; display: inline; float: none;">*</span>
-          <input type="text" name="name" class="form-control" placeholder="Name" id="licenseInputName" aria-describedby="nameHelp"
-            required>
+          <input type="text" name="name" class="form-control" placeholder="Name" id="licenseInputName"
+            aria-describedby="nameHelp" required>
         </div>
         <div class="mb-3">
           <label for="inputTitle" class="form-label">Title </label><span
             style="color: red !important; display: inline; float: none;">*</span>
-          <input type="text" name="title" class="form-control" placeholder="(e.g. Professor, Assistant Prof.)" id="licenseInputTitle"
-            required>
+          <input type="text" name="title" class="form-control" placeholder="(e.g. Professor, Assistant Prof.)"
+            id="licenseInputTitle" required>
         </div>
         <div class="mb-3">
           <label for="licenseInputTitle" class="form-label">University Name</label><span
             style="color: red !important; display: inline; float: none;">*</span>
-          <input type="text" name="university" class="form-control" placeholder="University/Institution Name" id="licenseInputTitle"
-            required>
+          <input type="text" name="university" class="form-control" placeholder="University/Institution Name"
+            id="licenseInputTitle" required>
         </div>
         <div class="mb-3">
           <label for="licenseInputTitle" class="form-label">University Email</label><span
             style="color: red !important; display: inline; float: none;">*</span>
-          <input type="text" name="email" class="form-control" placeholder="University/Institution Email" id="licenseInputTitle"
-            required>
+          <input type="text" name="email" class="form-control" placeholder="University/Institution Email"
+            id="licenseInputTitle" required>
         </div>
         <div class="mb-3">
-          <label for="licenseInputAddress" class="form-label">University Address</label><span
+          <label for="universityAddress" class="form-label">University Address</label><span
             style="color: red !important; display: inline; float: none;">*</span>
-          <input type="text" name="email" class="form-control" id="licenseInputAddress" placeholder="University/Institution Address"
-            required>
+          <input type="text" name="address" class="form-control" id="universityAddress"
+            placeholder="University/Institution Address" required>
         </div>
 
         <div class="row">
           <div class="mb-3 col-sm-6">
             <label for="licenseInputTitle" class="form-label">City</label><span
               style="color: red !important; display: inline; float: none;">*</span>
-            <input type="text" name="city" class="form-control" id="licenseInputTitle" placeholder="University/Institution's City"
-              required>
+            <input type="text" name="city" class="form-control" id="licenseInputTitle"
+              placeholder="University/Institution's City" required>
           </div>
           <div class="mb-3 col-sm-6">
             <label for="licenseInputTitle" class="form-label">State</label>
-            <input type="text" name="state" class="form-control" placeholder="University/Institution's State" id="licenseInputTitle"
-              required>
+            <input type="text" name="state" class="form-control" placeholder="University/Institution's State"
+              id="licenseInputTitle" required>
           </div>
         </div>
 
         <div class="row">
           <div class="mb-3 col-sm-6">
             <label for="licenseInputPostalCode" class="form-label">PostalCode</label>
-            <input type="text" name="postalCode" class="form-control" placeholder="City Postal Code" id="licenseInputPostalCode" required>
+            <input type="text" name="postalCode" class="form-control" placeholder="City Postal Code"
+              id="licenseInputPostalCode" required>
           </div>
           <div class="mb-3 col-sm-6">
             <label for="country">Country</label><span
@@ -673,13 +680,14 @@
         <div class="row">
           <div class="mb-3 col-sm-6">
             <label for="phone" class="form-label">Phone Number</label>
-            <input type="number" name="phone" class="form-control" id="phone" placeholder="Personal Phone no." name="phone">
+            <input type="number" name="phone" class="form-control" id="phone" placeholder="Personal Phone no."
+              name="phone">
           </div>
         </div>
 
 
         <div class="mb-3 form-check">
-          <input type="checkbox" name="agreeement" class="form-check-input" id="exampleCheck1">
+          <input type="checkbox" name="agreement" class="form-check-input" id="exampleCheck1">
           <!-- <label class="form-check-label" for="exampleCheck1">Check me out</label> -->
           <div>I have read and accept the<a href="" data-bs-toggle="modal" data-bs-target="#exampleModal">license
               Agreement.</a></div>
@@ -687,7 +695,7 @@
         </div>
 
 
-        <button type="submit" class="btn btn-primary"  id="js_send" onclick="myFunction('Academic')">Submit</button>
+        <button type="submit" class="btn btn-primary" id="js_send" onclick="myFunction('Academic')">Submit</button>
       </form>
 
     </div>
@@ -748,8 +756,7 @@
         <div class="mb-3">
           <label for="phone" class="form-label">Name</label><span
             style="color: red !important; display: inline; float: none;">*</span>
-          <input type="text" name="com_name" class="form-control" placeholder="Name" id="name"
-            >
+          <input type="text" name="com_name" class="form-control" placeholder="Name" id="name">
         </div>
         <div class="mb-3">
           <label for="fax" class="form-label">Email</label><span
@@ -759,41 +766,46 @@
         <div class="mb-3">
           <label for="inputTitle" class="form-label">Job Title</label><span
             style="color: red !important; display: inline; float: none;">*</span>
-          <input type="text" name="com_title" class="form-control" placeholder="Title/Designation at Company" id="licenseInputTitle"
-            required>
+          <input type="text" name="com_title" class="form-control" placeholder="Title/Designation at Company"
+            id="licenseInputTitle" required>
         </div>
         <div class="mb-3">
           <label for="inputTitle" class="form-label">Company Name</label><span
             style="color: red !important; display: inline; float: none;">*</span>
-          <input type="text" name="company" class="form-control" placeholder="Company's Name" id="licenseInputTitle" required>
+          <input type="text" name="company" class="form-control" placeholder="Company's Name" id="licenseInputTitle"
+            required>
         </div>
         <div class="mb-3">
           <label for="inputTitle" class="form-label">Website</label><span
             style="color: red !important; display: inline; float: none;">*</span>
-          <input type="text" name="website" class="form-control" placeholder="Company's offcial Website" id="licenseInputTitle"
-            required>
+          <input type="text" name="website" class="form-control" placeholder="Company's offcial Website"
+            id="licenseInputTitle" required>
         </div>
         <div class="mb-3">
           <label for="inputTitle" class="form-label">Company Address</label><span
             style="color: red !important; display: inline; float: none;">*</span>
-          <input type="text" name="com_address" class="form-control" placeholder="Company's Address" id="licenseInputTitle" required>
+          <input type="text" name="com_address" class="form-control" placeholder="Company's Address"
+            id="licenseInputTitle" required>
         </div>
         <div class="row">
           <div class="mb-3 col-sm-6">
             <label for="licenseInputTitle" class="form-label">City</label><span
               style="color: red !important; display: inline; float: none;">*</span>
-            <input type="text" name="com_city" class="form-control" id="licenseInputTitle" placeholder="Company's City" required>
+            <input type="text" name="com_city" class="form-control" id="licenseInputTitle" placeholder="Company's City"
+              required>
           </div>
           <div class="mb-3 col-sm-6">
             <label for="licenseInputTitle" class="form-label">State</label>
-            <input type="text" name="com_state" class="form-control" placeholder="Company's State" id="licenseInputTitle" required>
+            <input type="text" name="com_state" class="form-control" placeholder="Company's State"
+              id="licenseInputTitle" required>
           </div>
         </div>
 
         <div class="row">
           <div class="mb-3 col-sm-6">
             <label for="licenseInputPostalCode" class="form-label">PostalCode</label>
-            <input type="text" name="com_postalCode" class="form-control" placeholder="City Postal Code" id="licenseInputPostalCode" required>
+            <input type="text" name="com_postalCode" class="form-control" placeholder="City Postal Code"
+              id="licenseInputPostalCode" required>
           </div>
           <div class="mb-3 col-sm-6">
             <label for="country">Country</label><span
@@ -1054,7 +1066,8 @@
         <div class="row">
           <div class="mb-3 col-sm-6">
             <label for="phone" class="form-label">Phone Number</label>
-            <input type="number" name="com_phone" class="form-control" id="phone" placeholder="Personal Phone no." name="phone">
+            <input type="number" name="com_phone" class="form-control" id="phone" placeholder="Personal Phone no."
+              name="phone">
           </div>
         </div>
         <div class="mb-3">
@@ -1171,7 +1184,64 @@
             possible.</p>
         </div>
         <div class="modal-footer">
-          <button class="btn btn-success btn-block" data-dismiss="modal" onclick="$('#myModal').modal('toggle')">OK</button>
+          <button class="btn btn-success btn-block" data-dismiss="modal"
+            onclick="$('#myModal').modal('toggle')">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="alert-box" style="display: none;">
+    <p>This is an alert message.</p>
+  </div>
+
+  <!-- modal for errors -->
+  <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel2">hello</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-3" id="errorBody" style="white-space: pre-line; text-align: justify;">
+        </div>
+        <div class="modal-footer">
+          <span style="cursor: pointer;" id="toggle-svg" onclick="copyToClipboard('#errorBody')">
+            <i class="ml-0">Copy & send us this data at : <a href="contact@dgbtek.com">safest@dgbtek.com</a> </i>
+            <svg fill="#000000" height="20px" width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64" enable-background="new 0 0 64 64"
+              xml:space="preserve">
+              <g id="Text-files">
+                <path d="M53.9791489,9.1429005H50.010849c-0.0826988,0-0.1562004,0.0283995-0.2331009,0.0469999V5.0228
+             C49.7777481,2.253,47.4731483,0,44.6398468,0h-34.422596C7.3839517,0,5.0793519,2.253,5.0793519,5.0228v46.8432999
+             c0,2.7697983,2.3045998,5.0228004,5.1378999,5.0228004h6.0367002v2.2678986C16.253952,61.8274002,18.4702511,64,21.1954517,64
+             h32.783699c2.7252007,0,4.9414978-2.1725998,4.9414978-4.8432007V13.9861002
+             C58.9206467,11.3155003,56.7043495,9.1429005,53.9791489,9.1429005z M7.1110516,51.8661003V5.0228
+             c0-1.6487999,1.3938999-2.9909999,3.1062002-2.9909999h34.422596c1.7123032,0,3.1062012,1.3422,3.1062012,2.9909999v46.8432999
+             c0,1.6487999-1.393898,2.9911003-3.1062012,2.9911003h-34.422596C8.5049515,54.8572006,7.1110516,53.5149002,7.1110516,51.8661003z
+              M56.8888474,59.1567993c0,1.550602-1.3055,2.8115005-2.9096985,2.8115005h-32.783699
+             c-1.6042004,0-2.9097996-1.2608986-2.9097996-2.8115005v-2.2678986h26.3541946
+             c2.8333015,0,5.1379013-2.2530022,5.1379013-5.0228004V11.1275997c0.0769005,0.0186005,0.1504021,0.0469999,0.2331009,0.0469999
+             h3.9682999c1.6041985,0,2.9096985,1.2609005,2.9096985,2.8115005V59.1567993z" />
+                <path d="M38.6031494,13.2063999H16.253952c-0.5615005,0-1.0159006,0.4542999-1.0159006,1.0158005
+             c0,0.5615997,0.4544001,1.0158997,1.0159006,1.0158997h22.3491974c0.5615005,0,1.0158997-0.4542999,1.0158997-1.0158997
+             C39.6190491,13.6606998,39.16465,13.2063999,38.6031494,13.2063999z" />
+                <path d="M38.6031494,21.3334007H16.253952c-0.5615005,0-1.0159006,0.4542999-1.0159006,1.0157986
+             c0,0.5615005,0.4544001,1.0159016,1.0159006,1.0159016h22.3491974c0.5615005,0,1.0158997-0.454401,1.0158997-1.0159016
+             C39.6190491,21.7877007,39.16465,21.3334007,38.6031494,21.3334007z" />
+                <path d="M38.6031494,29.4603004H16.253952c-0.5615005,0-1.0159006,0.4543991-1.0159006,1.0158997
+             s0.4544001,1.0158997,1.0159006,1.0158997h22.3491974c0.5615005,0,1.0158997-0.4543991,1.0158997-1.0158997
+             S39.16465,29.4603004,38.6031494,29.4603004z" />
+                <path d="M28.4444485,37.5872993H16.253952c-0.5615005,0-1.0159006,0.4543991-1.0159006,1.0158997
+             s0.4544001,1.0158997,1.0159006,1.0158997h12.1904964c0.5615025,0,1.0158005-0.4543991,1.0158005-1.0158997
+             S29.0059509,37.5872993,28.4444485,37.5872993z" />
+              </g>
+            </svg>
+          </span>
+
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
         </div>
       </div>
     </div>
@@ -1195,93 +1265,138 @@
 <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js"></script>
 <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-  crossorigin="anonymous"></script>
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-  crossorigin="anonymous"></script>
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-  crossorigin="anonymous"></script>
-  <script src="js/main.js"></script>
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
 
-  <script>
-    //update this with your js_form selector
-    var form_id_js = "javascript_form";
-    var data_js = {
-      // "access_token": "0x3m5jl6ezyde95kkfa12wqb" // sent after you sign up
-      "access_token": "jnhtikq43qqq15mvpgrrs4db" // sent after you sign up
-    };
+<script>
+  //update this with your js_form selector
+  var form_id_js = "javascript_form";
+  var data_js = {
+    // "access_token": " dtrxrev001gblvbtj7m3riew" // for-testing purposes
+    // "access_token": "jnhtikq43qqq15mvpgrrs4db" // token for: contact@dgbtek.com
+  };
+  function showAlert(message, duration) {
+    const alertBox = document.getElementById("alert-box");
+    alertBox.querySelector("p").textContent = message;
+    alertBox.style.display = "flex";
+    setTimeout(() => {
+      alertBox.style.display = "none";
+    }, duration);
+  }
 
-    function js_onSuccess() {
-      // remove this to avoid redirect
-      // window.location = window.location.pathname + "?message=Email+Successfully+Sent%21&isError=0";
-      $('#myModal').modal('toggle');
+  function copyToClipboard(element) {
+    showAlert("Text was copied!", 1000);
+    var $temp = $("<input>");
+    $("#exampleModal2 .modal-body").append($temp);
+    $temp.val($(element).text()).select();
+    document.execCommand("copy");
+    $temp.remove();
+  }
+  function js_onSuccess() {
+    // remove this to avoid redirect
+    // window.location = window.location.pathname + "?message=Email+Successfully+Sent%21&isError=0";
+    $('#myModal').modal('toggle');
 
+  }
+
+  function js_onError(error, message) {
+    $('#exampleModal2 .modal-title').text("Oops! something went wrong");
+    $("#exampleModal2 .modal-body").html(message);
+    $('#exampleModal2').modal('toggle');
+    window.open('mailto:safest@dgbtek.com?subject=sub&body='+message);
+
+    // window.alert("Oops! something went wrong"+"\nCopy your data and send it at: contact@dgbtek.com\n"+message);
+  }
+
+
+
+  //sendButton.onclick = js_send;
+
+  function toParams(data_js) {
+    var form_data = [];
+    for (var key in data_js) {
+      form_data.push(encodeURIComponent(key) + "=" + encodeURIComponent(data_js[key]));
     }
 
-    function js_onError(error) {
-      // remove this to avoid redirect
-      // window.location = window.location.pathname + "?message=Email+could+not+be+sent.&isError=1";
-      window.alert("ERROR: Could not send email:\n" + error);
-    }
+    return form_data.join("&");
+  }
 
+  function myFunction(licenseType) {
 
-  
- //sendButton.onclick = js_send;
+    var sendButton = document.getElementById("js_send");
+    sendButton.disabled = true;
 
- function toParams(data_js) {
-      var form_data = [];
-      for (var key in data_js) {
-        form_data.push(encodeURIComponent(key) + "=" + encodeURIComponent(data_js[key]));
-      }
-
-      return form_data.join("&");
-    }
-    
-    function myFunction(licenseType) {
-
-      var sendButton = document.getElementById("js_send");
-      sendButton.disabled = true;
-     
-      var request = new XMLHttpRequest();
-      request.onreadystatechange = function () {
-        if (request.readyState == 4 && request.status == 200) {
-
-          console.log("Success")
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function () {
+      if (request.readyState == 4 && request.status == 200) {
+        console.log("Success")
+        if (licenseType == 'Academic') {
           document.querySelector("#" + form_id_js + " [name='name']").value = '';
-          document.querySelector("#" + form_id_js + " [name='com_name']").value = '';
           document.querySelector("#" + form_id_js + " [name='title']").value = '';
-          document.querySelector("#" + form_id_js + " [name='com_title']").value = '';
           document.querySelector("#" + form_id_js + " [name='university']").value = '';
-          document.querySelector("#" + form_id_js + " [name='company']").value = '';
           document.querySelector("#" + form_id_js + " [name='email']").value = '';
-          document.querySelector("#" + form_id_js + " [name='com_email']").value = '';
           document.querySelector("#" + form_id_js + " [name='address']").value = '';
-          document.querySelector("#" + form_id_js + " [name='com_address']").value = '';
           document.querySelector("#" + form_id_js + " [name='city']").value = '';
-          document.querySelector("#" + form_id_js + " [name='com_city']").value = '';
           document.querySelector("#" + form_id_js + " [name='state']").value = '';
-          document.querySelector("#" + form_id_js + " [name='com_state']").value = '';
           document.querySelector("#" + form_id_js + " [name='postalCode']").value = '';
-          document.querySelector("#" + form_id_js + " [name='com_postalCode']").value = '';
           document.querySelector("#" + form_id_js + " [name='country']").value = '';
-          document.querySelector("#" + form_id_js + " [name='com_country']").value = '';
           document.querySelector("#" + form_id_js + " [name='phone']").value = '';
-          document.querySelector("#" + form_id_js + " [name='com_phone']").value = '';
           document.querySelector("#" + form_id_js + " [name='agreement']").value = '';
+
+
+          message = "Applicant Name:\t" + document.querySelector("#" + form_id_js + " [name='name']").value
+          message += "\nTitle:\t" + document.querySelector("#" + form_id_js + " [name='title']").value;
+          message += "\nUniversity:\t" + document.querySelector("#" + form_id_js + " [name='university']").value;
+          message += "\nEmail\t" + document.querySelector("#" + form_id_js + " [name='email']").value;
+          message += "\nAddress:\t" + document.querySelector("#" + form_id_js + " [name='address']").value;
+          message += "\nCity:\t" + document.querySelector("#" + form_id_js + " [name='city']").value;
+          message += "\nState:\t" + document.querySelector("#" + form_id_js + " [name='state']").value;
+          message += "\nPost Code:\t" + document.querySelector("#" + form_id_js + " [name='postalCode']").value;
+          message += "\nCountry\t" + document.querySelector("#" + form_id_js + " [name='country']").value;
+          message += "\nPhone:\t" + document.querySelector("#" + form_id_js + " [name='phone']").value;
+          message += "\nAgreement:\t" + document.querySelector("#" + form_id_js + " [name='agreement']").value;
+        }
+        if (licenseType == 'Commercial') {
+          document.querySelector("#" + form_id_js + " [name='com_name']").value = '';
+          document.querySelector("#" + form_id_js + " [name='com_title']").value = '';
+          document.querySelector("#" + form_id_js + " [name='company']").value = '';
+          document.querySelector("#" + form_id_js + " [name='com_email']").value = '';
+          document.querySelector("#" + form_id_js + " [name='com_address']").value = '';
+          document.querySelector("#" + form_id_js + " [name='com_city']").value = '';
+          document.querySelector("#" + form_id_js + " [name='com_state']").value = '';
+          document.querySelector("#" + form_id_js + " [name='com_postalCode']").value = '';
+          document.querySelector("#" + form_id_js + " [name='com_country']").value = '';
+          document.querySelector("#" + form_id_js + " [name='com_phone']").value = '';
           document.querySelector("#" + form_id_js + " [name='com_agreement']").value = '';
 
-        } else
-          if (request.readyState == 4) {
-            js_onError(request.response);
-          }
-      };
-      var message;
-      var subject;
-      if(licenseType=='Academic'){
-      subject = document.querySelector("#" + form_id_js + " [name='email']").value +" | " + licenseType+" "+"License Request";
-      message = "Applicant Name:\t" + document.querySelector("#" + form_id_js + " [name='name']").value 
+          message = "Applicant Name:\t" + document.querySelector("#" + form_id_js + " [name='com_name']").value
+          message += "\nEmail\t" + document.querySelector("#" + form_id_js + " [name='com_email']").value;
+          message += "\nTitle:\t" + document.querySelector("#" + form_id_js + " [name='com_title']").value;
+          message += "\nCompany Name:\t" + document.querySelector("#" + form_id_js + " [name='company']").value;
+          message += "\nWebsite:\t" + document.querySelector("#" + form_id_js + " [name='website']").value;
+          message += "\nCompany ddress:\t" + document.querySelector("#" + form_id_js + " [name='com_address']").value;
+          message += "\nCity:\t" + document.querySelector("#" + form_id_js + " [name='com_city']").value;
+          message += "\nState:\t" + document.querySelector("#" + form_id_js + " [name='com_state']").value;
+          message += "\nCountry\t" + document.querySelector("#" + form_id_js + " [name='com_country']").value;
+          message += "\nPost Code:\t" + document.querySelector("#" + form_id_js + " [name='com_postalCode']").value;
+          message += "\nPhone:\t" + document.querySelector("#" + form_id_js + " [name='com_phone']").value;
+          message += "\nRequest Message:\t" + document.querySelector("#" + form_id_js + " [name='message']").value;
+        }
+
+      } else
+        if (request.readyState == 4) {
+          js_onError(request.error, message)
+        }
+    };
+    var message;
+    var subject;
+    if (licenseType == 'Academic') {
+      subject = document.querySelector("#" + form_id_js + " [name='email']").value + " | " + licenseType + " " + "License Request";
+      message = "Applicant Name:\t" + document.querySelector("#" + form_id_js + " [name='name']").value
       message += "\nTitle:\t" + document.querySelector("#" + form_id_js + " [name='title']").value;
       message += "\nUniversity:\t" + document.querySelector("#" + form_id_js + " [name='university']").value;
       message += "\nEmail\t" + document.querySelector("#" + form_id_js + " [name='email']").value;
@@ -1292,10 +1407,10 @@
       message += "\nCountry\t" + document.querySelector("#" + form_id_js + " [name='country']").value;
       message += "\nPhone:\t" + document.querySelector("#" + form_id_js + " [name='phone']").value;
       message += "\nAgreement:\t" + document.querySelector("#" + form_id_js + " [name='agreement']").value;
-      }
-      else if(licenseType=='Commercial'){
-      subject = document.querySelector("#" + form_id_js + " [name='com_email']").value +" | " + licenseType+" "+"License Request";
-      message = "Applicant Name:\t" + document.querySelector("#" + form_id_js + " [name='com_name']").value 
+    }
+    if (licenseType == 'Commercial') {
+      subject = document.querySelector("#" + form_id_js + " [name='com_email']").value + " | " + licenseType + " " + "License Request";
+      message = "Applicant Name:\t" + document.querySelector("#" + form_id_js + " [name='com_name']").value
       message += "\nEmail\t" + document.querySelector("#" + form_id_js + " [name='com_email']").value;
       message += "\nTitle:\t" + document.querySelector("#" + form_id_js + " [name='com_title']").value;
       message += "\nCompany Name:\t" + document.querySelector("#" + form_id_js + " [name='company']").value;
@@ -1308,21 +1423,21 @@
       message += "\nPhone:\t" + document.querySelector("#" + form_id_js + " [name='com_phone']").value;
       message += "\nRequest Message:\t" + document.querySelector("#" + form_id_js + " [name='message']").value;
 
-      };
-     
-      data_js['subject'] = subject;
-      data_js['text'] = message;
-      var params = toParams(data_js);
+    };
 
-      request.open("POST", "https://postmail.invotes.com/send", true);
-      request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-      request.send(params);
-      return false;
-   
-}
-   
+    data_js['subject'] = subject;
+    data_js['text'] = message;
+    var params = toParams(data_js);
 
-  </script>
+    request.open("POST", "https://postmail.invotes.com/send", true);
+    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    request.send(params);
+    return false;
+
+  }
+
+
+</script>
 </body>
 
 </html>
