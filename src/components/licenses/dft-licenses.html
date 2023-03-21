@@ -377,10 +377,9 @@
             aria-describedby="nameHelp" required>
         </div>
         <div class="mb-3">
-          <label for="inputTitle" class="form-label">Title </label><span
-            style="color: red !important; display: inline; float: none;">*</span>
+          <label for="inputTitle" class="form-label">Title </label>
           <input type="text" name="title" class="form-control" placeholder="(e.g. Professor, Assistant Prof.)"
-            id="licenseInputTitle" required>
+            id="licenseInputTitle">
         </div>
         <div class="mb-3">
           <label for="licenseInputTitle" class="form-label">University Name</label><span
@@ -411,7 +410,7 @@
           <div class="mb-3 col-sm-6">
             <label for="licenseInputTitle" class="form-label">State</label>
             <input type="text" name="state" class="form-control" placeholder="University/Institution's State"
-              id="licenseInputTitle" required>
+              id="licenseInputTitle" >
           </div>
         </div>
 
@@ -419,7 +418,7 @@
           <div class="mb-3 col-sm-6">
             <label for="licenseInputPostalCode" class="form-label">PostalCode</label>
             <input type="text" name="postalCode" class="form-control" placeholder="City Postal Code"
-              id="licenseInputPostalCode" required>
+              id="licenseInputPostalCode" >
           </div>
           <div class="mb-3 col-sm-6">
             <label for="country">Country</label><span
@@ -756,12 +755,12 @@
         <div class="mb-3">
           <label for="phone" class="form-label">Name</label><span
             style="color: red !important; display: inline; float: none;">*</span>
-          <input type="text" name="com_name" class="form-control" placeholder="Name" id="name">
+          <input type="text" name="com_name" class="form-control" placeholder="Name" id="name" required>
         </div>
         <div class="mb-3">
           <label for="fax" class="form-label">Email</label><span
             style="color: red !important; display: inline; float: none;">*</span>
-          <input type="email" name="com_email" class="form-control" placeholder="Email" id="fax" name="fax">
+          <input type="email" name="com_email" class="form-control" placeholder="Email" id="fax" name="fax" required>
         </div>
         <div class="mb-3">
           <label for="inputTitle" class="form-label">Job Title</label><span
@@ -797,7 +796,7 @@
           <div class="mb-3 col-sm-6">
             <label for="licenseInputTitle" class="form-label">State</label>
             <input type="text" name="com_state" class="form-control" placeholder="Company's State"
-              id="licenseInputTitle" required>
+              id="licenseInputTitle">
           </div>
         </div>
 
@@ -805,7 +804,7 @@
           <div class="mb-3 col-sm-6">
             <label for="licenseInputPostalCode" class="form-label">PostalCode</label>
             <input type="text" name="com_postalCode" class="form-control" placeholder="City Postal Code"
-              id="licenseInputPostalCode" required>
+              id="licenseInputPostalCode">
           </div>
           <div class="mb-3 col-sm-6">
             <label for="country">Country</label><span
@@ -1247,6 +1246,22 @@
     </div>
   </div>
 
+
+  <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel3">Confirmation</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-3" id="errorBody" style="white-space: pre-line; text-align: justify;">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div id="footerdgb"></div>
@@ -1276,7 +1291,7 @@
   //update this with your js_form selector
   var form_id_js = "javascript_form";
   var data_js = {
-    // "access_token": " dtrxrev001gblvbtj7m3riew" // for-testing purposes
+    // "access_token": "dtrxrev001gblvbtj7m3riew" // for-testing purposes
     "access_token": "jnhtikq43qqq15mvpgrrs4db" // token for: contact@dgbtek.com
   };
   function showAlert(message, duration) {
@@ -1299,7 +1314,7 @@
   function js_onSuccess() {
     // remove this to avoid redirect
     // window.location = window.location.pathname + "?message=Email+Successfully+Sent%21&isError=0";
-    $('#myModal').modal('toggle');
+    showAlert("✔️ Your data was successfully submitted!",3000)
 
   }
 
@@ -1334,6 +1349,7 @@
     request.onreadystatechange = function () {
       if (request.readyState == 4 && request.status == 200) {
         console.log("Success")
+        js_onSuccess();
         if (licenseType == 'Academic') {
           document.querySelector("#" + form_id_js + " [name='name']").value = '';
           document.querySelector("#" + form_id_js + " [name='title']").value = '';
