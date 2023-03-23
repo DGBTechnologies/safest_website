@@ -388,6 +388,12 @@
             id="licenseInputTitle" required>
         </div>
         <div class="mb-3">
+          <label for="uni_website" class="form-label">University Website URL</label><span
+            style="color: red !important; display: inline; float: none;">*</span>
+          <input type="text" name="uni_website" class="form-control" placeholder="University/Institution website url"
+            id="licenseInputTitle" required>
+        </div>
+        <div class="mb-3">
           <label for="licenseInputTitle" class="form-label">University Email</label><span
             style="color: red !important; display: inline; float: none;">*</span>
           <input type="text" name="email" class="form-control" placeholder="University/Institution Email"
@@ -1354,7 +1360,7 @@
           document.querySelector("#" + form_id_js + " [name='name']").value = '';
           document.querySelector("#" + form_id_js + " [name='title']").value = '';
           document.querySelector("#" + form_id_js + " [name='university']").value = '';
-          document.querySelector("#" + form_id_js + " [name='email']").value = '';
+          document.querySelector("#" + form_id_js + " [name='uni_website']").value = '';
           document.querySelector("#" + form_id_js + " [name='address']").value = '';
           document.querySelector("#" + form_id_js + " [name='city']").value = '';
           document.querySelector("#" + form_id_js + " [name='state']").value = '';
@@ -1367,6 +1373,7 @@
           message = "Applicant Name:\t" + document.querySelector("#" + form_id_js + " [name='name']").value
           message += "\nTitle:\t" + document.querySelector("#" + form_id_js + " [name='title']").value;
           message += "\nUniversity:\t" + document.querySelector("#" + form_id_js + " [name='university']").value;
+          message += "\nUniversity Website URL:\t" + document.querySelector("#" + form_id_js + " [name='uni_website']").value;
           message += "\nEmail\t" + document.querySelector("#" + form_id_js + " [name='email']").value;
           message += "\nAddress:\t" + document.querySelector("#" + form_id_js + " [name='address']").value;
           message += "\nCity:\t" + document.querySelector("#" + form_id_js + " [name='city']").value;
@@ -1415,6 +1422,7 @@
       message = "Applicant Name:\t" + document.querySelector("#" + form_id_js + " [name='name']").value
       message += "\nTitle:\t" + document.querySelector("#" + form_id_js + " [name='title']").value;
       message += "\nUniversity:\t" + document.querySelector("#" + form_id_js + " [name='university']").value;
+      message += "\nUniversity Website URL:\t" + document.querySelector("#" + form_id_js + " [name='uni_website']").value;
       message += "\nEmail\t" + document.querySelector("#" + form_id_js + " [name='email']").value;
       message += "\nAddress:\t" + document.querySelector("#" + form_id_js + " [name='address']").value;
       message += "\nCity:\t" + document.querySelector("#" + form_id_js + " [name='city']").value;
