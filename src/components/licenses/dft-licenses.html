@@ -416,7 +416,7 @@
           <div class="mb-3 col-sm-6">
             <label for="licenseInputTitle" class="form-label">State</label>
             <input type="text" name="state" class="form-control" placeholder="University/Institution's State"
-              id="licenseInputTitle" >
+              id="licenseInputTitle">
           </div>
         </div>
 
@@ -424,7 +424,7 @@
           <div class="mb-3 col-sm-6">
             <label for="licenseInputPostalCode" class="form-label">PostalCode</label>
             <input type="text" name="postalCode" class="form-control" placeholder="City Postal Code"
-              id="licenseInputPostalCode" >
+              id="licenseInputPostalCode">
           </div>
           <div class="mb-3 col-sm-6">
             <label for="country">Country</label><span
@@ -696,6 +696,10 @@
           <!-- <label class="form-check-label" for="exampleCheck1">Check me out</label> -->
           <div>I have read and accept the<a href="" data-bs-toggle="modal" data-bs-target="#exampleModal">license
               Agreement.</a></div>
+          <div class="mt-3 text-bg-primary text"><i><strong>NOTE :</strong> If you are facing any problem submitting your
+              data. Please send the
+              same data at:</i> <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal">contact@dgbtek.com</a>
+          </div>
 
         </div>
 
@@ -1086,6 +1090,11 @@
           <!-- <label class="form-check-label" for="exampleCheck1">Check me out</label> -->
           <div>I have read and accept the<a href="" data-bs-toggle="modal" data-bs-target="#exampleModal1">license
               Agreement.</a></div>
+
+          <div class="mt-3 text-bg-primary text"><i><strong>NOTE :</strong> If you are facing any problem submitting your
+              data. Please send the
+              same data at:</i> <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal">contact@dgbtek.com</a>
+          </div>
         </div>
 
         <button type="submit" class="btn btn-primary" id="js_send" onclick="myFunction('Commercial')">Submit</button>
@@ -1320,7 +1329,7 @@
   function js_onSuccess() {
     // remove this to avoid redirect
     // window.location = window.location.pathname + "?message=Email+Successfully+Sent%21&isError=0";
-    showAlert("✔️ Your data was successfully submitted!",3000)
+    showAlert("✔️ Your data was successfully submitted!", 3000)
 
   }
 
@@ -1328,7 +1337,7 @@
     $('#exampleModal2 .modal-title').text("Oops! something went wrong");
     $("#exampleModal2 .modal-body").html(message);
     $('#exampleModal2').modal('toggle');
-    window.open('mailto:safest@dgbtek.com?subject=sub&body='+message);
+    window.open('mailto:safest@dgbtek.com?subject=sub&body=' + message);
 
     // window.alert("Oops! something went wrong"+"\nCopy your data and send it at: contact@dgbtek.com\n"+message);
   }
