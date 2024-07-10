@@ -369,7 +369,7 @@
     <div class="container-fluid col-sm-10">
 
 
-      <form id="javascript_form" class="col-sm-10 m-auto" onsubmit="return myFunction()">
+      <form id="javascript_form" class="col-sm-10 m-auto" onsubmit="return myFunction('Academic')">
         <div class="mb-3">
           <label for="licenseInputName" class="form-label">Name</label><span
             style="color: red !important; display: inline; float: none;">*</span>
@@ -1306,168 +1306,161 @@
   //update this with your js_form selector
   var form_id_js = "javascript_form";
   var data_js = {
-    // "access_token": "dtrxrev001gblvbtj7m3riew" // for-testing purposes
     "access_token": "jnhtikq43qqq15mvpgrrs4db" // token for: contact@dgbtek.com
   };
+
   function showAlert(message, duration) {
-    const alertBox = document.getElementById("alert-box");
-    alertBox.querySelector("p").textContent = message;
-    alertBox.style.display = "flex";
-    setTimeout(() => {
-      alertBox.style.display = "none";
-    }, duration);
+  const alertBox = document.getElementById("alert-box");
+  alertBox.querySelector("p").textContent = message;
+  alertBox.style.display = "flex";
+  setTimeout(() => {
+    alertBox.style.display = "none";
+  }, duration);
+}
+
+function copyToClipboard(element) {
+  showAlert("Text was copied!", 1000);
+  var $temp = $("<input>");
+  $("#exampleModal2 .modal-body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+}
+
+function js_onSuccess() {
+  showAlert("✔️ Your data was successfully submitted!", 3000);
+}
+
+function js_onError(message) {
+  showAlert(message, 3000);
+}
+
+function toParams(data_js) {
+  var form_data = [];
+  for (var key in data_js) {
+    form_data.push(encodeURIComponent(key) + "=" + encodeURIComponent(data_js[key]));
+  }
+  return form_data.join("&");
+}
+
+function validateForm(licenseType) {
+  let isValid = true;
+  let requiredFields = [];
+
+  if (licenseType === 'Academic') {
+    requiredFields = [
+      "name", "title", "university", "uni_website", "email",
+      "address", "city", "country", "agreement"
+    ];
+  } else if (licenseType === 'Commercial') {
+    requiredFields = [
+      "com_name", "com_title", "company", "com_email",
+      "com_address", "com_city",
+      "com_country", "com_agreement", "website"
+    ];
   }
 
-  function copyToClipboard(element) {
-    showAlert("Text was copied!", 1000);
-    var $temp = $("<input>");
-    $("#exampleModal2 .modal-body").append($temp);
-    $temp.val($(element).text()).select();
-    document.execCommand("copy");
-    $temp.remove();
-  }
-  function js_onSuccess() {
-    // remove this to avoid redirect
-    // window.location = window.location.pathname + "?message=Email+Successfully+Sent%21&isError=0";
-    showAlert("✔️ Your data was successfully submitted!", 3000)
-
-  }
-
-  function js_onError(error, message) {
-    $('#exampleModal2 .modal-title').text("Oops! something went wrong");
-    $("#exampleModal2 .modal-body").html(message);
-    $('#exampleModal2').modal('toggle');
-    window.open('mailto:safest@dgbtek.com?subject=sub&body=' + message);
-
-    // window.alert("Oops! something went wrong"+"\nCopy your data and send it at: contact@dgbtek.com\n"+message);
-  }
-
-
-
-  //sendButton.onclick = js_send;
-
-  function toParams(data_js) {
-    var form_data = [];
-    for (var key in data_js) {
-      form_data.push(encodeURIComponent(key) + "=" + encodeURIComponent(data_js[key]));
+  for (let field of requiredFields) {
+    let fieldValue = document.querySelector(`#${form_id_js} [name='${field}']`).value.trim();
+    if (!fieldValue) {
+      isValid = false;
+      break;
     }
-
-    return form_data.join("&");
   }
 
-  function myFunction(licenseType) {
+  return isValid;
+}
 
-    var sendButton = document.getElementById("js_send");
-    sendButton.disabled = true;
-
-    var request = new XMLHttpRequest();
-    request.onreadystatechange = function () {
-      if (request.readyState == 4 && request.status == 200) {
-        console.log("Success")
-        js_onSuccess();
-        if (licenseType == 'Academic') {
-          document.querySelector("#" + form_id_js + " [name='name']").value = '';
-          document.querySelector("#" + form_id_js + " [name='title']").value = '';
-          document.querySelector("#" + form_id_js + " [name='university']").value = '';
-          document.querySelector("#" + form_id_js + " [name='uni_website']").value = '';
-          document.querySelector("#" + form_id_js + " [name='address']").value = '';
-          document.querySelector("#" + form_id_js + " [name='city']").value = '';
-          document.querySelector("#" + form_id_js + " [name='state']").value = '';
-          document.querySelector("#" + form_id_js + " [name='postalCode']").value = '';
-          document.querySelector("#" + form_id_js + " [name='country']").value = '';
-          document.querySelector("#" + form_id_js + " [name='phone']").value = '';
-          document.querySelector("#" + form_id_js + " [name='agreement']").value = '';
-
-
-          message = "Applicant Name:\t" + document.querySelector("#" + form_id_js + " [name='name']").value
-          message += "\nTitle:\t" + document.querySelector("#" + form_id_js + " [name='title']").value;
-          message += "\nUniversity:\t" + document.querySelector("#" + form_id_js + " [name='university']").value;
-          message += "\nUniversity Website URL:\t" + document.querySelector("#" + form_id_js + " [name='uni_website']").value;
-          message += "\nEmail\t" + document.querySelector("#" + form_id_js + " [name='email']").value;
-          message += "\nAddress:\t" + document.querySelector("#" + form_id_js + " [name='address']").value;
-          message += "\nCity:\t" + document.querySelector("#" + form_id_js + " [name='city']").value;
-          message += "\nState:\t" + document.querySelector("#" + form_id_js + " [name='state']").value;
-          message += "\nPost Code:\t" + document.querySelector("#" + form_id_js + " [name='postalCode']").value;
-          message += "\nCountry\t" + document.querySelector("#" + form_id_js + " [name='country']").value;
-          message += "\nPhone:\t" + document.querySelector("#" + form_id_js + " [name='phone']").value;
-          message += "\nAgreement:\t" + document.querySelector("#" + form_id_js + " [name='agreement']").value;
-        }
-        if (licenseType == 'Commercial') {
-          document.querySelector("#" + form_id_js + " [name='com_name']").value = '';
-          document.querySelector("#" + form_id_js + " [name='com_title']").value = '';
-          document.querySelector("#" + form_id_js + " [name='company']").value = '';
-          document.querySelector("#" + form_id_js + " [name='com_email']").value = '';
-          document.querySelector("#" + form_id_js + " [name='com_address']").value = '';
-          document.querySelector("#" + form_id_js + " [name='com_city']").value = '';
-          document.querySelector("#" + form_id_js + " [name='com_state']").value = '';
-          document.querySelector("#" + form_id_js + " [name='com_postalCode']").value = '';
-          document.querySelector("#" + form_id_js + " [name='com_country']").value = '';
-          document.querySelector("#" + form_id_js + " [name='com_phone']").value = '';
-          document.querySelector("#" + form_id_js + " [name='com_agreement']").value = '';
-
-          message = "Applicant Name:\t" + document.querySelector("#" + form_id_js + " [name='com_name']").value
-          message += "\nEmail\t" + document.querySelector("#" + form_id_js + " [name='com_email']").value;
-          message += "\nTitle:\t" + document.querySelector("#" + form_id_js + " [name='com_title']").value;
-          message += "\nCompany Name:\t" + document.querySelector("#" + form_id_js + " [name='company']").value;
-          message += "\nWebsite:\t" + document.querySelector("#" + form_id_js + " [name='website']").value;
-          message += "\nCompany ddress:\t" + document.querySelector("#" + form_id_js + " [name='com_address']").value;
-          message += "\nCity:\t" + document.querySelector("#" + form_id_js + " [name='com_city']").value;
-          message += "\nState:\t" + document.querySelector("#" + form_id_js + " [name='com_state']").value;
-          message += "\nCountry\t" + document.querySelector("#" + form_id_js + " [name='com_country']").value;
-          message += "\nPost Code:\t" + document.querySelector("#" + form_id_js + " [name='com_postalCode']").value;
-          message += "\nPhone:\t" + document.querySelector("#" + form_id_js + " [name='com_phone']").value;
-          message += "\nRequest Message:\t" + document.querySelector("#" + form_id_js + " [name='message']").value;
-        }
-
-      } else
-        if (request.readyState == 4) {
-          js_onError(request.error, message)
-        }
-    };
-    var message;
-    var subject;
-    if (licenseType == 'Academic') {
-      subject = document.querySelector("#" + form_id_js + " [name='email']").value + " | " + licenseType + " " + "License Request";
-      message = "Applicant Name:\t" + document.querySelector("#" + form_id_js + " [name='name']").value
-      message += "\nTitle:\t" + document.querySelector("#" + form_id_js + " [name='title']").value;
-      message += "\nUniversity:\t" + document.querySelector("#" + form_id_js + " [name='university']").value;
-      message += "\nUniversity Website URL:\t" + document.querySelector("#" + form_id_js + " [name='uni_website']").value;
-      message += "\nEmail\t" + document.querySelector("#" + form_id_js + " [name='email']").value;
-      message += "\nAddress:\t" + document.querySelector("#" + form_id_js + " [name='address']").value;
-      message += "\nCity:\t" + document.querySelector("#" + form_id_js + " [name='city']").value;
-      message += "\nState:\t" + document.querySelector("#" + form_id_js + " [name='state']").value;
-      message += "\nPost Code:\t" + document.querySelector("#" + form_id_js + " [name='postalCode']").value;
-      message += "\nCountry\t" + document.querySelector("#" + form_id_js + " [name='country']").value;
-      message += "\nPhone:\t" + document.querySelector("#" + form_id_js + " [name='phone']").value;
-      message += "\nAgreement:\t" + document.querySelector("#" + form_id_js + " [name='agreement']").value;
+function myFunction(licenseType) {
+  // var sendButton = document.getElementById("js_send");
+  if (!validateForm(licenseType)) {
+    js_onError("Please fill in all required fields.");
+    // sendButton.disabled = false;
+    return;
+  }
+  // sendButton.disabled = true;
+  
+  var request = new XMLHttpRequest();
+  request.onreadystatechange = function () {
+    if (request.readyState == 4 && request.status == 200) {
+      console.log("Success");
+      js_onSuccess();
+      if (licenseType == 'Academic') {
+        document.querySelector("#" + form_id_js + " [name='name']").value = '';
+        document.querySelector("#" + form_id_js + " [name='title']").value = '';
+        document.querySelector("#" + form_id_js + " [name='university']").value = '';
+        document.querySelector("#" + form_id_js + " [name='uni_website']").value = '';
+        document.querySelector("#" + form_id_js + " [name='email']").value = '';
+        document.querySelector("#" + form_id_js + " [name='address']").value = '';
+        document.querySelector("#" + form_id_js + " [name='city']").value = '';
+        document.querySelector("#" + form_id_js + " [name='state']").value = '';
+        document.querySelector("#" + form_id_js + " [name='postalCode']").value = '';
+        document.querySelector("#" + form_id_js + " [name='country']").value = '';
+        document.querySelector("#" + form_id_js + " [name='phone']").value = '';
+        document.querySelector("#" + form_id_js + " [name='agreement']").value = '';
+        console.log("line 1404");
+      } else if (licenseType == 'Commercial') {
+        document.querySelector("#" + form_id_js + " [name='com_name']").value = '';
+        document.querySelector("#" + form_id_js + " [name='com_title']").value = '';
+        document.querySelector("#" + form_id_js + " [name='company']").value = '';
+        document.querySelector("#" + form_id_js + " [name='com_email']").value = '';
+        document.querySelector("#" + form_id_js + " [name='com_address']").value = '';
+        document.querySelector("#" + form_id_js + " [name='com_city']").value = '';
+        document.querySelector("#" + form_id_js + " [name='com_state']").value = '';
+        document.querySelector("#" + form_id_js + " [name='com_postalCode']").value = '';
+        document.querySelector("#" + form_id_js + " [name='com_country']").value = '';
+        document.querySelector("#" + form_id_js + " [name='com_phone']").value = '';
+        document.querySelector("#" + form_id_js + " [name='com_agreement']").value = '';
+        document.querySelector("#" + form_id_js + " [name='website']").value = '';
+        document.querySelector("#" + form_id_js + " [name='message']").value = '';
+      }
+    } else if (request.readyState == 4) {
+      js_onError("There was an error submitting the form.");
     }
-    if (licenseType == 'Commercial') {
-      subject = document.querySelector("#" + form_id_js + " [name='com_email']").value + " | " + licenseType + " " + "License Request";
-      message = "Applicant Name:\t" + document.querySelector("#" + form_id_js + " [name='com_name']").value
-      message += "\nEmail\t" + document.querySelector("#" + form_id_js + " [name='com_email']").value;
-      message += "\nTitle:\t" + document.querySelector("#" + form_id_js + " [name='com_title']").value;
-      message += "\nCompany Name:\t" + document.querySelector("#" + form_id_js + " [name='company']").value;
-      message += "\nWebsite:\t" + document.querySelector("#" + form_id_js + " [name='website']").value;
-      message += "\nCompany ddress:\t" + document.querySelector("#" + form_id_js + " [name='com_address']").value;
-      message += "\nCity:\t" + document.querySelector("#" + form_id_js + " [name='com_city']").value;
-      message += "\nState:\t" + document.querySelector("#" + form_id_js + " [name='com_state']").value;
-      message += "\nCountry\t" + document.querySelector("#" + form_id_js + " [name='com_country']").value;
-      message += "\nPost Code:\t" + document.querySelector("#" + form_id_js + " [name='com_postalCode']").value;
-      message += "\nPhone:\t" + document.querySelector("#" + form_id_js + " [name='com_phone']").value;
-      message += "\nRequest Message:\t" + document.querySelector("#" + form_id_js + " [name='message']").value;
+  };
+  
+  var message;
+  var subject;
 
-    };
-
-    data_js['subject'] = subject;
-    data_js['text'] = message;
-    var params = toParams(data_js);
-
-    request.open("POST", "https://postmail.invotes.com/send", true);
-    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    request.send(params);
-    return false;
-
+  if (licenseType == 'Academic') {
+    subject = document.querySelector("#" + form_id_js + " [name='email']").value + " | " + licenseType + " " + "License Request";
+    message = "Applicant Name:\t" + document.querySelector("#" + form_id_js + " [name='name']").value;
+    console.log((document.querySelector("#" + form_id_js + " [name='name']").value),  "#" + form_id_js + " [name='name']" )
+    message += "\nTitle:\t" + document.querySelector("#" + form_id_js + " [name='title']").value;
+    message += "\nUniversity:\t" + document.querySelector("#" + form_id_js + " [name='university']").value;
+    message += "\nUniversity Website URL:\t" + document.querySelector("#" + form_id_js + " [name='uni_website']").value;
+    message += "\nEmail:\t" + document.querySelector("#" + form_id_js + " [name='email']").value;
+    message += "\nAddress:\t" + document.querySelector("#" + form_id_js + " [name='address']").value;
+    message += "\nCity:\t" + document.querySelector("#" + form_id_js + " [name='city']").value;
+    message += "\nState:\t" + document.querySelector("#" + form_id_js + " [name='state']").value;
+    message += "\nPost Code:\t" + document.querySelector("#" + form_id_js + " [name='postalCode']").value;
+    message += "\nCountry:\t" + document.querySelector("#" + form_id_js + " [name='country']").value;
+    message += "\nPhone:\t" + document.querySelector("#" + form_id_js + " [name='phone']").value;
+    message += "\nAgreement:\t" + document.querySelector("#" + form_id_js + " [name='agreement']").value;
+  } else if (licenseType == 'Commercial') {
+    subject = document.querySelector("#" + form_id_js + " [name='com_email']").value + " | " + licenseType + " " + "License Request";
+    message = "Applicant Name:\t" + document.querySelector("#" + form_id_js + " [name='com_name']").value;
+    message += "\nEmail:\t" + document.querySelector("#" + form_id_js + " [name='com_email']").value;
+    message += "\nTitle:\t" + document.querySelector("#" + form_id_js + " [name='com_title']").value;
+    message += "\nCompany Name:\t" + document.querySelector("#" + form_id_js + " [name='company']").value;
+    message += "\nWebsite:\t" + document.querySelector("#" + form_id_js + " [name='website']").value;
+    message += "\nCompany Address:\t" + document.querySelector("#" + form_id_js + " [name='com_address']").value;
+    message += "\nCity:\t" + document.querySelector("#" + form_id_js + " [name='com_city']").value;
+    message += "\nState:\t" + document.querySelector("#" + form_id_js + " [name='com_state']").value;
+    message += "\nCountry:\t" + document.querySelector("#" + form_id_js + " [name='com_country']").value;
+    message += "\nPost Code:\t" + document.querySelector("#" + form_id_js + " [name='com_postalCode']").value;
+    message += "\nPhone:\t" + document.querySelector("#" + form_id_js + " [name='com_phone']").value;
+    message += "\nRequest Message:\t" + document.querySelector("#" + form_id_js + " [name='message']").value;
   }
+  data_js['subject'] = subject;
+  data_js['text'] = message;
+  var params = toParams(data_js);
+  // return
+  request.open("POST", "https://postmail.invotes.com/send", true);
+  request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  request.send(params);
+  return false;
+}
 
 
 </script>
