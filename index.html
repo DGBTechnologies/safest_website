@@ -76,7 +76,7 @@
 		</div>
 	</section>
 	<div class="content container-fluid col-sm-10  my-3 ">
-		<div style="pointer-events: none; border:none !important;" class="card m-auto">
+		<div  class="card m-auto">
 			<!-- <strong>Say Hello To SAFEST
 					<div class="row ">
 				<span style="border-radius: 15px; background-color: #00ACEE; color: white;
@@ -87,77 +87,79 @@
 				<img src="/src/assets/images/ween.png" width="auto" height="150vh">
 			</div>
 			<div class="m-auto" style="padding: 0px 60px 0px 50px">
-				<h4 class="mt-0 text-center"><strong><i>A probabilistic risk assessment toolchain based on dynamic fault
-							trees and reward event trees</i></strong></h4>
-				<p class=" mt-3" style="text-align: justify;">
-					<!-- Fault trees analysis is essential to keep e.g. our power plants,
-							trains, drones, medical devices, satellites and self-driving cars
-							safe and operational. FTA usage is required by e.g. the Federal
-							Aviation Authority (FAA), the Nuclear Regulatory Commission (NRC),
-							in ISO 26262 for autonomous driving or for software development
-							in aerospace systems (by NASA and ESA). Various fault tree extensions
-							exist that increase expressiveness while yielding succinct and
-							comprehensible models e.g. dynamic fault trees, their analysis
-							is however a main bottleneck: techniques do not scale and require
-							substantial manual effort. -->
-					Probabilistic risk assessment (PRA) is essential to keep e.g. our power plants, trains, drones,
-					medical devices, satellites, and self-driving cars safe and operational within acceptable risk
-					levels. PRA usage is required by e.g. the Federal Aviation Authority (FAA), the Nuclear Regulatory
-					Commission (NRC), in ISO 26262 for autonomous driving or for software development in aerospace
-					systems (by NASA and ESA).
-				</p>
-				<p class=" mt-3" style="text-align: justify;">
-					PRA encompasses two steps: risk quantification - through static fault tree analysis (FTA) -, and
-					consequence quantification - through event tree analysis (ETA).
-				</p>
-				<p class=" mt-3" style="text-align: justify;">
-					Though highly adopted formalism, static fault trees are very simple formalism – equivalent to
-					boolean logic – and therefore cannot faithfully model fail-operational/fault-tolerant systems having
-					redundancies, (probabilistic) functional dependencies, and temporal ordering among failing
-					components. Similarly, traditional event trees cannot model the decision-making – might be required
-					to mitigate the impact of e.g. accidental events –, and quantify measures like no of casualties,
-					monetary loss, etc.
-
-				</p>
+				<h4 class="mt-0 text-center" style="cursor: pointer;" onclick="toggleContent()">
+					<strong><i>A probabilistic risk assessment toolchain based on dynamic fault trees and reward event trees</i></strong>
+				</h4>
+				<div id="content" style="display: none;">
+					<p class="mt-3" style="text-align: justify;">
+						Probabilistic risk assessment (PRA) is essential to keep e.g. our power plants, trains, drones,
+						medical devices, satellites, and self-driving cars safe and operational within acceptable risk
+						levels. PRA usage is required by e.g. the Federal Aviation Authority (FAA), the Nuclear Regulatory
+						Commission (NRC), in ISO 26262 for autonomous driving or for software development in aerospace
+						systems (by NASA and ESA).
+					</p>
+					<p class="mt-3" style="text-align: justify;">
+						PRA encompasses two steps: risk quantification - through static fault tree analysis (FTA) -, and
+						consequence quantification - through event tree analysis (ETA).
+					</p>
+					<p class="mt-3" style="text-align: justify;">
+						Though highly adopted formalism, static fault trees are very simple formalism – equivalent to
+						boolean logic – and therefore cannot faithfully model fail-operational/fault-tolerant systems having
+						redundancies, (probabilistic) functional dependencies, and temporal ordering among failing
+						components. Similarly, traditional event trees cannot model the decision-making – might be required
+						to mitigate the impact of e.g. accidental events –, and quantify measures like no of casualties,
+						monetary loss, etc.
+					</p>
+					<div class="row  m-auto mt-5 mb-4">
+						<div class="col-sm-1"></div>
+						<div class="col-sm-2">
+							<img src="/src/assets/images/USNRC.png" width="60%">
+						</div>
+						<div class="col-sm-2 ">
+							<img src="/src/assets/images/NASA.png" width="60%">
+						</div>
+						<div class="col-sm-2 ">
+							<img src="/src/assets/images/esa.png" width="60%">
+						</div>
+						<div class="col-sm-2 ">
+							<img src="/src/assets/images/FAA.png" width="60%">
+						</div>
+						<div class="col-sm-2 ">
+							<img src="/src/assets/images/ENSREG.png" width="100%">
+						</div>
+						<div class="col-sm-1"></div>
+					</div>
+				</div>
 			</div>
+			
+			<script>
+				function toggleContent() {
+					const content = document.getElementById('content');
+					content.style.display = content.style.display === 'none' ? 'block' : 'none';
+				}
+			</script>
+			
 			<!-- <div class="col-sm-4 m-auto" style="padding: 0px 60px 0px 50px">	
 							coloumn-2	
 						</div> -->
-		</div>
-
-		<div class="row  m-auto mt-5 mb-4">
-			<div class="col-sm-1"></div>
-			<div class="col-sm-2">
-				<img src="/src/assets/images/USNRC.png" width="60%">
-			</div>
-			<div class="col-sm-2 ">
-				<img src="/src/assets/images/NASA.png" width="60%">
-			</div>
-			<div class="col-sm-2 ">
-				<img src="/src/assets/images/esa.png" width="60%">
-			</div>
-			<div class="col-sm-2 ">
-				<img src="/src/assets/images/FAA.png" width="60%">
-			</div>
-			<div class="col-sm-2 ">
-				<img src="/src/assets/images/ENSREG.png" width="100%">
-			</div>
-			<div class="col-sm-1"></div>
 		</div>
 	</div>
 	</div>
 
 	<div class="content container-fluid col-sm-10">
-		<div style="pointer-events: none;" class="my-3  m-auto">
+		<div class="my-3  m-auto">
 			<div class="row mt-5">
 				<div class="col-sm-1"></div>
 				<div class="col-sm-2">
-					<img src="/src/assets/images/twente.png" width="100%">
+					<img style="background-color: black;" src="/src/assets/images/logos/ut-logo.svg" width="70%">
 				</div>
 				<div class="col-sm-6">
 
 					<p class="mt-0" style="text-align: justify;">
-						In collaboration with Twente and RWTH Aachen universities, we developed a fully automatic,
+						In collaboration with 
+						<a href="https://www.utwente.nl/en/eemcs/fmt/" target="_blank">[University of Twente]</a> and
+						<a href="https://moves.rwth-aachen.de/" target="_blank">[RWTH Aachen University]</a> 
+						, we developed a fully automatic,
 						scalable, and state-of-the-art tool SAFEST that can faithfully assess the risk of
 						fail-operational/fault-tolerant systems. It goes beyond the capabilities of existing commercial
 						tools in offering more flexible modeling and analyses. It has two modules:
@@ -358,26 +360,52 @@
 							<h2 class="accordion-header">
 								<button type="button" class="d-block text-center accordion-button collapsed"
 									data-bs-toggle="collapse" data-bs-target="#collapseFour">
-									<strong class="display-6">Fault trees for Quantification of Dependability
-										Metrics</strong></button>
+									<strong class="display-6">Fault Trees for Quantification of Dependability Metrics</strong></button>
 							</h2>
 							<div id="collapseFour" class="accordion-collapse collapse"
 								data-bs-parent="#productsAccordion">
 								<div class="card-body">
-									<p>FTA focuses on computing various dependability metrics, i.e. key performance
-										indicators that measure how well a system performs. Standard metrics are the
-										system:
-										<br><u>Reliability</u> : the probability that no failure occurred until time T
-										<br><u> Conditional Reliability</u> : the probability that no failure occurred
-										until time T given a component has already failed
-										<br> <u>Availability</u> : the average percentage of time that a system is
-										operational
-										<br> <u> Mean Time to Failure (MTTF)</u>: the mean time between failures,
-										<br><u> Criticality of components </u>: to what extent does a component failure
-										contribute to a system failure, etc.
-										<br>
-										Our tools also handles various extensions that include the cost and impact of
-										failures.
+<p class="has-line-data" data-line-start="2" data-line-end="3"><strong>SAFEST</strong> focuses on computing various dependability metrics, i.e., key performance indicators that measure a system’s performance. SAFEST categorizes metrics into different categories based on their complexity: Basic, Advanced, Importance, and Custom.</p>
+<hr>
+<p class="has-line-data" data-line-start="6" data-line-end="7"><strong>Basic</strong></p>
+<ul>
+<li class="has-line-data" data-line-start="8" data-line-end="9"><strong>Reliability</strong>: Probability of failure within a given time bound.</li>
+<li class="has-line-data" data-line-start="9" data-line-end="10"><strong>Unreliability</strong>: The complement of reliability (1 - Reliability).</li>
+<li class="has-line-data" data-line-start="10" data-line-end="11"><strong>Average failure probability per hour</strong>.</li>
+<li class="has-line-data" data-line-start="11" data-line-end="12"><strong>Mean-Time-To-Failure</strong>: Expected time to system failure or scenario occurrence.</li>
+<li class="has-line-data" data-line-start="12" data-line-end="13"><strong>Event Probability within a Time-Bound</strong>: Probability that an event occurs within a given time.</li>
+<li class="has-line-data" data-line-start="13" data-line-end="14"><strong>Event Probability</strong>: Probability that an event occurs.</li>
+<li class="has-line-data" data-line-start="14" data-line-end="16"><strong>Instantaneous Probability</strong>: Probability that an event occurs at a given time.</li>
+</ul>
+<hr>
+<p class="has-line-data" data-line-start="18" data-line-end="19"><strong>Advanced</strong></p>
+<ul>
+<li class="has-line-data" data-line-start="20" data-line-end="21"><strong>Full Function Availability (FFA)</strong>: Time-bounded probability that the system provides full functionality, indicating it has neither failed nor degraded.</li>
+<li class="has-line-data" data-line-start="21" data-line-end="22"><strong>Failure Without Degradation (FWD)</strong>: Time-bounded probability that the system fails without being degraded first.</li>
+<li class="has-line-data" data-line-start="22" data-line-end="23"><strong>Mean Time from Degradation to Failure (MTDF)</strong>: Expected time from the moment of degradation to system failure.</li>
+<li class="has-line-data" data-line-start="23" data-line-end="24"><strong>Minimal Degraded Reliability (MDR)</strong>: Worst-case failure probability when using the system in a degraded state.</li>
+<li class="has-line-data" data-line-start="24" data-line-end="25"><strong>Failure under Limited Operation in Degradation (FLOD_1)</strong>: Probability of failure when imposing a time limit for using a degraded system.</li>
+<li class="has-line-data" data-line-start="25" data-line-end="26"><strong>Failure under Limited Operation in Degradation (FLOD_2)</strong>: Similar to FLOD_1, but with additional conditions of avoiding prior system failure.</li>
+<li class="has-line-data" data-line-start="26" data-line-end="27"><strong>System Integrity under Limited Fail-Operation (SILFO)</strong>: Considers the system-wide impact of limiting the degraded operation time, with aspects FWD and FLOD_1.</li>
+<li class="has-line-data" data-line-start="27" data-line-end="28"><strong>Reach-Avoid Probability</strong>: Probability of one event occurring without another event happening before.</li>
+<li class="has-line-data" data-line-start="28" data-line-end="30"><strong>Time-Bounded Reach-Avoid Probability</strong>: Probability of an event occurring within a time limit without another event happening beforehand.</li>
+</ul>
+<hr>
+<p class="has-line-data" data-line-start="32" data-line-end="33"><strong>Importance</strong></p>
+<ul>
+<li class="has-line-data" data-line-start="34" data-line-end="35"><strong>Birnbaum Index (BI)</strong>: Measures how much the system’s unreliability depends on a specific component’s unreliability.</li>
+<li class="has-line-data" data-line-start="35" data-line-end="36"><strong>Criticality Importance (CI)</strong>: Similar to BI, scaled by the ratio of component and system unreliability.</li>
+<li class="has-line-data" data-line-start="36" data-line-end="37"><strong>Risk Achievement Worth (RAW)</strong>: Impact of a component’s total degradation on system unreliability.</li>
+<li class="has-line-data" data-line-start="37" data-line-end="38"><strong>Risk Reduction Worth (RRW)</strong>: Impact of making a component fully reliable on system unreliability.</li>
+<li class="has-line-data" data-line-start="38" data-line-end="39"><strong>Diagnostics Importance Factor (DIF)</strong>: Frequency of a component’s failure in states where the system has failed.</li>
+<li class="has-line-data" data-line-start="39" data-line-end="40"><strong>BAGT+</strong>: Change in Mean-Time-To-Failure (MTTF) if the component fully degrades.</li>
+<li class="has-line-data" data-line-start="40" data-line-end="42"><strong>BAGT-</strong>: Change in MTTF if the component is fully reliable.</li>
+</ul>
+<hr>
+<p class="has-line-data" data-line-start="44" data-line-end="45"><strong>Custom</strong></p>
+<ul>
+<li class="has-line-data" data-line-start="46" data-line-end="47">Custom properties can be specified using <strong>Continuous Stochastic Logic (CSL)</strong>.</li>
+</ul>
 								</div>
 							</div>
 						</div>
@@ -414,7 +442,7 @@
 						<li class="hex">
 							<div class="hexIn">
 								<a class="hexLink card text-center"
-									href="/src/components/dcumentations/dft-documentations.html">
+									href="/src/components/case_studies/dft-case-studies.html">
 									<div class='img bg-light'><img src="/src/assets/images/aviation.jpg" alt="aviation">
 									</div>
 									<div
@@ -429,7 +457,7 @@
 						<li class="hex">
 							<div class="hexIn">
 								<a class="hexLink card text-center"
-									href="/src/components/dcumentations/dft-documentations.html">
+									href="/src/components/case_studies/dft-case-studies.html">
 									<div class='img bg-light'><img src="/src/assets/images/robotics.jpg" alt="robotics">
 									</div>
 									<div
@@ -443,7 +471,7 @@
 						<li class="hex">
 							<div class="hexIn">
 								<a class="hexLink card text-center"
-									href="/src/components/dcumentations/dft-documentations.html">
+									href="/src/components/case_studies/dft-case-studies.html">
 									<div class='img bg-light'><img src="/src/assets/images/intelligent systems.png"
 											alt="intelligent systems"></div>
 									<div
@@ -457,7 +485,7 @@
 						<li class="hex">
 							<div class="hexIn">
 								<a class="hexLink card text-center"
-									href="/src/components/dcumentations/dft-documentations.html">
+									href="/src/components/case_studies/dft-case-studies.html">
 									<div class='img bg-light'><img src="/src/assets/images/medical.png" alt="medical">
 									</div>
 									<div
@@ -471,7 +499,7 @@
 						<li class="hex">
 							<div class="hexIn">
 								<a class="hexLink card text-center"
-									href="/src/components/getting_started/dft-getting-started.html">
+									href="/src/components/case_studies/dft-case-studies.html">
 									<div class='img bg-light'><img src="/src/assets/images/defence.jpg" alt="defense">
 									</div>
 									<div class="card-img-overlay d-flex flex-column
@@ -485,7 +513,7 @@
 						<li class="hex">
 							<div class="hexIn">
 								<a class="hexLink card text-center"
-									href="/src/components/dcumentations/dft-documentations.html">
+									href="/src/components/case_studies/dft-case-studies.html">
 									<div class='img bg-light'><img src="/src/assets/images/nuclear.jpg" alt="nuclear">
 									</div>
 									<div
@@ -499,7 +527,7 @@
 						<li class="hex">
 							<div class="hexIn">
 								<a class="hexLink card text-center"
-									href="/src/components/dcumentations/dft-documentations.html">
+									href="/src/components/case_studies/dft-case-studies.html">
 									<div class='img bg-light'><img src="/src/assets/images/energy.jpg" alt="energy">
 									</div>
 									<div
@@ -513,7 +541,7 @@
 						<li class="hex">
 							<div class="hexIn">
 								<a class="hexLink card text-center"
-									href="/src/components/dcumentations/dft-documentations.html">
+									href="/src/components/case_studies/dft-case-studies.html">
 									<div class='img bg-light'><img src="/src/assets/images/oil & gas.jpg"
 											alt="oil & gas"></div>
 									<div
@@ -527,7 +555,7 @@
 						<li class="hex">
 							<div class="hexIn">
 								<a class="hexLink card text-center"
-									href="/src/components/dcumentations/dft-documentations.html">
+									href="/src/components/case_studies/dft-case-studies.html">
 									<div class='img bg-light'><img src="/src/assets/images/construction.jpg"
 											alt="construction"></div>
 									<div

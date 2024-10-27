@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Preview</title>
+    <style>
+        /* Styling for the markdown content */
+        #markdown-content {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        #markdown-content h1, #markdown-content h2, #markdown-content h3 {
+            color: #333;
+        }
+        #markdown-content pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        #markdown-content code {
+            background-color: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="markdown-content">Loading...</div>
+
+<script>
+    async function fetchAndRenderMarkdown() {
+        // Replace with your markdown file's raw URL, using a CORS proxy
+        const markdownUrl = 'https://api.allorigins.win/raw?url=https://raw.githubusercontent.com/moves-rwth/stormpy/1.9.0/CHANGELOG.md';
+
+        try {
+            // Fetch the markdown file content through the proxy
+            const response = await fetch(markdownUrl);
+            const markdownText = await response.text();
+
+            // Render markdown to HTML
+            const markdownHTML = marked.parse(markdownText);
+
+            // Insert HTML into the page
+            document.getElementById('markdown-content').innerHTML = markdownHTML;
+        } catch (error) {
+            console.error('Error fetching markdown:', error);
+            document.getElementById('markdown-content').innerText = "Error loading content.";
+        }
+    }
+
+    // Load the marked library from CDN
+    const script = document.createElement('script');
+    script.src = "https://cdn.jsdelivr.net/npm/marked/marked.min.js";
+    script.onload = fetchAndRenderMarkdown;
+    document.head.appendChild(script);
+</script>
+
+</body>
+</html>
