@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Change Log -SAFEST</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/index.css" />
+
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="/script.js "></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav
+      id="navbar"
+      class="navbar navbar-light bg-light navbar-expand-sm fixed-top"
+      style="background-color: white; overflow: auto"
+    >
+      <a class="navbar-brand" href="/index.html"
+        ><img
+          src="/src/assets/images/SAFEST_LOGO_.png"
+          style="width: auto; height: 40px"
+      /></a>
+
+      <button
+        type="button"
+        class="navbar-toggler"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapse"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="navbar-collapse collapse" id="collapse">
+        <ul class="navbar-nav ms-auto me-auto">
+          <li class="nav-item">
+            <a
+              href="/src/components/tool_features/dft-tool-features.html"
+              class="nav-link"
+              >Tool Features</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              href="/src/components/installation/installation.html"
+              class="nav-link"
+              >Installation</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              href="/src/components/licenses/dft-licenses.html"
+              class="nav-link"
+              >Licenses</a
+            >
+          </li>
+          <li class="nav-item active">
+            <a
+              href=" /src/components/documentations/dft-documentations.html"
+              class="nav-link"
+              >Documentations</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              href="/src/components/validation/validation.html"
+              class="nav-link"
+              >Validation</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="/src/components/support/dft-support.html" class="nav-link"
+              >Support</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              href="/src/components/case_studies/dft-case-studies.html"
+              class="nav-link"
+              >Case Studies</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="/src/components/team/dft-team.html" class="nav-link"
+              >Team</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              href="/src/components/collaborator/collaborator.html"
+              class="nav-link"
+              > Clients</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="/src/components/contact/contact.html" class="nav-link"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+      <a class="navbar-brand" href="https://www.dgbtek.com"
+        ><img
+          src="/src/assets/images/dgb-logo.png"
+          style="width: auto; height: 40px"
+      /></a>
+    </nav>
+
+    <div class="container my-5 py-5">
+        <h1>Change Log (Version 2.0.0)</h1>
+        <ul>
+            <li>Scalable static & dynamic fault trees (DFTs)</li>
+            <li>Scalable event trees with non-deterministic choices, and rewards/losses at nodes</li>
+            <li>Auto translation of SysML v2 to (dynamic) fault trees</li>
+            <li><a href="#" style="pointer-events: none;">Multipage & hierarchical fault/event trees</a></li>
+            <li><a href="#" style="pointer-events: none;">Common cause failure groups (CCF groups): Alpha, Beta, Multi Greek, Binomial-model, Custom models</a></li>
+            <li>Probabilistic dependencies on fault trees: Failure-on-demand, Dynamic addition of new failure modes, etc.</li>
+            <li><a href="#" style="pointer-events: none;">Initial/Boundary condition sets: failure evidence – BEs and modules can be set to fail before analysis</a></li>
+            <li>Rich set of measures in continuous stochastic logic (CSL).</li>
+            <li>Scalable analysis of FTs via BDDs & Model-checking</li>
+            <li><a href="#" style="pointer-events: none;">Modular analysis for Birnbaum Index, Criticality Importance, RAW, RRW, Diagnostics Imp. Factor, Bagt+, Bagt, etc. for large DFTs</a></li>
+            <li>Define & quantify complex events on fault tree elements using model-checking</li>
+            <li>Exact and approx. sound analysis of DFTs</li>
+            <li><a href="#" style="pointer-events: none;">(Multipage) Interactive graphical simulation of DFTs</a></li>
+            <li><a href="#" style="pointer-events: none;">MCS for static fault trees, and their multi-page graphical display</a></li>
+            <li>Graphs on CSL measures</li>
+            <li>Parametrized fault/event tree models</li>
+            <li>Graphical, tabular, (parametric) Galileo views</li>
+            <li>Automatic module detection, fault tree simplification</li>
+            <li><a href="#" style="pointer-events: none;">Multi-attributes/color tagging to elements</a></li>
+            <li><a href="#" style="pointer-events: none;">Mirror images of fault tree elements</a></li>
+            <li><a href="#" style="pointer-events: none;">Integration of fault trees into event trees</a></li>
+            <li>Finding an optimal sequence of decisions in event trees to minimize risk</li>
+            <li>Quantify expected losses in event trees e.g. casualties, emissions, etc.</li>
+            <li><a href="#" style="pointer-events: none;">Extensive filters, group find & replace</a></li>
+            <li><a href="#" style="pointer-events: none;">Duplicate fault/event trees</a></li>
+            <li><a href="#" style="pointer-events: none;">Group deletion, update of elements</a></li>
+            <li>Importing/exporting FTs in JSON, Galileo, and Latex</li>
+            <li>Importing/exporting model parameters in Excel</li>
+            <li>Generating empirical and mixture failure distributions</li>
+            <li>URLs of manuals can be attached with elements</li>
+            <li>Easy integration with AI/ML/NLP technologies</li>
+            <li>Technology stack (Angular, Python)</li>
+        </ul>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-5 text-center text-lg-start bg-white text-muted">
+      <!-- Section: Social media -->
+      <section
+        class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+      >
+        <!-- Left -->
+        <div class="me-5 d-none d-lg-block">
+          <!-- <span>Get connected with us on social networks</span> -->
+        </div>
+        <!-- Left -->
+
+        <!-- Right -->
+        <div>
+          <a
+            href="https://github.com/DGBTechnologies/SAFEST/discussions"
+            class="social text-decoration-none me-4 link-secondary"
+          >
+            <i class="fa fa-google"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/company/dgbtechnologies/"
+            class="social text-decoration-none me-4 link-secondary"
+          >
+            <i class="fa fa-linkedin"></i>
+          </a>
+          <a
+            href="https://github.com/DGBTechnologies/SAFEST/discussions"
+            class="social text-decoration-none me-4 link-secondary"
+          >
+            <i class="fa fa-github"></i>
+          </a>
+        </div>
+        <!-- Right -->
+      </section>
+      <!-- Section: Social media -->
+
+      <!-- Section: Links  -->
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <img
+                src="/src/assets/images/dgb-logo.png"
+                width="150px"
+                alt="Dgb-logo"
+              />
+
+              <p class="text-justify">
+                An independent technology research company dedicated to
+                implementing next-generation ideas and inventing solutions in
+                niche technology areas.
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Projects</h6>
+              <p>
+                <a
+                  href="https://www.dgbtek.com/Projects.html"
+                  class="text-reset"
+                  >Formal Verification</a
+                >
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 px-0 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Useful links</h6>
+              <p>
+                <a
+                  href="/src/components/tool_features/dft-tool-features.html"
+                  class="text-reset"
+                  >Tool Features</a
+                >
+              </p>
+              <p>
+                <a
+                  href="/src/components/installation/installation.html"
+                  class="text-reset"
+                  >Installation</a
+                >
+              </p>
+              <p>
+                <a
+                  href="/src/components/documentations/dft-documentations.html"
+                  class="text-reset"
+                  >Documentations</a
+                >
+              </p>
+              <p>
+                <a
+                  href="/src/components/support/dft-support.html"
+                  class="text-reset"
+                  >Support</a
+                >
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div
+              class="col-md-5 col-lg-3 col-xl-3 mx-auto px-0 mb-md-0 mb-4"
+              style="width: 550px !important"
+            >
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+              <p>
+                <img
+                  src="/src/assets/images/location.png"
+                  alt=""
+                  height="25px"
+                />
+                476 James Way, Wyckoff, New Jersey 07481, US <br />
+                <img
+                  src="/src/assets/images/location.png"
+                  alt=""
+                  height="25px"
+                />
+                Keetman Str. 01, 47058 Duisburg, Germany <br />
+                <!-- <img src="/src/assets/images/location.png" alt="" height="25px" />
+            21 CC-1st Floor, Commercial Area, DHA Phase-8 Ex-Parkview,Lahore PK -->
+              </p>
+              <p>
+                <a
+                  href="mailto:contact@dgbtek.com"
+                  style="text-decoration: none"
+                  class="text-reset"
+                  ><img
+                    src="/src/assets/images/mail-24.png"
+                    alt=""
+                    height="25px"
+                  />
+                  contact@dgbtek.com</a
+                >
+              </p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
+
+      <!-- Copyright -->
+      <div
+        class="text-center p-4"
+        style="background-color: rgba(0, 0, 0, 0.025)"
+      >
+        © 2023 Copyright:
+        <a class="text-reset fw-bold social" href="https://www.dgbtek.com/"
+          >DGB Technologies</a
+        >
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+
+</script>
+  </body>
+</html>

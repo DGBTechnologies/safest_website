@@ -148,10 +148,10 @@
 
 	<div class="content container-fluid col-sm-10">
 		<div class="my-3  m-auto">
-			<div class="row mt-5">
+			<div class="row my-5">
 				<div class="col-sm-1"></div>
 				<div class="col-sm-2">
-					<img style="background-color: black;" src="/src/assets/images/logos/ut-logo.svg" width="70%">
+					<img style="background-color: black;" src="/src/assets/images/logos/ut-logo.svg" width="60%">
 				</div>
 				<div class="col-sm-6">
 
@@ -169,7 +169,7 @@
 				<div class="col-sm-2">
 					<img src="/src/assets/images/aachen.png" width="100%">
 				</div>
-				<div class="col-sm-1"></div>
+				<div class="col-sm-2"></div>
 			</div>
 
 
@@ -220,140 +220,122 @@
 		<div class="col-sm-10  m-auto">
 			<!-- fist card -->
 			<div class="card mt-1" style="border:none !important;">
-				<div class="m-auto">
-					<img src="/src/assets/images/need_dft.png" alt="research-student" width="100%" style="">
-				</div>
 				<div class="card-body">
 					<div class="accordion-item">
 						<h2 class="accordion-header card-title" id="allProducts">
-							<button type="button" class="d-block text-center accordion-button collapsed"
-								data-bs-toggle="collapse" data-bs-target="#collapseOne"><strong
-									class="display-6">Faithful modeling of
-									fault-tolerant and/or fail-operational systems</strong></button>
+							<button type="button" class="d-block text-center accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+								<strong class="display-6">Faithful modeling of fault-tolerant and/or fail-operational systems</strong>
+							</button>
 						</h2>
 						<div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#productsAccordion">
 							<div class="card-body">
-								<p>
-									Because of limited expressiveness, SFTs cannot model dynamic behaviour of systems in
-									which:
-								</p>
-								<p>
-									<li>Components are redundant (Cold, Warm, Hot)
-									</li>
-									<li>Components functionality is dependent
-										<ul style="list-style-type: circle;">
-											<li><i>two sources generating energy in parallel -- hot spare</i></li>
-										</ul>
-									</li>
-									<li>Components failure have some temporal ordering
-										<ul style="list-style-type: circle;">
-											<li><i>first component A fails followed by components B and C</i></li>
-										</ul>
-									</li>
-									<li>Components relationship/responsibility/priority change with time
-										<ul style="list-style-type: circle;">
-											<li><i>a switch automatically changes energy source e.g. from main-grid to
-													generators</i>
+								<div class="row">
+									<!-- Text Section -->
+									<div class="col-md-8">
+										<p>Because of limited expressiveness, SFTs cannot model dynamic behaviour of systems in which:</p>
+										<ul>
+											<li>Components are redundant (Cold, Warm, Hot)</li>
+											<li>Components functionality is dependent
+												<ul style="list-style-type: circle;">
+													<li><i>two sources generating energy in parallel -- hot spare</i></li>
+												</ul>
+											</li>
+											<li>Components failure have some temporal ordering
+												<ul style="list-style-type: circle;">
+													<li><i>first component A fails followed by components B and C</i></li>
+												</ul>
+											</li>
+											<li>Components relationship/responsibility/priority change with time
+												<ul style="list-style-type: circle;">
+													<li><i>a switch automatically changes energy source e.g. from main-grid to generators</i></li>
+												</ul>
 											</li>
 										</ul>
-									</li>
-
-								</p>
+									</div>
+									<!-- Image Section -->
+									<div class="col-md-4 text-center">
+										<img src="/src/assets/images/need_dft.png" alt="research-student" class="img-fluid">
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+			
 		</div>
 
 		<div class="col-sm-10 m-auto">
 			<!-- second card -->
 			<div class="card mt-3" style="border:none !important;">
-				<div class="m-auto py-3">
-					<img src="/src/assets/images/iso-certification.png" alt="research-student" width="100%">
-				</div>
 				<div class="card-body">
 					<div class="accordion-item">
 						<h2 class="accordion-header" id="allProducts">
-							<button type="button" style="width:100%;"
-								class="d-block text-center accordion-button collapsed" data-bs-toggle="collapse"
-								data-bs-target="#collapseTwo">
+							<button type="button" style="width:100%;" class="d-block text-center accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
 								<h1>Compliance of safety standards</h1>
 							</button>
 						</h2>
 						<div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#productsAccordion">
 							<div class="card-body">
-								<p>
-								</p>
-								ISO 26262:2011 demands rigorous risk assessments in automotive industry:
-								<p>
-								<ul style="list-style-type:disc;">
-									<li>“metrics are verifiable and precise enough to differentiate between different
-										system
-										architectures”
-									</li>
-									<li>“[for systems where the] concept is based on redundant safety mechanisms,
-										multiple-point
-										failures
-										of a higher order than two are considered in the analysis” </li>
-								</ul>
-								</p>
+								<div class="row">
+									<!-- Text Section -->
+									<div class="col-md-8">
+										<p>ISO 26262:2011 demands rigorous risk assessments in automotive industry:</p>
+										<ul style="list-style-type:disc;">
+											<li>“metrics are verifiable and precise enough to differentiate between different system architectures”</li>
+											<li>“[for systems where the] concept is based on redundant safety mechanisms, multiple-point failures of a higher order than two are considered in the analysis”</li>
+										</ul>
+									</div>
+									<!-- Image Section -->
+									<div class="col-md-4 text-center">
+										<img src="/src/assets/images/iso-certification.png" alt="research-student" class="img-fluid">
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+			
 		</div>
 		<div class="col-sm-10 m-auto" style="border:none !important;">
+			<!-- style="background-color: black;" -->
 			<!-- third card -->
-			<div class="mt-3 card" style="background-color: black;">
-				<div class="m-auto">
-					<img src="src\assets\images\aapi-420.jpeg" alt="research-student" width="100%">
-				</div>
+			<div class="mt-3 card" >
 				<div class="card-body">
 					<div class="accordion-item">
 						<h2 class="accordion-header" id="allProducts">
-							<button type="button" style="width:100%"
-								class="d-block text-center accordion-button collapsed" data-bs-toggle="collapse"
-								data-bs-target="#collapseThree">
-								<strong class="display-6">Quantification of erroneous behaviour of
-									AI/ML-components</strong></button>
+							<button type="button" style="width:100%" class="d-block text-center accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+								<strong class="display-6">Quantification of erroneous behaviour of AI/ML-components</strong>
+							</button>
 						</h2>
 						<div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#productsAccordion">
 							<div class="card-body">
-								<p>
-									Rapidly increased usage of AI components in modern systems necessitates a rigorous
-									risk
-									assessment
-								<ul style="list-style-type: circle;">
-									<li>Neural networks typically come with weak statistical guarantees only (if at
-										all).
-										Small perturbations of their inputs may lead to misclassifications that can be
-										catastrophic
-										in safety-critical applications
-									</li>
-									<li>The use of AI components also implies the need for reliability metrics that
-										go beyond the standard metrics of reliability and availability.
-										In particular, there is a need to specify various levels of degradation
-										(given the uncertainty of the AI components) and be able to analyse e.g.,
-										“what is the probability that the system will come to a halt without going
-										through degradation level A first”.
-									</li>
-								</ul>
-								</p>
+								<div class="row">
+									<!-- Text Section -->
+									<div class="col-md-8">
+										<p>Rapidly increased usage of AI components in modern systems necessitates a rigorous risk assessment:</p>
+										<ul style="list-style-type: circle;">
+											<li>Neural networks typically come with weak statistical guarantees (if at all). Small perturbations of their inputs may lead to misclassifications that can be catastrophic in safety-critical applications.</li>
+											<li>The use of AI components implies the need for reliability metrics beyond standard metrics of reliability and availability. Specifically, metrics to specify various levels of degradation are required to analyze scenarios, e.g., “what is the probability that the system will come to a halt without going through degradation level A first”.</li>
+										</ul>
+									</div>
+									<!-- Image Section -->
+									<div class="col-md-4 text-center">
+										<img src="src/assets/images/aapi-420.jpeg" alt="research-student" class="img-fluid">
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+			</div>			
 		</div>
 
 		<div class="col-sm-10 m-auto">
 			<!-- fourth card -->
 			<div class="card mt-3" style="border:none !important;">
-				<div class="m-auto">
-					<img src="/src/assets/images/metric.jpeg" alt="research-student" width="100%">
-				</div>
+
 				<div class="card-body">
 					<div class="row">
 						<div class="accordion-item">
@@ -364,6 +346,9 @@
 							</h2>
 							<div id="collapseFour" class="accordion-collapse collapse"
 								data-bs-parent="#productsAccordion">
+								<div class="m-auto text-center">
+									<img src="/src/assets/images/metric.jpeg" alt="research-student" width="50%">
+								</div>
 								<div class="card-body">
 <p class="has-line-data" data-line-start="2" data-line-end="3"><strong>SAFEST</strong> focuses on computing various dependability metrics, i.e., key performance indicators that measure a system’s performance. SAFEST categorizes metrics into different categories based on their complexity: Basic, Advanced, Importance, and Custom.</p>
 <hr>
