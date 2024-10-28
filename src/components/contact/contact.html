@@ -129,7 +129,8 @@
             <a
               href="/src/components/collaborator/collaborator.html"
               class="nav-link"
-              > Clients</a
+            >
+              Clients</a
             >
           </li>
           <li class="nav-item">
@@ -146,27 +147,98 @@
       /></a>
     </nav>
 
-    <header>
-      <div id="large-header" class="large-header">
+    <!-- <header> -->
+    <!-- <div id="large-header" class="large-header">
         <h1 class="main-title">Contact</h1>
         <canvas id="demo-canvas"></canvas>
         <div class="overlay"></div>
         <video autoplay muted loop id="myVideo">
           <source src="videos/bg-video-5.mp4" type="video/mp4" />
         </video>
-      </div>
-    </header>
+      </div> -->
+    <!-- </header> -->
 
-    <div class="header-border"></div>
+    <div class="service-section container mt-5">
+      <div
+        class="row"
+        style="margin-top: 40px; margin-left: auto; margin-right: auto"
+      >
+        <div class="csi-body">
+          <h3 style="text-align: center">Contact Us</h3>
+          <div class="divider-line-center"></div>
+        </div>
+      </div>
+
+      <div class="mt-5" id="contact">
+        <form id="javascript_form" onsubmit="return myFunction()">
+          <div class="row">
+            <div class="col-sm-4">
+              <input
+                class="input-field"
+                type="text"
+                placeholder="Enter Subject"
+                name="userSubject"
+                required
+              />
+            </div>
+            <div class="col-sm-4">
+              <input
+                class="input-field"
+                type="email"
+                placeholder="Enter your Email"
+                name="userEmail"
+                required
+              />
+            </div>
+            <div class="col-sm-4">
+              <input
+                class="input-field"
+                type="text"
+                placeholder="Enter your Name"
+                name="userName"
+                required
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm">
+              <!-- <input class="input-field-des" type="text" placeholder="Enter your message here!" name="userMessage"/> -->
+              <textarea
+                class="input-field-des"
+                type="text"
+                placeholder="Enter your message here!"
+                name="userMessage"
+                required
+              ></textarea>
+              <!-- <div class="round-button"> <a href="#myModal" class="trigger-btn" data-toggle="modal" type="submit" id="js_send"> <img src="images/send-ic.png" alt="Home" /> </a> </div>
+                  <div class="round-button"> <a class="trigger-btn" data-toggle="modal" type="submit" id="js_send"> <img src="images/send-ic.png" alt="Home" /> </a> </div> -->
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm offset-sm-11">
+              <button
+                type="submit"
+                class="btn"
+                style="background-color: #00acff; color: #ffffff"
+                id="js_send"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- <div class="header-border"></div> -->
 
     <section style="width: 80%; margin-left: auto; margin-right: auto">
       <div class="service-section container">
         <div class="csi-body">
-          <h3 style="text-align: center">Locations</h3>
+          <h3 style="text-align: center">Offices</h3>
           <div class="divider-line-center"></div>
         </div>
 
-        <div class="row" style="margin-top: 15px; margin-bottom: 250px">
+        <div class="row py-5" style="margin-top: 50px;">
           <!-- <div class="col-sm-6">
           <iframe class="responsive-iframe"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3401.0870363137647!2d74.43766051499593!3d31.521769381369104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190f7487092e83%3A0x975fe58fc007b549!2sDGB%20Technologies!5e0!3m2!1sen!2s!4v1595010355118!5m2!1sen!2s"
@@ -178,7 +250,17 @@
           T: +92 423 717 5844
 
         </div> -->
-
+          <div class="col-sm-6">
+            <iframe
+              class="responsive-iframe"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2487.378932977419!2d6.783421115767238!3d51.432834479622926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b8bf6fbc41770b%3A0x6f3f3a3c643b03e1!2sKeetmanstra%C3%9Fe%201%2C%2047058%20Duisburg%2C%20Germany!5e0!3m2!1sen!2s!4v1598864989249!5m2!1sen!2s"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+            <h3>Germany Office</h3>
+            DGB Technologies<br />Keetman Str. 01, 47058 Duisburg, Germany<br />
+            T: +49 176 346 74943<br /><br /><br />
+          </div>
           <div class="col-sm-6">
             <iframe
               class="responsive-iframe"
@@ -192,91 +274,7 @@
             T: +1 551 284 9981<br /><br /><br />
           </div>
         </div>
-        <div class="row" style="margin-top: 15px; margin-bottom: 250px">
-          <div class="col-sm-6">
-            <iframe
-              class="responsive-iframe"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2487.378932977419!2d6.783421115767238!3d51.432834479622926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b8bf6fbc41770b%3A0x6f3f3a3c643b03e1!2sKeetmanstra%C3%9Fe%201%2C%2047058%20Duisburg%2C%20Germany!5e0!3m2!1sen!2s!4v1598864989249!5m2!1sen!2s"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
-            <h3>Germany Office</h3>
-            DGB Technologies<br />Keetman Str. 01, 47058 Duisburg, Germany<br />
-            T: +49 176 346 74943<br /><br /><br />
-          </div>
-        </div>
-      </div>
-
-      <div class="service-section container">
-        <div
-          class="row"
-          style="margin-top: 25px; margin-left: auto; margin-right: auto"
-        >
-          <div class="csi-body">
-            <h3 style="text-align: center">Contact US</h3>
-            <div class="divider-line-center"></div>
-          </div>
-        </div>
-
-        <div id="contact">
-          <form id="javascript_form" onsubmit="return myFunction()">
-            <div class="row">
-              <div class="col-sm-4">
-                <input
-                  class="input-field"
-                  type="text"
-                  placeholder="Enter Subject"
-                  name="userSubject"
-                  required
-                />
-              </div>
-              <div class="col-sm-4">
-                <input
-                  class="input-field"
-                  type="email"
-                  placeholder="Enter your Email"
-                  name="userEmail"
-                  required
-                />
-              </div>
-              <div class="col-sm-4">
-                <input
-                  class="input-field"
-                  type="text"
-                  placeholder="Enter your Name"
-                  name="userName"
-                  required
-                />
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm">
-                <!-- <input class="input-field-des" type="text" placeholder="Enter your message here!" name="userMessage"/> -->
-                <textarea
-                  class="input-field-des"
-                  type="text"
-                  placeholder="Enter your message here!"
-                  name="userMessage"
-                  required
-                ></textarea>
-                <!-- <div class="round-button"> <a href="#myModal" class="trigger-btn" data-toggle="modal" type="submit" id="js_send"> <img src="images/send-ic.png" alt="Home" /> </a> </div>
-                    <div class="round-button"> <a class="trigger-btn" data-toggle="modal" type="submit" id="js_send"> <img src="images/send-ic.png" alt="Home" /> </a> </div> -->
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm offset-sm-11">
-                <button
-                  type="submit"
-                  class="btn"
-                  style="background-color: #00acff; color: #ffffff"
-                  id="js_send"
-                >
-                  Submit
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
+        <div class="row" style="margin-top: 15px; margin-bottom: 250px"></div>
       </div>
     </section>
 
