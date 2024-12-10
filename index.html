@@ -209,200 +209,268 @@
 			</div>
 
 		</div>
+		<div class="container mt-5">
+			<div class="bg-light p-5 shadow rounded">
+				<h1 class="text-center text-primary mb-4">Why do we need dynamic fault trees?</h1>
+				<div class="row mb-5">
+					<div class="col-md-8">
+						<h4 class="text-secondary">Faithful Modeling of Fault-Tolerant Systems</h4>
+						<p>Because of limited expressiveness, SFTs cannot model dynamic behaviour of systems in which:</p>
+						<ul>
+							<li>Components are redundant (Cold, Warm, Hot)</li>
+							<li>Components functionality is dependent: <em>two sources generating energy in parallel -- hot spare</em></li>
+							<li>Components failure have some temporal ordering: <em>first component A fails followed by components B and C</em></li>
+							<li>Components relationship/responsibility/priority change with time: <em>a switch automatically changes energy source e.g. from main-grid to generators</em></li>
+						</ul>
+					</div>
+					<div class="col-md-4 text-center">
+						<img src="/src/assets/images/need_dft.png" alt="Modeling" class="img-fluid rounded">
+					</div>
+				</div>
+	
+				<div class="row mb-5">
+					<div class="col-md-8 order-md-2">
+						<h4 class="text-secondary">Compliance of Safety Standards</h4>
+						<p>ISO 26262:2011 demands rigorous risk assessments in automotive industry:</p>
+						<ul>
+							<li>“Metrics are verifiable and precise enough to differentiate between different system architectures”</li>
+							<li>“[For systems where the] concept is based on redundant safety mechanisms, multiple-point failures of a higher order than two are considered in the analysis”</li>
+						</ul>
+					</div>
+					<div class="col-md-4 text-center order-md-1">
+						<img src="/src/assets/images/iso-certification.png" alt="Standards" class="img-fluid rounded">
+					</div>
+				</div>
+	
+				<div class="row mb-5">
+					<div class="col-md-8">
+						<h4 class="text-secondary">Quantification of Erroneous Behavior of AI/ML Components</h4>
+						<p>Rapidly increased usage of AI components in modern systems necessitates a rigorous risk assessment:</p>
+						<ul>
+							<li>Neural networks typically come with weak statistical guarantees (if at all). Small perturbations of their inputs may lead to misclassifications that can be catastrophic in safety-critical applications.</li>
+							<li>The use of AI components implies the need for reliability metrics beyond standard metrics of reliability and availability.</li>
+						</ul>
+					</div>
+					<div class="col-md-4 text-center">
+						<img src="/src/assets/images/aapi-420.jpeg" alt="AI Risk" class="img-fluid rounded">
+					</div>
+				</div>
+	
+				<div class="row mb-5">
+					<div class="col-md-8 order-md-2">
+						<h4 class="text-secondary">Fault Trees for Quantification of Dependability Metrics</h4>
+						<div class="card-body">
+							<p><strong>SAFEST</strong> focuses on computing various dependability metrics, i.e., key performance indicators that measure a system’s performance. SAFEST categorizes these metrics into different categories based on their complexity: Basic, Advanced, Importance, and Custom.</p>
+							<hr>
+							<h5 class="text-secondary">Basic</h5>
+							<ul>
+								<li><strong>Reliability:</strong> Probability of failure within a given time bound.</li>
+								<li><strong>Unreliability:</strong> The complement of reliability (1 - Reliability).</li>
+								<li><strong>Average failure probability per hour</strong></li>
+								<li><strong>Mean-Time-To-Failure:</strong> Expected time to system failure or scenario occurrence.</li>
+								<li><strong>Event Probability within a Time-Bound:</strong> Probability that an event occurs within a given time.</li>
+								<li><strong>Event Probability:</strong> Probability that an event occurs.</li>
+								<li><strong>Instantaneous Probability:</strong> Probability that an event occurs at a given time.</li>
+							</ul>
+							<hr>
+							<h5 class="text-secondary">Advanced</h5>
+							<ul>
+								<li><strong>Full Function Availability (FFA):</strong> Time-bounded probability that the system provides full functionality, indicating it has neither failed nor degraded.</li>
+								<li><strong>Failure Without Degradation (FWD):</strong> Time-bounded probability that the system fails without being degraded first.</li>
+								<li><strong>Mean Time from Degradation to Failure (MTDF):</strong> Expected time from the moment of degradation to system failure.</li>
+								<li><strong>Minimal Degraded Reliability (MDR):</strong> Worst-case failure probability when using the system in a degraded state.</li>
+								<li><strong>Failure under Limited Operation in Degradation (FLOD_1):</strong> Probability of failure when imposing a time limit for using a degraded system.</li>
+								<li><strong>Failure under Limited Operation in Degradation (FLOD_2):</strong> Similar to FLOD_1, but with additional conditions of avoiding prior system failure.</li>
+								<li><strong>System Integrity under Limited Fail-Operation (SILFO):</strong> Considers the system-wide impact of limiting the degraded operation time, with aspects FWD and FLOD_1.</li>
+								<li><strong>Reach-Avoid Probability:</strong> Probability of one event occurring without another event happening before.</li>
+								<li><strong>Time-Bounded Reach-Avoid Probability:</strong> Probability of an event occurring within a time limit without another event happening beforehand.</li>
+							</ul>
+							<hr>
+							<h5 class="text-secondary">Importance</h5>
+							<ul>
+								<li><strong>Birnbaum Index (BI):</strong> Measures how much the system’s unreliability depends on a specific component’s unreliability.</li>
+								<li><strong>Criticality Importance (CI):</strong> Similar to BI, scaled by the ratio of component and system unreliability.</li>
+								<li><strong>Risk Achievement Worth (RAW):</strong> Impact of a component’s total degradation on system unreliability.</li>
+								<li><strong>Risk Reduction Worth (RRW):</strong> Impact of making a component fully reliable on system unreliability.</li>
+								<li><strong>Diagnostics Importance Factor (DIF):</strong> Frequency of a component’s failure in states where the system has failed.</li>
+								<li><strong>BAGT+:</strong> Change in Mean-Time-To-Failure (MTTF) if the component fully degrades.</li>
+								<li><strong>BAGT-:</strong> Change in MTTF if the component is fully reliable.</li>
+							</ul>
+							<hr>
+							<h5 class="text-secondary">Custom</h5>
+							<ul>
+								<li>Custom properties can be specified using <strong>Continuous Stochastic Logic (CSL)</strong>.</li>
+							</ul>
+						</div>
+						
+					</div>
+					<div class="col-md-4 text-center order-md-1">
+						<img src="/src/assets/images/metric.jpeg" alt="Metrics" class="img-fluid rounded">
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-	<div class="bg-image p-5 text-center bg-light shadow-1-strong my-5 rounded text-secondary">
+	<!-- <div class="bg-image p-5 text-center bg-light shadow-1-strong my-5 rounded text-secondary">
 		<h1 class="mb-3 h">Why do we need dynamic fault trees?</h1>
-	</div>
+	</div> -->
 	<!-- <img src="/src/assets/images/neen.png " width="100%"> -->
 
-	<div class="content container-fluid col-sm-12">
-
-		<div class="col-sm-10  m-auto">
-			<!-- fist card -->
-			<div class="card mt-1" style="border:none !important;">
-				<div class="card-body">
-					<div class="accordion-item">
-						<h2 class="accordion-header card-title" id="allProducts">
-							<button type="button" class="d-block text-center accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-								<strong class="display-6">Faithful modeling of fault-tolerant and/or fail-operational systems</strong>
-							</button>
-						</h2>
-						<div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#productsAccordion">
-							<div class="card-body">
-								<div class="row">
-									<!-- Text Section -->
-									<div class="col-md-8">
-										<p>Because of limited expressiveness, SFTs cannot model dynamic behaviour of systems in which:</p>
-										<ul>
-											<li>Components are redundant (Cold, Warm, Hot)</li>
-											<li>Components functionality is dependent
-												<ul style="list-style-type: circle;">
-													<li><i>two sources generating energy in parallel -- hot spare</i></li>
-												</ul>
-											</li>
-											<li>Components failure have some temporal ordering
-												<ul style="list-style-type: circle;">
-													<li><i>first component A fails followed by components B and C</i></li>
-												</ul>
-											</li>
-											<li>Components relationship/responsibility/priority change with time
-												<ul style="list-style-type: circle;">
-													<li><i>a switch automatically changes energy source e.g. from main-grid to generators</i></li>
-												</ul>
-											</li>
-										</ul>
-									</div>
-									<!-- Image Section -->
-									<div class="col-md-4 text-center">
-										<img src="/src/assets/images/need_dft.png" alt="research-student" class="img-fluid">
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-		</div>
-
-		<div class="col-sm-10 m-auto">
-			<!-- second card -->
-			<div class="card mt-3" style="border:none !important;">
-				<div class="card-body">
-					<div class="accordion-item">
-						<h2 class="accordion-header" id="allProducts">
-							<button type="button" style="width:100%;" class="d-block text-center accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-								<h1>Compliance of safety standards</h1>
-							</button>
-						</h2>
-						<div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#productsAccordion">
-							<div class="card-body">
-								<div class="row">
-									<!-- Text Section -->
-									<div class="col-md-8">
-										<p>ISO 26262:2011 demands rigorous risk assessments in automotive industry:</p>
-										<ul style="list-style-type:disc;">
-											<li>“metrics are verifiable and precise enough to differentiate between different system architectures”</li>
-											<li>“[for systems where the] concept is based on redundant safety mechanisms, multiple-point failures of a higher order than two are considered in the analysis”</li>
-										</ul>
-									</div>
-									<!-- Image Section -->
-									<div class="col-md-4 text-center">
-										<img src="/src/assets/images/iso-certification.png" alt="research-student" class="img-fluid">
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-		</div>
-		<div class="col-sm-10 m-auto" style="border:none !important;">
-			<!-- style="background-color: black;" -->
-			<!-- third card -->
-			<div class="mt-3 card" >
-				<div class="card-body">
-					<div class="accordion-item">
-						<h2 class="accordion-header" id="allProducts">
-							<button type="button" style="width:100%" class="d-block text-center accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree">
-								<strong class="display-6">Quantification of erroneous behaviour of AI/ML-components</strong>
-							</button>
-						</h2>
-						<div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#productsAccordion">
-							<div class="card-body">
-								<div class="row">
-									<!-- Text Section -->
-									<div class="col-md-8">
-										<p>Rapidly increased usage of AI components in modern systems necessitates a rigorous risk assessment:</p>
-										<ul style="list-style-type: circle;">
-											<li>Neural networks typically come with weak statistical guarantees (if at all). Small perturbations of their inputs may lead to misclassifications that can be catastrophic in safety-critical applications.</li>
-											<li>The use of AI components implies the need for reliability metrics beyond standard metrics of reliability and availability. Specifically, metrics to specify various levels of degradation are required to analyze scenarios, e.g., “what is the probability that the system will come to a halt without going through degradation level A first”.</li>
-										</ul>
-									</div>
-									<!-- Image Section -->
-									<div class="col-md-4 text-center">
-										<img src="src/assets/images/aapi-420.jpeg" alt="research-student" class="img-fluid">
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>			
-		</div>
-
-		<div class="col-sm-10 m-auto">
-			<!-- fourth card -->
-			<div class="card mt-3" style="border:none !important;">
-
-				<div class="card-body">
-					<div class="row">
-						<div class="accordion-item">
-							<h2 class="accordion-header">
-								<button type="button" class="d-block text-center accordion-button collapsed"
-									data-bs-toggle="collapse" data-bs-target="#collapseFour">
-									<strong class="display-6">Fault Trees for Quantification of Dependability Metrics</strong></button>
-							</h2>
-							<div id="collapseFour" class="accordion-collapse collapse"
-								data-bs-parent="#productsAccordion">
-								<div class="m-auto text-center">
-									<img src="/src/assets/images/metric.jpeg" alt="research-student" width="50%">
-								</div>
-								<div class="card-body">
-<p class="has-line-data" data-line-start="2" data-line-end="3"><strong>SAFEST</strong> focuses on computing various dependability metrics, i.e., key performance indicators that measure a system’s performance. SAFEST categorizes metrics into different categories based on their complexity: Basic, Advanced, Importance, and Custom.</p>
-<hr>
-<p class="has-line-data" data-line-start="6" data-line-end="7"><strong>Basic</strong></p>
-<ul>
-<li class="has-line-data" data-line-start="8" data-line-end="9"><strong>Reliability</strong>: Probability of failure within a given time bound.</li>
-<li class="has-line-data" data-line-start="9" data-line-end="10"><strong>Unreliability</strong>: The complement of reliability (1 - Reliability).</li>
-<li class="has-line-data" data-line-start="10" data-line-end="11"><strong>Average failure probability per hour</strong>.</li>
-<li class="has-line-data" data-line-start="11" data-line-end="12"><strong>Mean-Time-To-Failure</strong>: Expected time to system failure or scenario occurrence.</li>
-<li class="has-line-data" data-line-start="12" data-line-end="13"><strong>Event Probability within a Time-Bound</strong>: Probability that an event occurs within a given time.</li>
-<li class="has-line-data" data-line-start="13" data-line-end="14"><strong>Event Probability</strong>: Probability that an event occurs.</li>
-<li class="has-line-data" data-line-start="14" data-line-end="16"><strong>Instantaneous Probability</strong>: Probability that an event occurs at a given time.</li>
-</ul>
-<hr>
-<p class="has-line-data" data-line-start="18" data-line-end="19"><strong>Advanced</strong></p>
-<ul>
-<li class="has-line-data" data-line-start="20" data-line-end="21"><strong>Full Function Availability (FFA)</strong>: Time-bounded probability that the system provides full functionality, indicating it has neither failed nor degraded.</li>
-<li class="has-line-data" data-line-start="21" data-line-end="22"><strong>Failure Without Degradation (FWD)</strong>: Time-bounded probability that the system fails without being degraded first.</li>
-<li class="has-line-data" data-line-start="22" data-line-end="23"><strong>Mean Time from Degradation to Failure (MTDF)</strong>: Expected time from the moment of degradation to system failure.</li>
-<li class="has-line-data" data-line-start="23" data-line-end="24"><strong>Minimal Degraded Reliability (MDR)</strong>: Worst-case failure probability when using the system in a degraded state.</li>
-<li class="has-line-data" data-line-start="24" data-line-end="25"><strong>Failure under Limited Operation in Degradation (FLOD_1)</strong>: Probability of failure when imposing a time limit for using a degraded system.</li>
-<li class="has-line-data" data-line-start="25" data-line-end="26"><strong>Failure under Limited Operation in Degradation (FLOD_2)</strong>: Similar to FLOD_1, but with additional conditions of avoiding prior system failure.</li>
-<li class="has-line-data" data-line-start="26" data-line-end="27"><strong>System Integrity under Limited Fail-Operation (SILFO)</strong>: Considers the system-wide impact of limiting the degraded operation time, with aspects FWD and FLOD_1.</li>
-<li class="has-line-data" data-line-start="27" data-line-end="28"><strong>Reach-Avoid Probability</strong>: Probability of one event occurring without another event happening before.</li>
-<li class="has-line-data" data-line-start="28" data-line-end="30"><strong>Time-Bounded Reach-Avoid Probability</strong>: Probability of an event occurring within a time limit without another event happening beforehand.</li>
-</ul>
-<hr>
-<p class="has-line-data" data-line-start="32" data-line-end="33"><strong>Importance</strong></p>
-<ul>
-<li class="has-line-data" data-line-start="34" data-line-end="35"><strong>Birnbaum Index (BI)</strong>: Measures how much the system’s unreliability depends on a specific component’s unreliability.</li>
-<li class="has-line-data" data-line-start="35" data-line-end="36"><strong>Criticality Importance (CI)</strong>: Similar to BI, scaled by the ratio of component and system unreliability.</li>
-<li class="has-line-data" data-line-start="36" data-line-end="37"><strong>Risk Achievement Worth (RAW)</strong>: Impact of a component’s total degradation on system unreliability.</li>
-<li class="has-line-data" data-line-start="37" data-line-end="38"><strong>Risk Reduction Worth (RRW)</strong>: Impact of making a component fully reliable on system unreliability.</li>
-<li class="has-line-data" data-line-start="38" data-line-end="39"><strong>Diagnostics Importance Factor (DIF)</strong>: Frequency of a component’s failure in states where the system has failed.</li>
-<li class="has-line-data" data-line-start="39" data-line-end="40"><strong>BAGT+</strong>: Change in Mean-Time-To-Failure (MTTF) if the component fully degrades.</li>
-<li class="has-line-data" data-line-start="40" data-line-end="42"><strong>BAGT-</strong>: Change in MTTF if the component is fully reliable.</li>
-</ul>
-<hr>
-<p class="has-line-data" data-line-start="44" data-line-end="45"><strong>Custom</strong></p>
-<ul>
-<li class="has-line-data" data-line-start="46" data-line-end="47">Custom properties can be specified using <strong>Continuous Stochastic Logic (CSL)</strong>.</li>
-</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-
-	</div>
 	<div class="bg-image p-5 text-center bg-light shadow-1-strong my-5 rounded text-secondary">
 		<h1 class="mb-3 ">Application Domains</h1>
+	</div>
+
+	<div class="content container-fluid col-sm-12">
+		<div class="col-sm-8 m-auto">
+
+			<div class="row">
+				<div class="grid" style="padding-bottom: 50px; ">
+					<ul id="hexGrid">
+						<li class="hex">
+							<div class="hexIn">
+								<a class="hexLink card text-center"
+									href="/src/components/case_studies/dft-case-studies.html">
+									<div class='img bg-light'><img src="/src/assets/images/automotive.jpg"
+											alt="automotive"></div>
+									<div class="card-img-overlay d-flex flex-column
+											justify-content-center align-items-center">
+										<p class="display-7 card-title  text-light fw-bolder">Automotive</p>
+									</div>
+								</a>
+							</div>
+						</li>
+						<li class="hex">
+							<div class="hexIn">
+								<a class="hexLink card text-center"
+									href="/src/components/case_studies/dft-case-studies.html">
+									<div class='img bg-light'><img src="/src/assets/images/aviation.jpg" alt="aviation">
+									</div>
+									<div
+										class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
+										<p class="display-7 card-title  text-light fw-bolder">Aviation</p>
+									</div>
+
+								</a>
+							</div>
+						</li>
+
+						<li class="hex">
+							<div class="hexIn">
+								<a class="hexLink card text-center"
+									href="/src/components/case_studies/dft-case-studies.html">
+									<div class='img bg-light'><img src="/src/assets/images/robotics.jpg" alt="robotics">
+									</div>
+									<div
+										class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
+										<p class="display-7 card-title  text-light fw-bolder">Robotics</p>
+									</div>
+
+								</a>
+							</div>
+						</li>
+						<li class="hex">
+							<div class="hexIn">
+								<a class="hexLink card text-center"
+									href="/src/components/case_studies/dft-case-studies.html">
+									<div class='img bg-light'><img src="/src/assets/images/intelligent systems.png"
+											alt="intelligent systems"></div>
+									<div
+										class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
+										<p class="display-7 card-title  text-light fw-bolder">Intelligent Systems</p>
+									</div>
+
+								</a>
+							</div>
+						</li>
+						<li class="hex">
+							<div class="hexIn">
+								<a class="hexLink card text-center"
+									href="/src/components/case_studies/dft-case-studies.html">
+									<div class='img bg-light'><img src="/src/assets/images/medical.png" alt="medical">
+									</div>
+									<div
+										class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
+										<p class="display-7 card-title  text-light fw-bolder">Medical</p>
+									</div>
+
+								</a>
+							</div>
+						</li>
+						<li class="hex">
+							<div class="hexIn">
+								<a class="hexLink card text-center"
+									href="/src/components/case_studies/dft-case-studies.html">
+									<div class='img bg-light'><img src="/src/assets/images/defence.jpg" alt="defense">
+									</div>
+									<div class="card-img-overlay d-flex flex-column
+											justify-content-center align-items-center">
+										<p class="display-7 card-title text-light fw-bolder">Defense</p>
+									</div>
+
+								</a>
+							</div>
+						</li>
+						<li class="hex">
+							<div class="hexIn">
+								<a class="hexLink card text-center"
+									href="/src/components/case_studies/dft-case-studies.html">
+									<div class='img bg-light'><img src="/src/assets/images/nuclear.jpg" alt="nuclear">
+									</div>
+									<div
+										class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
+										<p class="display-7 card-title  text-light fw-bolder">Nuclear</p>
+									</div>
+
+								</a>
+							</div>
+						</li>
+						<li class="hex">
+							<div class="hexIn">
+								<a class="hexLink card text-center"
+									href="/src/components/case_studies/dft-case-studies.html">
+									<div class='img bg-light'><img src="/src/assets/images/energy.jpg" alt="energy">
+									</div>
+									<div
+										class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
+										<p class="display-7 card-title  text-light fw-bolder">Renewable Energy</p>
+									</div>
+
+								</a>
+							</div>
+						</li>
+						<li class="hex">
+							<div class="hexIn">
+								<a class="hexLink card text-center"
+									href="/src/components/case_studies/dft-case-studies.html">
+									<div class='img bg-light'><img src="/src/assets/images/oil & gas.jpg"
+											alt="oil & gas"></div>
+									<div
+										class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
+										<p class="display-7 card-title  text-light fw-bolder">Oil & Gas</p>
+									</div>
+
+								</a>
+							</div>
+						</li>
+						<li class="hex">
+							<div class="hexIn">
+								<a class="hexLink card text-center"
+									href="/src/components/case_studies/dft-case-studies.html">
+									<div class='img bg-light'><img src="/src/assets/images/construction.jpg"
+											alt="construction"></div>
+									<div
+										class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
+										<p class="display-7 card-title  text-light fw-bolder">Construction</p>
+									</div>
+
+								</a>
+							</div>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<div class="content container-fluid col-sm-12">
