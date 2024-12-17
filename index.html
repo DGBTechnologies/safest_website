@@ -48,7 +48,7 @@
 			.section-header h3 {
 			  margin: 0;
 			  font-size: 18px;
-			  color: #007ac3;
+			  color: #00acff;
 			  flex-grow: 1;
 			  border-bottom: 1px solid #f5f5f5;
 			}
@@ -98,103 +98,65 @@
 	<div id="nav-placeholder"></div>
 
 	<section style="margin-top: 4rem">
-		<div class="header-section">
-		  <div class="header-container">
-			<div class="header-text">
-				<h1 class="header-title">Probabilistic</h1>
-				<h1 class="header-title">Risk Assessment</h1>
-				<p class="header-description">
-				  SAFEST — A probabilistic risk assessment toolchain based on dynamic fault trees and reward event trees.
-				</p>
-			  <div class="header-buttons">
-				<a
-				  href="/src/components/installation/installation.html"
-				  class="btn-primary"
-				  >Get started now</a
-				>
-				<a href="#" class="btn-secondary">Schedule a Demo ➡️</a>
-			  </div>
+				<div class="header-section mb-5">
+					<div class="header-container">
+						<div class="header-text">
+							<h1 class="header-title">SAFEST: A Probabilistic</h1>
+							<h1 class="header-title">Risk Assessment Toolchain
+							</h1>
+							<p class="header-description">
+								A fully automatic, scalable, and state-of-the-art tool that is based on <span class="bluehighlight-text">dynamic fault trees
+									and event trees</span>  and, thus, can faithfully assess the risk of <span class="bluehighlight-text">fail-operational/fault-tolerant
+								dynamic systems with decision-making capabilities.</span> It offers more flexible modeling and
+								analyses, going beyond the capabilities of existing commercial tools.
+							</p>
+						<div class="header-buttons">
+							<a
+							href="/src/components/installation/installation.html"
+							class="btn-primary"
+							>Get started now</a
+							>
+							<a href="#" class="btn-secondary">Schedule a Demo ➡️</a>
+						</div>
+					</div>
+
+					<div class="header-image">
+						<div class="badge-container">
+							<img
+							src="/src/assets/images/dfts.png"
+							alt="Laptop with website preview"
+							class="header-laptop-image"/>
+							<div class="badge">
+							<span class="badge-text">FREE <br>for<br> Academia</span>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="header-image">
-			  <img
-				src="/src/assets/images/dfts.png"
-				alt="Laptop with website preview"
-				class="header-laptop-image"
-			  />
-			</div>
+		</section>
+
+	  
+	  
+	  
+	<section class="content container-fluid col-sm-8">
+		<div style="text-align:center;">
+			<h3 style="font-size:30px; color: #8e8f8f; background-color: #f8f9fa;"><b>Our Academic Partners</b></h3>
+		  <div style="display:flex; justify-content: center; align-items:center;flex-wrap:wrap;">
+		  
+		   <div style="width:200px; height:100px; margin-top: 30px;">
+			<img src="/src/assets/images/logos/ut-logo.svg" alt="Partner 1" width="60%" style="background-color: black; max-width:100%; max-height:100%;object-fit:contain">
+		   </div>
+		   <div style="width: 200px; height:100px; margin-top: 30px;">
+			<img src="/src/assets/images/aachen.png" alt="Partner 2" style="max-width:100%; max-height:100%;object-fit:contain">
+		   </div>
 		  </div>
 		</div>
-	  </section>
+	</section>
 
-	  <div class="content container-fluid col-sm-10">
-		<div class="mb-5 m-auto">
-			<div class="row mb-5">
-				<div class="col-sm-1"></div>
-				<div class="col-sm-2">
-					<img style="background-color: black;" src="/src/assets/images/logos/ut-logo.svg" width="60%">
-				</div>
-				<div class="col-sm-6">
-
-					<p class="mt-0" style="text-align: justify;">
-						In collaboration with 
-						<a href="https://www.utwente.nl/en/eemcs/fmt/" target="_blank">[University of Twente]</a> and
-						<a href="https://moves.rwth-aachen.de/" target="_blank">[RWTH Aachen University]</a> 
-						, we developed a fully automatic,
-						scalable, and state-of-the-art tool SAFEST that can faithfully assess the risk of
-						fail-operational/fault-tolerant systems. It goes beyond the capabilities of existing commercial
-						tools in offering more flexible modeling and analyses. It has two modules:
-
-					</p>
-				</div>
-				<div class="col-sm-2">
-					<img src="/src/assets/images/aachen.png" width="100%">
-				</div>
-				<div class="col-sm-2"></div>
-			</div>
-
-
-			<div class="row mt-2">
-				<div class="col-sm-1"></div>
-				<div class="col-sm-4">
-					<h5 class="mt-0 "><strong>Dynamic Fault Trees (DFTs) Analysis</strong></h5>
-					<p class="mt-0" style="text-align: justify;">
-						SAFEST is the most complete, effective, and scalable tool
-						for analyzing static and dynamic fault trees. Static fault tree analysis is competitive with
-						existing tools. It can check <b>more reliability measures than ever and can check fault trees that
-						are larger than ever</b>. It can model systems having: </br>
-						<ul>
-							<li>Redundant components</li>
-							<li>(Probabilistic) Functional dependencies</li>
-							<li>Temporal ordering of failures</li>
-						</ul>
-					</p>
-				</div>
-				<div class="col-sm-1"></div>
-				<div class="col-sm-5">
-					<h5 class="mt-0"><strong>Reward Event Trees (RETs) Analysis</strong></h5>
-					<p class="mt-0" style="text-align: justify;">
-						In SAFEST we extend classical event trees with
-						non-deterministic choices/decision-making at states, and allow the addition of state
-						rewards/losses. Moreover, DFTs can be embedded into RETs and provide transition probabilities
-						(of RETs). By analyzing RETs, one can determine:
-					<ul>
-						<li>Expected gains or losses, such as radioactive leakage, fatalities, etc.</li>
-						<li>Limits on the frequencies and probability of the outcomes in event trees</li>
-						<li>Wise choices to, for example, lessen the unfavorable effects/outcomes</li>
-					</ul>
-					</p>
-				</div>
-
-				<div class="col-sm-1"></div>
-			</div>
-
-		</div>
-	  </div>
-
-	  <div class="content container-fluid col-sm-10  my-3 ">
+	  <div class="content container-fluid col-sm-8  my-5 ">
 		
 		<div style="text-align: center">
-			<h1 style="color: #007ac3">SAFEST Features Overview</h1>
+			<h1 style="color: #00acff; background-color: #f8f9fa;"">SAFEST Features Overview</h1>
 		  </div>
 		  <div class="container">
 		<div class="section">
@@ -636,11 +598,11 @@
 	  </script>
 
 
-	<div class="bg-image p-5 text-center bg-light shadow-1-strong my-5 rounded text-secondary">
+	<div class="bg-image container-fluid col-sm-8 p-5 text-center bg-light shadow-1-strong my-5 rounded text-secondary">
 		<h1 class="mb-3 ">Application Domains</h1>
 	</div>
 
-	<div class="content container-fluid col-sm-12">
+	<div class="content container-fluid col-sm-8">
 		<div class="col-sm-8 m-auto">
 
 			<div class="row">
@@ -793,7 +755,7 @@
 		</div>
 	</div>
 
-	<div class="content container-fluid col-sm-12">
+	<div class="content container-fluid col-sm-8">
 		<div class="col-sm-8 m-auto">
 
 			<div class="row">
@@ -947,12 +909,12 @@
 	</div>
 
 	<!-- <img src="/src/assets/images/industrial_partners.png" alt="research-student" width="100%"> -->
-	<div class="bg-image p-5 bg-light text-center shadow-1-strong mb-5 rounded text-secondary">
+	<div class="container-fluid col-sm-8 bg-image p-5 bg-light text-center shadow-1-strong mb-5 rounded text-secondary">
 		<h1 class="mb-3 h">Industrial Partners</h1>
 	</div>
 
-	<div class="mt-5 content container-fluid col-sm-12" style="margin-bottom: 150px !important;">
-		<div class="col-sm-12 m-auto">
+	<div class="my-5 content container-fluid col-sm-8">
+		<div class="col-sm-8 m-auto">
 			<div class="col-sm-9 m-auto container-fluid">
 				<div class="row mt-5 justify-content-evenly">
 					<div class="col-sm-4">
@@ -998,10 +960,59 @@
 		</div>
 	</div>
 
-	<!-- <div class="bg-image p-5 bg-light  text-center shadow-1-strong mb-5 rounded text-secondary">
-    <h1 class="mb-3 h">What experts are saying about SAFEST</h1>
-  </div> -->
-	<div class="content container-fluid col-sm-12">
+	<div class="container-fluid col-sm-8" style="font-family: 'Nunito', sans-serif; padding: 100px; display: flex; justify-content:center; flex-wrap: wrap; gap: 200px; background-color: #f8f9fa;">
+		<div style="background-color: white; color: #24141c; width: 300px; border-radius: 7px; padding: 20px; display: flex; flex-direction: column; align-items: center;">
+		  <div style="text-align: center;">
+			<h2 style="font-weight: 600; margin-bottom: 10px;">Basic</h2>
+			<h4 style="font-weight: 400; margin: 0; margin-bottom: 20px;">Free</h4>
+		  </div>
+		  <ul style="padding-inline-start: 20px; margin: 0 0 20px 0; list-style-type: disc; width: 80%;">
+			<li style="font-weight: 200; margin-bottom: 8px;">Limited Reports</li>
+			<li style="font-weight: 200; margin-bottom: 8px;">Unlimited projects</li>
+			<li style="font-weight: 200; margin-bottom: 8px;">Data storage for 1 year</li>
+		  </ul>
+		  <button style="outline: none; border: 1px solid #007ac3; background: transparent; color: #007ac3; width: 80%; height: 40px; border-radius: 5px; font-family: 'Nunito', sans-serif; cursor: pointer;">
+			Get Started Now
+		  </button>
+		</div>
+	  
+		<div style="background-color: white; color: #24141c; width: 300px; border-radius: 7px; padding: 20px; display: flex; flex-direction: column; align-items: center;">
+		  <div style="text-align: center;">
+			<h2 style="font-weight: 600; margin-bottom: 10px;">Enterprise</h2>
+			<h4 style="font-weight: 400; margin: 0; margin-bottom: 20px;">Schedule a Demo</h4>
+		  </div>
+		  <ul style="padding-inline-start: 20px; margin: 0 0 20px 0; list-style-type: disc; width: 80%;">
+			<li style="font-weight: 200; margin-bottom: 8px;">Unlimited Reports</li>
+			<li style="font-weight: 200; margin-bottom: 8px;">15-days free trial</li>
+			<li style="font-weight: 200; margin-bottom: 8px;">Data storage for 3 years</li>
+		  </ul>
+		  <button style="outline: none; border: none; background: #007ac3; color: #ffffff; width: 80%; height: 40px; border-radius: 5px; font-family: 'Nunito', sans-serif; cursor: pointer;">
+			Schedule a Demo
+		  </button>
+		</div>
+
+		
+			<!-- <div
+			style="
+			/* background-color: #333; */
+			color: #333;
+			text-align: center;
+			/* padding: 20px; */
+			"
+			class="bg-light"
+		>
+			<h2>Learn how the software can work for you</h2>
+			<p>
+			Schedule a demo with us to give you a free online demonstration
+			of how the software fits your needs.
+			</p>
+		</div> -->
+	  </div>
+
+	</div>
+
+
+	<div class="content container-fluid col-sm-8">
 		<div class="col-sm-9 m-auto container-fluid">
 
 			<div class="row container-fluid col-sm-9 m-auto mt-5">
@@ -1038,65 +1049,12 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	
+	
+	
+	
 
-	    <!-- <div
-      style="
-        /* background-color: #333; */
-        color: #333;
-        text-align: center;
-        padding: 20px;
-      "
-      class="bg-light"
-    >
-      <h2>Learn how the software can work for you</h2>
-      <p>
-        Schedule a demo with us to give you a free online demonstration
-        of how the software fits your needs.
-      </p>
-      <button
-        style="
-          /* background-color: #4caf50; */
-          color: white;
-          padding: 10px 20px;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-        "
-        class="btn-secondary"
-      >
-        Request Demo ➡️
-      </button>
-    </div> -->
 
-	<div style="background-color: #24141c; color: #cccccc; font-family: 'Nunito', sans-serif; width: 70%; border-radius: 7px; padding: 5%; margin: 5% auto; display: flex; justify-content: space-around;">
-		<div style="padding: 5% 10%; flex: 1; border-right: 0.1px solid rgba(178, 170, 171, 0.185);">
-			<h2 style="font-weight: 600;">Basic</h2>
-			<h4 style="font-weight: 400; margin: 0;">Free</h4>
-			<!-- <span style="font-weight: 200;">3,000 monthly visitors</span> -->
-			<ul style="padding-inline-start: 7%; margin: 20% 0;">
-				<li style="font-weight: 200;">Limited Reports</li>
-				<li style="font-weight: 200;">Unlimited projects</li>
-				<li style="font-weight: 200;">Data storage for 1 year</li>
-			</ul>
-			<button style="outline: none; border: 1px solid #007ac3; background: transparent; color: #007ac3; width: 100%; height: 50px; border-radius: 5px; font-family: 'Nunito', sans-serif; cursor: pointer;">
-				Get Started Now
-			</button>
-		</div>
-		<div style="padding: 5% 10%; flex: 1;">
-			<h2 style="font-weight: 600;">Enterprise</h2>
-			<h4 style="font-weight: 400; margin: 0;">Schdule a Demo</h4>
-			<!-- <span style="font-weight: 200;">10,000 monthly visitors</span> -->
-			<ul style="padding-inline-start: 7%; margin: 20% 0;">
-				<li style="font-weight: 200;">Unlimited Reports</li>
-				<li style="font-weight: 200;">15-days free trial</li>
-				<li style="font-weight: 200;">Data storage for 3 years</li>
-			</ul>
-			<button style="outline: none; border: none; background: #007ac3; color: #ffffff; width: 100%; height: 50px; border-radius: 5px; font-family: 'Nunito', sans-serif; cursor: pointer;">
-				Schedule a Demo
-			</button>
-		</div>
-	</div>
 	
 
 

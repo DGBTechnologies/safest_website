@@ -1,14 +1,12 @@
-
-  #local-nav{
-    background-color:white; 
-    position: sticky; 
-    top: 0; 
-    z-index: 6;
+#local-nav {
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 6;
 }
-.active{
+.active {
   border-bottom: 2px solid blue;
 }
-
 
 #alert-box {
   position: fixed;
