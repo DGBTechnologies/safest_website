@@ -129,247 +129,6 @@ body {
   }
    */
 
-#hexGrid {
-    display: flex;
-    flex-wrap: wrap;
-    width: 90%;
-    margin: 0 auto;
-    overflow: hidden;
-    font-family: sans-serif;
-    list-style-type: none;
-}
-
-.hex {
-    position: relative;
-    outline: 1px solid transparent; /* fix for jagged edges in FF on hover transition */
-    transition: all 0.5s;
-    /* backface-visibility: hidden; */
-    will-change: transform;
-}
-.hex::after {
-    content: "";
-    display: block;
-    padding-bottom: 86.602%; /* =  100 / tan(60) * 1.5 */
-}
-.hexIn {
-    position: absolute;
-    width: 96%;
-    padding-bottom: 110.851%; /* =  width / sin(60) */
-    margin: 2%;
-    overflow: hidden;
-    outline: 1px solid transparent; /* fix for jagged edges in FF on hover transition */
-    -webkit-transform: rotate3d(0, 0, 1, -60deg) skewY(30deg);
-    -ms-transform: rotate3d(0, 0, 1, -60deg) skewY(30deg);
-    transform: rotate3d(0, 0, 1, -60deg) skewY(30deg);
-}
-.hexIn * {
-    position: absolute;
-    visibility: visible;
-    outline: 1px solid transparent; /* fix for jagged edges in FF on hover transition */
-}
-.hexLink {
-    display: block;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    color: #fff;
-    overflow: hidden;
-    -webkit-transform: skewY(-30deg) rotate3d(0, 0, 1, 60deg);
-    -ms-transform: skewY(-30deg) rotate3d(0, 0, 1, 60deg);
-    transform: skewY(-30deg) rotate3d(0, 0, 1, 60deg);
-}
-
-/*** HEX CONTENT **********************************************************************/
-.hex img {
-    left: -100%;
-    right: -100%;
-    width: auto;
-    height: 100%;
-    margin: 0 auto;
-}
-
-/* .hex h1, .hex p {
-    width: 100%;
-    padding: 5%;
-    box-sizing:border-box;
-    font-weight: 300;
-    opacity: 0;
-  } */
-
-#imageLabel {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: black;
-    color: white;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-.hex h1:before,
-.hex h1:after {
-    display: inline-block;
-    margin: 0 0.5em;
-    width: 0.25em;
-    height: 0.03em;
-    background: #ffffff;
-    content: "";
-    vertical-align: middle;
-    transition: all 0.3s;
-    text-align: center;
-}
-.img {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-position: center center;
-    background-size: cover;
-    overflow: hidden;
-    -webkit-clip-path: polygon(
-        50% 0%,
-        100% 25%,
-        100% 75%,
-        50% 100%,
-        0% 75%,
-        0% 25%
-    );
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    z-index: 2; /* added this line */
-}
-.img img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.img:before,
-.img:after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    content: "";
-    opacity: 0;
-    transition: opacity 0.5s;
-}
-/*** HOVER EFFECT  **********************************************************************/
-
-.hexLink:hover p,
-.hexLink:focus p {
-    opacity: 1;
-    transition: 0.8s;
-}
-
-.hexIn:hover .img:before,
-.hexIn:hover .img:after,
-.hexIn:hover .hexLink {
-    opacity: 0.25;
-}
-
-/*** HEXAGON SIZING AND EVEN ROW INDENTATION *****************************************************************/
-@media (min-width: 1201px) {
-    /* <- 5-4  hexagons per row */
-    #hexGrid {
-        padding-bottom: 10.4%;
-    }
-    .hex {
-        width: 25%; /* = 100 / 5 */
-    }
-    .hex:nth-child(3n + 4) {
-        margin-left: 12.5%;
-    }
-    .hex:nth-child(3n + 7) {
-        margin-left: 0%;
-    }
-    .hex:nth-child(3n + 10) {
-        margin-left: 0%;
-    }
-    .hex:nth-child(3n + 11) {
-        margin-left: 12.5%;
-    }
-}
-
-@media (max-width: 1200px) and (min-width: 901px) {
-    /* <- 4-3  hexagons per row */
-    #hexGrid {
-        padding-bottom: 8.5%;
-        font-size: 13px;
-    }
-    .hex {
-        width: 25%; /* = 100 / 4 */
-    }
-    .hex:nth-child(3n + 4) {
-        margin-left: 12.5%;
-    }
-    .hex:nth-child(3n + 7) {
-        margin-left: 0%;
-    }
-    .hex:nth-child(3n + 10) {
-        margin-left: 0%;
-    }
-    .hex:nth-child(3n + 11) {
-        margin-left: 12.5%;
-    }
-}
-
-@media (max-width: 900px) and (min-width: 601px) {
-    /* <- 3-2  hexagons per row */
-    #hexGrid {
-        padding-bottom: 8.4%;
-        font-size: 14px;
-    }
-    .hex {
-        width: 25%; /* = 100 / 3 */
-    }
-    .hex:nth-child(3n + 4) {
-        margin-left: 12.5%;
-    }
-    .hex:nth-child(3n + 7) {
-        margin-left: 0%;
-    }
-    .hex:nth-child(3n + 10) {
-        margin-left: 0%;
-    }
-    .hex:nth-child(3n + 11) {
-        margin-left: 12.5%;
-    }
-}
-
-@media (max-width: 600px) {
-    /* <- 2-1  hexagons per row */
-    #hexGrid {
-        padding-bottom: 11.2%;
-        font-size: 12px;
-    }
-    .hex {
-        width: 25%; /* = 100 / 3 */
-    }
-    .hex:nth-child(3n + 4) {
-        margin-left: 12.5%;
-    }
-    .hex:nth-child(3n + 7) {
-        margin-left: 0%;
-    }
-    .hex:nth-child(3n + 10) {
-        margin-left: 0%;
-    }
-    .hex:nth-child(3n + 11) {
-        margin-left: 12.5%;
-    }
-}
-
-@media (max-width: 400px) {
-    #hexGrid {
-        font-size: 8px;
-    }
-}
-
 /* meeting card */
 #card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -462,7 +221,7 @@ a.social {
 }
 
 .header-title {
-    font-size: 48px;
+    font-size: 40px;
     font-weight: bold;
     color: #00acff;
     margin-bottom: 10px;
@@ -519,8 +278,8 @@ a.social {
   
   .badge {
     position: absolute;
-    top: -60px;
-    right: -60px;
+    top: -50px;
+    right: -50px;
     width: 150px;
     height: 150px;
     background-color: #FF5733; /* Bright orange */
@@ -608,4 +367,81 @@ a.social {
     margin-top: 15px;
     /* border: 1px solid #ddd; */
     border-radius: 5px;
+  }
+
+
+  .csi-body h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 2.12rem;
+    font-weight: 700;
+    color: #4d5360;
+    margin-top: 5vh;
+  }
+
+  .divider-line-center {
+    width: 18%;
+    height: 3px;
+    margin: 1.5rem 1rem 1.3rem 0rem;
+    border-radius: 5px;
+    background: linear-gradient(#0080ef 0%, #00acff 100%);
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  /* hexagonal css */
+
+  .main {
+    display:flex;
+    --s: 200px;  /* size  */
+    --m: 9px;    /* margin */
+    --f: calc(1.732 * var(--s) + 4 * var(--m)  - 1px);
+  }
+  
+  .hex-container {
+    font-size: 0; /*disable white space between inline block element */
+  }
+  
+  .hexagon-item {
+    width: var(--s);
+    margin: var(--m);
+    height: calc(var(--s)*1.1547); 
+    display: inline-block;
+    font-size:initial;
+    clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+    background-color: #ddd; /* Fallback color */
+      position: relative;
+      overflow: hidden; /* Clip the image to the hexagon */
+    margin-bottom: calc(var(--m) - var(--s)*0.2885); 
+  }
+  
+  .hex-container::before {
+      content: "";
+      width: calc(var(--s)/2 + var(--m));
+      float: left;
+      height: 120%;
+      shape-outside: repeating-linear-gradient(
+                     #0000 0 calc(var(--f) - 3px),
+                     #000 0 var(--f));
+  }
+  
+  .hexagon-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensure image fills the hexagon */
+    display: block;
+  }
+  
+  .overlay-heading {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 1.2em;
+      text-align: center;
+      text-shadow: 2px 2px 4px #000; /* Add shadow for readability */
+      z-index: 1; /* Ensure text is on top of image */
+      pointer-events: none; /* Allow click events to pass to the images if you wanted to handle it */
+  
   }
