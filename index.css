@@ -445,3 +445,7 @@ a.social {
       pointer-events: none; /* Allow click events to pass to the images if you wanted to handle it */
   
   }
+
+  .active {
+    border-bottom: 2px solid blue;
+  }
