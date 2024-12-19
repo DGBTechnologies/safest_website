@@ -141,7 +141,7 @@
 	  <!-- Collapsible Menu -->
 	  <div class="collapse navbar-collapse" id="navbarNav">
 		<ul class="navbar-nav ms-auto me-auto">
-		<li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+		<li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
 		  <li class="nav-item">
 			<a
 			  href="/src/components/installation/installation.html"
@@ -358,82 +358,104 @@
 					</div>
 				</div>
 			</div>	
-
 			<div class="section">
 				<div class="section-header" onclick="toggleSection(this)">
 					<span class="toggle-icon"></span>
 					<h3>Specification (CSL logic) & quantification of advanced reliability metrics</h3>
 				</div>
 				<div class="section-content">
-						<div class="m-auto" style="padding: 0px 60px 0px 50px">
-							Apart from traditional reliability metrics, SAFEST allows the computing of advanced dependability metrics. It categorizes metrics based on their complexity: Basic, Advanced, Importance, and Custom.
-							<div style="font-family: sans-serif; line-height: 1.6;">
-
+					<div class="m-auto" style="padding: 0px 60px 0px 50px">
+						Apart from traditional reliability metrics, SAFEST allows the computing of advanced dependability metrics. It
+						categorizes metrics based on their complexity: Basic, Advanced, Importance, and Custom.
+						<div style="font-family: sans-serif; line-height: 1.6;">
+			
 							<details>
-							  <summary><b>Basic</b></summary>
-							  <ul style="padding-left: 20px;">
-								<li>Reliability: the probability of failure within a given time bound.</li>
-								<li>Unreliability: the complement of reliability (1- Reliability).</li>
-								<li>Average failure probability per hour</li>
-								<li>Mean-time-to-failure: the expected time to system failure or scenario occurrence.</li>
-								 <li>Event probability within a time bound: the probability that an event occurs within a given time.</li>
-								<li>Event probability: the probability that an event occurs.</li>
-								 <li>Instantaneous probability: the probability that an event occurs at a given time.</li>
-							  </ul>
-							</details>
-						  
+								<summary class="section-header" onclick="toggleSubSection(this)">
+									<span class="toggle-icon"></span>
+									<b>Basic</b>
+								</summary>
+								<div class="section-content">
+								  <ul style="padding-left: 20px;">
+									<li>Reliability: the probability of failure within a given time bound.</li>
+									<li>Unreliability: the complement of reliability (1- Reliability).</li>
+									<li>Average failure probability per hour</li>
+									<li>Mean-time-to-failure: the expected time to system failure or scenario occurrence.</li>
+									 <li>Event probability within a time bound: the probability that an event occurs within a given time.</li>
+									<li>Event probability: the probability that an event occurs.</li>
+									 <li>Instantaneous probability: the probability that an event occurs at a given time.</li>
+								  </ul>
+								</div>
+							  </details>
+			
 							<details>
-								<summary><b>Advanced</b></summary>
-								<ul style="padding-left: 20px;">
-									<li>Full function availability (FFA): the time-bounded probability that the system provides full functionality, indicating it has neither failed nor degraded.</li>
-									<li>Failure without degradation (FWD): the time-bounded probability that the system fails without being degraded first.</li>
-									<li>Mean time from degradation to failure (MTDF): The expected time from the moment of degradation to system failure.</li>
-									<li>Minimal degraded reliability (MDR): the worst-case failure probability when using the system in a degraded state.</li>
-									<li>Failure under limited operation in degradation (FLOD_1): the probability of failure when imposing a time limit for using a degraded system.</li>
-									<li>Failure under limited operation in degradation (FLOD_2): similar to FLOD_1, but with additional conditions of avoiding prior system failure.</li>
-									<li>System integrity under limited fail-operation (SILFO): it considers the system-wide impact of limiting the degraded operation time, with aspects FWD and FLOD_1.</li>
-									<li>Reach-avoid probability: the probability of one event occurring without another event happening before.</li>
-									<li>Time-bounded reach-avoid probability: the probability of an event occurring within a time limit without another event happening beforehand.</li>
-								</ul>
-								<div class="image-wrapper">
-									<img src="/src/assets/images/tool-features/feat-screens/csl-advanced.png"
-									alt="Structure knowledge example"/>
-								</div>
+								<summary class="section-header" onclick="toggleSubSection(this)">
+									 <span class="toggle-icon"></span>
+									<b>Advanced</b>
+								</summary>
+								<div class="section-content">
+									<ul style="padding-left: 20px;">
+										<li>Full function availability (FFA): the time-bounded probability that the system provides full functionality, indicating it has neither failed nor degraded.</li>
+										<li>Failure without degradation (FWD): the time-bounded probability that the system fails without being degraded first.</li>
+										<li>Mean time from degradation to failure (MTDF): The expected time from the moment of degradation to system failure.</li>
+										<li>Minimal degraded reliability (MDR): the worst-case failure probability when using the system in a degraded state.</li>
+										<li>Failure under limited operation in degradation (FLOD_1): the probability of failure when imposing a time limit for using a degraded system.</li>
+										<li>Failure under limited operation in degradation (FLOD_2): similar to FLOD_1, but with additional conditions of avoiding prior system failure.</li>
+										<li>System integrity under limited fail-operation (SILFO): it considers the system-wide impact of limiting the degraded operation time, with aspects FWD and FLOD_1.</li>
+										<li>Reach-avoid probability: the probability of one event occurring without another event happening before.</li>
+										<li>Time-bounded reach-avoid probability: the probability of an event occurring within a time limit without another event happening beforehand.</li>
+									</ul>
+									<div class="image-wrapper">
+										<img src="/src/assets/images/tool-features/feat-screens/csl-advanced.png"
+											alt="Structure knowledge example"/>
+									</div>
+							   </div>
 							</details>
-						  
-						  	</div>
-							<div style="font-family: sans-serif; line-height: 1.6;">
-
-								<details >
-								<summary><b>Importance</b></summary>
-								<ul style="padding-left: 20px;">
-									<li>Birnbaum index (BI): it measures how much the system's unreliability depends on a specific component's unreliability.</li>
-									<li>Criticality importance (CI): similar to BI, scaled by the ratio of component and system unreliability.</li>
-									<li>Risk achievement worth (RAW): the impact of a component's total degradation on system unreliability.</li>
-									<li>Risk reduction worth (RRW): the impact of making a component fully reliable on system unreliability.</li>
-									<li>Diagnostics importance factor (DIF): the frequency of a component's failure in states where the system has failed.</li>
-									<li>BAGT+: the change in mean time-to-failure (MTTF) if the component fully degrades.</li>
-									<li>BAGT-: the change in mean time-to-failure (MTTF) if the component is fully reliable.</li>
-								</ul>
-								<div class="image-wrapper">
-									<img src="/src/assets/images/tool-features/feat-screens/csl-importance.png"
-									alt="Structure knowledge example"/>
-								</div>
-								</details>
-
-							</div>
-							<div style="font-family: sans-serif; line-height: 1.6;">
-
-								<details>
-									<summary><b>Custom</b></summary>
+			
+						</div>
+						<div style="font-family: sans-serif; line-height: 1.6;">
+			
+							<details>
+								<summary class="section-header" onclick="toggleSubSection(this)">
+									<span class="toggle-icon"></span>
+									<b>Importance</b>
+								</summary>
+								<div class="section-content">
+									<ul style="padding-left: 20px;">
+										<li>Birnbaum index (BI): it measures how much the system's unreliability depends on a specific component's unreliability.</li>
+										<li>Criticality importance (CI): similar to BI, scaled by the ratio of component and system unreliability.</li>
+										<li>Risk achievement worth (RAW): the impact of a component's total degradation on system unreliability.</li>
+										<li>Risk reduction worth (RRW): the impact of making a component fully reliable on system unreliability.</li>
+										<li>Diagnostics importance factor (DIF): the frequency of a component's failure in states where the system has failed.</li>
+										<li>BAGT+: the change in mean time-to-failure (MTTF) if the component fully degrades.</li>
+										<li>BAGT-: the change in mean time-to-failure (MTTF) if the component is fully reliable.</li>
+									</ul>
+									<div class="image-wrapper">
+										<img src="/src/assets/images/tool-features/feat-screens/csl-importance.png"
+											alt="Structure knowledge example"/>
+									</div>
+							   </div>
+							</details>
+			
+						</div>
+						<div style="font-family: sans-serif; line-height: 1.6;">
+			
+							<details>
+								<summary class="section-header" onclick="toggleSubSection(this)">
+									<span class="toggle-icon"></span>
+									<b>Custom</b>
+								</summary>
+								<div class="section-content">
 									<p>Custom properties can be specified using Probabilistic Computation Tree Logic (PCTL) / Continuous Stochastic Logic (CSL).</p>
 									<p>The probability measure on Markov models is typically defined on paths. These paths are defined as in temporal logic, or more specifically computation tree logic (CTL), a branching-time logic. That means that the formula alternates over descriptions of paths and descriptions of states.</p>
-									  <p>(in the blow text, insure the red color of forumale is preserved. Also make "a" and "b" italic in the below text</p>
-							
-								</details>
-							
-								<details open>
-									<summary><b>Path Formulae</b></summary>
+								</div>
+							</details>
+			
+							<details open>
+								<summary class="section-header" onclick="toggleSubSection(this)">
+								   <span class="toggle-icon"></span>
+									<b>Path Formulae</b>
+								</summary>
+								 <div class="section-content">
 									<p>For this, we assume that <i style="font-style:italic;">a</i> and <i style="font-style:italic;">b</i> are <span style="color:red;">state formulae</span> and <span style="color:red;">{op}</span> is any one of <, <=, =, >=, >. The available path formulae are:</p>
 									<ul style="padding-left: 20px;">
 										<li><i style="font-style:italic;">a</i> U <i style="font-style:italic;">b</i> to describe paths on which at some point <i style="font-style:italic;">b</i> holds and in all prior steps <i style="font-style:italic;">a</i> holds.</li>
@@ -442,10 +464,15 @@
 										<li>F<span style="color:red;">{op}</span>k <i style="font-style:italic;">b</i> as a shortcut for <span style="color:red;">true U<span style="color:red;">{op}</span>k <i style="font-style:italic;">b</i></span>.</li>
 										<li>G <i style="font-style:italic;">a</i> to describe paths on which <i style="font-style:italic;">a</i> holds in every step.</li>
 									</ul>
-								</details>
-							
-								<details open>
-									<summary><b>State Formulae</b></summary>
+								</div>
+							</details>
+			
+							<details open>
+								<summary class="section-header" onclick="toggleSubSection(this)">
+									<span class="toggle-icon"></span>
+									<b>State Formulae</b>
+								</summary>
+								 <div class="section-content">
 									<p>Here, we assume that <i style="font-style:italic;">a</i> and <i style="font-style:italic;">b</i> are <span style="color:red;">state formulae</span>, phi is a <span style="color:red;">path formula</span> and <span style="color:red;">{op}</span> is any one of <, <=, =, >=, >. The available state formulae are:</p>
 									<ul style="padding-left: 20px;">
 										<li>c where c is either a label or an expression over the model variables.</li>
@@ -454,25 +481,36 @@
 										<li>P[<span style="color:red;">{op}</span>]t [ phi ] (where t is a threshold value) to describe the states in which the probability to satisfy phi conforms to the comparison <span style="color:red;">{op}</span> t.</li>
 										<li>LRA[<span style="color:red;">{op}</span>]t [ <i style="font-style:italic;">a</i> ] to describe states in which the long-run average probability to be in a state satisfying <i style="font-style:italic;">a</i> conforms to <span style="color:red;">{op}</span> t.</li>
 									</ul>
-								</details>
-							
-							</div>
-							<div style="font-family: sans-serif; line-height: 1.6;">
-								<details>
-									<summary><b>Obtaining Probabilities</b></summary>
-									<p>Although formally not allowed in PCTL/CSL, one can also request the probability of fulfilling a path formula from each state. Instead of comparing to a given value  <span style="color:red;">P{op}b [ phi ]</span> , one can write <span style="color:red;">P=? [ phi ]</span> to obtain the actual values rather then obtaining a truth value.</p>
-								</details>
-							
-								<details>
-									<summary><b>Nondeterministic Models</b></summary>
-									<p>For nondeterministic models, the formula can (and sometimes needs to) specify whether it refers to minimal or maximal probabilities. Since there is no information on how the nondeterminism in the models is to be resolved, Storm needs information on whether it should resolve the choices to <span style="text-decoration: underline;">minimize</span> or <span style="text-decoration: underline;">maximize</span> the values. That is, you cannot write <span style="color:red;">P=? [F a]</span>, but have to either write <span style="color:red;">Pmin=? [F a]</span> or <span style="color:red;">Pmax=? [F a]</span>. While you can also specify <span style="text-decoration: underline;">min</span> and <span style="text-decoration: underline;">max</span> when comparing to a probability threshold, it's not necessary to do it. By default, if the comparison operator <span style="color:red;">{op}</span> is < or <=, then the probability is maximized and otherwise minimized. The reasoning is the following: if the property holds in a state, then no matter which resolution of nondeterminism is taken, the probability will always be below (or equal) to the threshold value.</p>
-								</details>
-							
-							</div>
+								</div>
+							</details>
+			
 						</div>
+						<div style="font-family: sans-serif; line-height: 1.6;">
+							<details>
+								<summary class="section-header" onclick="toggleSubSection(this)">
+									<span class="toggle-icon"></span>
+									<b>Obtaining Probabilities</b>
+								</summary>
+								 <div class="section-content">
+									<p>Although formally not allowed in PCTL/CSL, one can also request the probability of fulfilling a path formula from each state. Instead of comparing to a given value  <span style="color:red;">P{op}b [ phi ]</span> , one can write <span style="color:red;">P=? [ phi ]</span> to obtain the actual values rather then obtaining a truth value.</p>
+								</div>
+							</details>
+			
+							<details>
+							   <summary class="section-header" onclick="toggleSubSection(this)">
+									<span class="toggle-icon"></span>
+									<b>Nondeterministic Models</b>
+								</summary>
+								<div class="section-content">
+									<p>For nondeterministic models, the formula can (and sometimes needs to) specify whether it refers to minimal or maximal probabilities. Since there is no information on how the nondeterminism in the models is to be resolved, Storm needs information on whether it should resolve the choices to <span style="text-decoration: underline;">minimize</span> or <span style="text-decoration: underline;">maximize</span> the values. That is, you cannot write <span style="color:red;">P=? [F a]</span>, but have to either write <span style="color:red;">Pmin=? [F a]</span> or <span style="color:red;">Pmax=? [F a]</span>. While you can also specify <span style="text-decoration: underline;">min</span> and <span style="text-decoration: underline;">max</span> when comparing to a probability threshold, it's not necessary to do it. By default, if the comparison operator <span style="color:red;">{op}</span> is < or <=, then the probability is maximized and otherwise minimized. The reasoning is the following: if the property holds in a state, then no matter which resolution of nondeterminism is taken, the probability will always be below (or equal) to the threshold value.</p>
+								</div>
+							</details>
+			
+						</div>
+					</div>
 				</div>
-			</div>	
-		
+			</div>
+			
 			<div class="section">
 			<div class="section-header" onclick="toggleSection(this)">
 				<span class="toggle-icon"></span>
@@ -738,6 +776,11 @@
 		function toggleSection(header) {
 			const section = header.parentElement;
 			section.classList.toggle("open");
+		}
+	
+		 function toggleSubSection(summary) {
+			const subSection = summary.parentElement;
+			subSection.classList.toggle("open");
 		}
 	</script>
 <!-- features overview end here -->

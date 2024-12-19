@@ -358,6 +358,11 @@ a.social {
     display: block;
   }
 
+  details summary.section-header{
+    color: #00acff;
+    font-weight: normal;
+  }
+
   .image-wrapper {
     display: flex;
     justify-content: center; /* Center the image */
