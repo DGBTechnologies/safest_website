@@ -9,194 +9,49 @@
 	<link rel="icon" type="image/x-icon" class="h-25" href="/src/assets/images/fav_icon.png" />
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="/index.css" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
-
-	<link rel="stylesheet" href="/index.css" />
-	<!-- font-awesome link -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+	
 	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-	<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-		crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-		crossorigin="anonymous"></script>
-		<style>
-			.section-header {
-			  display: flex;
-			  align-items: center;
-			  gap: 10px;
-			  padding: 15px;
-			  cursor: pointer;
-			  background: white;
-			  border-radius: 8px 8px 0 0;
-			  margin-bottom: -1px;
-			  transition: background 0.3s;
-			}
-	  
-			.section-header:hover {
-			  background: #f5f5f5;
-			}
-	  
-			.section-header h3 {
-			  margin: 0;
-			  font-size: 18px;
-			  color: #00acff;
-			  flex-grow: 1;
-			  border-bottom: 1px solid #f5f5f5;
-			}
-	  
-			.section-header .toggle-icon {
-			  width: 10px;
-			  height: 10px;
-			  border: solid #007ac3;
-			  border-width: 0 2px 2px 0;
-			  transform: rotate(45deg); /* Default caret pointing down */
-			  transition: transform 0.3s ease;
-			}
-	  
-			.section-header:hover .toggle-icon {
-			  color: #005f9e;
-			}
-	  
-			.section.open .section-header .toggle-icon {
-			  transform: rotate(-135deg);
-			}
-	  
-			.section-content {
-			  display: none;
-			  padding: 15px;
-			  background: #fff;
-			  border-radius: 0 0 8px 8px;
-			}
-	  
-			.section.open .section-content {
-			  display: block;
-			}
-	  
-			.image-wrapper {
-			  display: flex;
-			  justify-content: center; /* Center the image */
-			}
-			.section-content img {
-			  max-width: 60%;
-			  margin-top: 15px;
-			  /* border: 1px solid #ddd; */
-			  border-radius: 5px;
-			}
-		  </style>	
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-	<script
-	src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-	integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-	crossorigin="anonymous"
-  ></script>
-  <link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-	crossorigin="anonymous"
-  />
-  
-  <nav
-	id="navbar"
-	class="navbar navbar-light bg-light navbar-expand-sm fixed-top"
-	style="transition: none; margin: 0; padding: 0; height: 7vh"
-  >
-	<div
-	  class="container-fluid d-flex align-items-center justify-content-between"
-	>
-	  <!-- Left Logo -->
-	  <a class="navbar-brand" href="https://www.safest.dgbtek.com/">
-		<img
-		  src="/src/assets/images/SAFEST_LOGO_.png"
-		  alt="SAFEST Logo"
-		  style="height: 40px"
-		/>
-	  </a>
-  
-	  <!-- Navbar Toggle Button for Mobile -->
-	  <button
-		class="navbar-toggler"
-		type="button"
-		data-bs-toggle="collapse"
-		data-bs-target="#navbarNav"
-		aria-controls="navbarNav"
-		aria-expanded="false"
-		aria-label="Toggle navigation"
-	  >
-		<span class="navbar-toggler-icon"></span>
-	  </button>
-  
-	  <!-- Collapsible Menu -->
-	  <div class="collapse navbar-collapse" id="navbarNav">
-		<ul class="navbar-nav ms-auto me-auto">
-		<li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
-		  <li class="nav-item">
-			<a
-			  href="/src/components/installation/installation.html"
-			  class="nav-link"
-			  >Installation</a
-			>
-		  </li>
-		  <li class="nav-item">
-			<a href="/src/components/licenses/dft-licenses.html" class="nav-link"
-			  >Licenses</a
-			>
-		  </li>
-		  <li class="nav-item">
-			<a
-			  href="/src/components/documentations/dft-documentations.html"
-			  class="nav-link"
-			  >Documentations</a
-			>
-		  </li>
-		  <!-- <li class="nav-item"><a href="/src/components/validation/validation.html" class="nav-link">Validation</a></li> -->
-		  <li class="nav-item">
-			<a href="/src/components/support/dft-support.html" class="nav-link"
-			  >Support</a
-			>
-		  </li>
-		  <li class="nav-item">
-			<a
-			  href="/src/components/case_studies/dft-case-studies.html"
-			  class="nav-link"
-			  >Case Studies</a
-			>
-		  </li>
-		  <li class="nav-item">
-			<a href="/src/components/team/dft-team.html" class="nav-link">Team</a>
-		  </li>
-		  <!-- <li class="nav-item"><a href="/src/components/collaborator/collaborator.html" class="nav-link">Clients</a></li> -->
-		  <li class="nav-item">
-			<a href="/src/components/contact/contact.html" class="nav-link"
-			  >Contact</a
-			>
-		  </li>
-		</ul>
-	  </div>
-  
-	  <!-- Right Logo -->
-	  <a class="navbar-brand" href="https://www.dgbtek.com" target="_blank">
-		<img
-		  src="/src/assets/images/dgb-logo.png"
-		  alt="DGB Logo"
-		  style="height: 40px"
-		/>
-	  </a>
-	</div>
-  </nav>
-  
+
+	<nav id="navbar" class="navbar navbar-light bg-light navbar-expand-sm fixed-top"
+		style="background-color:white; overflow:auto">
+
+			<a class="navbar-brand " href="/index.html"><img src="/src/assets/images/SAFEST_LOGO_.png"
+				style="width: auto; height: 40px;"></a>
+
+			<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#collapse"
+			aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="navbar-collapse collapse" id="collapse">
+			<ul class="navbar-nav ms-auto me-auto">
+				<li class="nav-item active"><a href="/index.html" class="nav-link">Home</a></li>
+				<li class="nav-item"><a href="/src/components/installation/installation.html" class="nav-link">Installation</a></li>
+				<li class="nav-item"><a href="/src/components/licenses/dft-licenses.html" class="nav-link">Licenses</a>
+				</li>
+				<li class="nav-item"><a href=" /src/components/documentations/dft-documentations.html"
+					class="nav-link">Documentations</a></li>
+				<li class="nav-item"><a href="/src/components/support/dft-support.html" class="nav-link">Support</a></li>
+				<li class="nav-item"><a href="/src/components/case_studies/dft-case-studies.html" class="nav-link">Case
+					Studies</a></li>
+				<li class="nav-item"><a href="/src/components/team/dft-team.html" class="nav-link">Team</a></li>
+				<li class="nav-item"><a href="/src/components/contact/contact.html" class="nav-link">Contact</a></li>
+
+			</ul>
+			</div>
+			<a class="navbar-brand " href="https://www.dgbtek.com"><img src="/src/assets/images/dgb-logo.png"
+				style="width: auto; height: 40px;"></a>
+
+	</nav>
+	
 
 <!-- main header & image -->
 	<section style="margin-top: 4rem">
@@ -207,10 +62,10 @@
 							<h1 class="header-title">Risk Assessment Toolchain
 							</h1>
 							<p class="header-description">
-								A fully automatic, scalable, and state-of-the-art tool that is based on <span class="bluehighlight-text">dynamic fault trees
-									and event trees</span>  and, thus, can faithfully assess the risk of <span class="bluehighlight-text">fail-operational/fault-tolerant
-								dynamic systems with decision-making capabilities.</span> It offers more flexible modeling and
-								analyses, going beyond the capabilities of existing commercial tools.
+								A fully automatic, scalable, and state-of-the-art tool that is based on <span class="bluehighlight-text">dynamic fault trees (DFT) and event trees</span> and, thus, 
+								can faithfully assess the risk of <span class="bluehighlight-text">fail-operational/fault-tolerant dynamic systems with decision-making capabilities.</span> 
+								It is equally competitive with existing commercial tools (for static fault trees analysis), but offers more flexible 
+								modeling and analyses, going beyond the capabilities of other tools, of dynamic systems as it <span class="bluehighlight-text">covers all DFT gates</span>.
 							</p>
 						<div class="header-buttons">
 							<a
@@ -245,43 +100,42 @@
 <section class="content container-fluid col-sm-8" style="margin-top: 40px;">
 	<div class="row" style="display: flex; align-items: stretch; width: 100%;">
   
-	  <!-- 1. Heading -->
-	  <div class="csi-body" style="text-align: center; padding: 20px; flex: 1; display:flex; align-items:center; justify-content:center; margin-right: 30px;">
-		<div style="width: 100%;">
-		  <h3 style="text-align: center;">Our Academic Partners</h3>
-		  <div class="divider-line-center"></div>
-		</div>
-	  </div>
+	  <!-- 1. Heading & Logos (First Half) -->
+	  <div style="display: flex; flex-direction: column; flex: 1; margin-right: 30px; justify-content: space-between;">
+          <div class="csi-body" style="text-align: center; padding: 20px; display:flex; align-items:center; justify-content:center;">
+            <div style="width: 100%;">
+              <h3 style="text-align: center;">Our Academic Partners</h3>
+              <div class="divider-line-center"></div>
+            </div>
+        </div>
+	    <div style="display: flex; justify-content: space-around; padding: 20px;">
+            <div style="display: flex; justify-content: center; align-items: center; width: 30%; height: 120px;">
+                <img src="/src/assets/images/logos/ut-logo.svg" alt="Partner 1" style="max-width: 100%; max-height: 100%; width: 100%; padding: 5px; object-fit: contain; background-color: black;">
+            </div>
+            <div style="display: flex; justify-content: center; align-items: center; width: 30%; height: 120px;">
+                <img src="/src/assets/images/aachen.png" alt="Partner 2" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+            </div>
+            <div style="display: flex; justify-content: center; align-items: center; width: 30%; height: 120px;">
+                <img src="/src/assets/images/logos/univ-eindhoven.png" alt="Partner 3" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+            </div>
+        </div>
+      </div>
   
-	  <!-- 2. Logos -->
-	  <div style="display: flex; justify-content: space-around; padding: 20px; flex: 2;">
-		<div style="display: flex; justify-content: center; align-items: center; width: 30%; height: 120px;">
-		  <img src="/src/assets/images/logos/ut-logo.svg" alt="Partner 1" style="max-width: 100%; max-height: 100%; width: 100%; padding: 5px; object-fit: contain; background-color: black;">
-		</div>
-		<div style="display: flex; justify-content: center; align-items: center; width: 30%; height: 120px;">
-		  <img src="/src/assets/images/aachen.png" alt="Partner 2" style="max-width: 100%; max-height: 100%; object-fit: contain;">
-		</div>
-		<div style="display: flex; justify-content: center; align-items: center; width: 30%; height: 120px;">
-		  <img src="/src/assets/images/logos/univ-eindhoven.png" alt="Partner 3" style="max-width: 100%; max-height: 100%; object-fit: contain;">
-		</div>
-	  </div>
-  
-	  <!-- 3. News Card -->
-	  <div style="padding: 20px; flex: 1; width: 300px; display: flex; align-items: center; justify-content: center; border-radius: 10%; box-shadow: 0 4px 8px #00acff; margin-left: 30px;">
-		  <div style="width: 100%;">
-			  <div style="text-align: center; margin-bottom: 20px;">
-				  <h4 style="font-size: 1.5em; color: #4d5360; font-weight: bold; border-bottom: 2px solid #00acff; padding-bottom: 10px; display:inline-block; margin: 0 auto">Latest News</h4>
-			  </div>
-			  <ul style="list-style:circle; padding: 2; margin: 0; display: flex; flex-direction: column;">
-				  <li style="padding: 0; margin-bottom: 2px; font-size: 0.9em;">Enterprise SAFEST is being released in January 2025</li>
-				  <li style="padding: 0; margin-bottom: 2px; font-size: 0.9em;">SAFEST v2 has been released in November 2024</li>
-			  </ul>
-		  </div>
+	  <!-- 2. News Card (Second Half - Same Width as Laptop) -->
+        <div style="flex: 1; padding: 20px;  display: flex; align-items: center; justify-content: center; border-radius: 10%; box-shadow: 0 4px 8px #00acff; margin-left: 30px;">
+            <div style="width: 100%; ">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <h4 style="font-size: 1.5em; color: #4d5360; font-weight: bold; border-bottom: 2px solid #00acff; padding-bottom: 10px; display:inline-block; margin: 0 auto">Latest News</h4>
+                </div>
+                <ul style="list-style:circle; margin: 0; display: flex; flex-direction: column; ">
+                    <li style="padding: 0; margin-bottom: 2px; font-size: 1em;">Enterprise SAFEST is being released in January 2025</li>
+                    <li style="padding: 0; margin-bottom: 2px; font-size: 1em;">SAFEST v2 has been released in November 2024</li>
+                </ul>
+            </div>
 	  </div>
   
 	</div>
   </section>
-  
 <!-- Academic partners/news end here -->
 
 
@@ -967,7 +821,7 @@
 				<div style="background-color: whitesmoke; color: #24141c; width: 300px; border-radius: 7px; padding: 20px; display: flex; flex-direction: column; align-items: center; position: relative; height: 100%; padding-bottom: 70px;">
 					<div style="text-align: center;">
 						<h2 style="font-weight: 600; margin-bottom: 10px;">Basic</h2>
-						<h4 style="font-weight: 400; margin: 0; margin-bottom: 20px;">Free</h4>
+						<!-- <h4 style="font-weight: 400; margin: 0; margin-bottom: 20px;">Free</h4> -->
 					</div>
 					<ul style="padding-inline-start: 20px; margin: 0 0 40px 0; list-style-type: disc; width: 80%;">
 						<li style="font-weight: 200; margin-bottom: 8px;">Free for academia</li>
@@ -983,7 +837,7 @@
 				<div style="background-color: whitesmoke; color: #24141c; width: 300px; border-radius: 7px; padding: 20px; display: flex; flex-direction: column; align-items: center; position: relative; height: 100%; padding-bottom: 70px;">
 					<div style="text-align: center;">
 						<h2 style="font-weight: 600; margin-bottom: 10px;">Enterprise</h2>
-						<h4 style="font-weight: 400; margin: 0; margin-bottom: 20px;">Schedule a Demo</h4>
+						<!-- <h4 style="font-weight: 400; margin: 0; margin-bottom: 20px;">Schedule a Demo</h4> -->
 					</div>
 					<ul style="padding-inline-start: 20px; margin: 0 0 40px 0; list-style-type: disc; width: 80%;">
 						<li style="font-weight: 200; margin-bottom: 8px;">Fault tree analysis module</li>
