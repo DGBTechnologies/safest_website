@@ -1,0 +1,136 @@
+.feature-section {
+    background-color: #fff; /* White background */
+    padding: 40px 20px; /* padding */
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+  gap: 30px;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: row; /* Align icon and text horizontally */
+    align-items: start; /* Align items at the top */
+    padding-bottom:20px;
+}
+
+.feature-item-icon {
+    width: 40px; /* Adjust the icon size as needed */
+    height: 40px;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-item-icon i {
+  font-size: 24px; /* adjust size as needed */
+  color: #3498db; /* Default icon color, can be customized */
+}
+
+.feature-item-content {
+   display: flex;
+   flex-direction: column;
+
+}
+
+.feature-item h3 {
+    color: #4d5360; /* Heading color */
+    font-size: 1.2em;
+    margin-bottom: 8px;
+    margin-top: 0;
+}
+
+.feature-item p {
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.5;
+  text-align: justify;
+}
+
+/* Optional styling for better alignment of content */
+.feature-item-content {
+     flex: 1; /* Allow text to occupy remaining space */
+    }
+
+    .contact-section {
+      background-color: #fff; /* White background */
+      padding: 40px 20px; /* padding */
+    }
+  
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box; /* Make sure padding doesn't add to the overall size */
+    }
+  
+    .input-field-des {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box; /* Make sure padding doesn't add to the overall size */
+      height: 150px; /* set a fixed height */
+      resize: vertical; /* allow vertical resizing of the textarea */
+      margin-bottom: 15px;
+    }
+      .input-field::placeholder, .input-field-des::placeholder { /* override the default placeholder color */
+           color: #999;
+      }
+      .contact-section {
+        background-color: #fff; /* White background */
+        padding: 40px 20px; /* padding */
+      }
+    
+      .input-field {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #e0e0e0; /* light gray border */
+        border-radius: 8px; /* rounded corners */
+        box-sizing: border-box; /* Make sure padding doesn't add to the overall size */
+          background-color: #f9f9f9; /* light background color */
+           transition: border-color 0.2s ease-in-out; /* smooth transition */
+      }
+    
+        .input-field:focus {
+            border-color: #00acff; /* Highlight border on focus */
+            outline: none; /* Remove default focus outline */
+        }
+    
+        .input-field-des {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            box-sizing: border-box;
+            height: 150px; /* set a fixed height */
+             background-color: #f9f9f9; /* light background color */
+            resize: vertical; /* allow vertical resizing of the textarea */
+            margin-bottom: 15px;
+            transition: border-color 0.2s ease-in-out; /* smooth transition */
+        }
+       .input-field-des:focus {
+            border-color: #00acff; /* Highlight border on focus */
+            outline: none; /* Remove default focus outline */
+        }
+      .input-field::placeholder, .input-field-des::placeholder { /* override the default placeholder color */
+             color: #999;
+        }
+    
+      .btn {
+        background-color: #00acff; /* same as original */
+        color: #ffffff; /* same as original */
+        border-radius: 5px;
+        padding: 10px 20px;
+      }
+      .divider-line-center {
+        border: 1px solid #00acff; /* line color from screenshot */
+        width: 80px;
+        margin: 15px auto; /* center the line */
+    }

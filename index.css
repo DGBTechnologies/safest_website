@@ -7,13 +7,27 @@ body {
 }
 /* Fixed Navbar */
 .navbar {
-  position: fixed;
+  position: fixed; /* Keep fixed position */
   top: 0;
   width: 100%;
   background-color: white;
   transition: top 0.3s;
+    z-index: 1030; /* Ensure it is above other elements */
 }
 
+.navbar-wrapper {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    align-items: center;
+    
+}
+.dropdown-menu {
+  position: fixed; /* Change to fixed */
+    z-index: 1031; /* Ensure it is above other elements */
+   
+}
 /* Sticky Navbar */
 .sticky {
   position: sticky;

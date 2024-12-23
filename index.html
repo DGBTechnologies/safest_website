@@ -1,56 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>SAFEST</title>
-	<link rel="icon" type="image/x-icon" class="h-25" href="/src/assets/images/fav_icon.png" />
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="/index.css" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	
-	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-</head>
-
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>SAFEST</title>
+		<link rel="icon" type="image/x-icon" class="h-25" href="/src/assets/images/fav_icon.png" />
+		
+		<link rel="stylesheet" href="/index.css" />
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+		
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+	</head>
 <body>
 
 
-	<nav id="navbar" class="navbar navbar-light bg-light navbar-expand-sm fixed-top"
-		style="background-color:white; overflow:auto">
+  <nav id="navbar" class="navbar navbar-light bg-light navbar-expand-sm fixed-top"
+        style="background-color:white; overflow:visible; z-index:1030; position:relative;">
 
-			<a class="navbar-brand " href="/index.html"><img src="/src/assets/images/SAFEST_LOGO_.png"
-				style="width: auto; height: 40px;"></a>
+        <div class="navbar-wrapper d-flex align-items-center">
 
-			<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#collapse"
-			aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-			</button>
+            <a class="navbar-brand" href="/index.html"><img src="/src/assets/images/SAFEST_LOGO_.png"
+                                                            style="width: auto; height: 40px;"></a>
 
-			<div class="navbar-collapse collapse" id="collapse">
-			<ul class="navbar-nav ms-auto me-auto">
-				<li class="nav-item active"><a href="/index.html" class="nav-link">Home</a></li>
-				<li class="nav-item"><a href="/src/components/installation/installation.html" class="nav-link">Installation</a></li>
-				<li class="nav-item"><a href="/src/components/licenses/dft-licenses.html" class="nav-link">Licenses</a>
-				</li>
-				<li class="nav-item"><a href=" /src/components/documentations/dft-documentations.html"
-					class="nav-link">Documentations</a></li>
-				<li class="nav-item"><a href="/src/components/support/dft-support.html" class="nav-link">Support</a></li>
-				<li class="nav-item"><a href="/src/components/case_studies/dft-case-studies.html" class="nav-link">Case
-					Studies</a></li>
-				<li class="nav-item"><a href="/src/components/team/dft-team.html" class="nav-link">Team</a></li>
-				<li class="nav-item"><a href="/src/components/contact/contact.html" class="nav-link">Contact</a></li>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#collapse"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-			</ul>
-			</div>
-			<a class="navbar-brand " href="https://www.dgbtek.com"><img src="/src/assets/images/dgb-logo.png"
-				style="width: auto; height: 40px;"></a>
+            <div class="navbar-collapse collapse" id="collapse">
+                <ul class="navbar-nav ms-auto me-auto">
+                    <li class="nav-item active"><a href="/index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="/src/components/installation/installation.html" class="nav-link">Installation</a></li>
+                    <li class="nav-item"><a href="/src/components/licenses/dft-licenses.html" class="nav-link">Licenses</a></li>
+					<li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                          <li><a class="dropdown-item" href="/src/components/services/consultancy-services.html">Consultancy services</a></li>
+                          <li><a class="dropdown-item" href="/src/components/services/implementation-services.html">Implementation & Integration Services</a></li>
+                        </ul>
+                     </li>
+                    <li class="nav-item"><a href=" /src/components/documentations/dft-documentations.html"
+                                            class="nav-link">Resources</a></li>
+                    <li class="nav-item"><a href="/src/components/support/dft-support.html" class="nav-link">Support</a></li>
+                    <li class="nav-item"><a href="/src/components/case_studies/dft-case-studies.html" class="nav-link">Case
+                        Studies</a></li>
+                    <li class="nav-item"><a href="/src/components/team/dft-team.html" class="nav-link">Team</a></li>
+                    <li class="nav-item"><a href="/src/components/contact/contact.html" class="nav-link">Contact</a></li>
 
-	</nav>
+                </ul>
+            </div>
+            <a class="navbar-brand " href="https://www.dgbtek.com"><img src="/src/assets/images/dgb-logo.png"
+                                                                        style="width: auto; height: 40px;"></a>
+        </div>
+    </nav>
 	
 
 <!-- main header & image -->
@@ -98,44 +106,44 @@
 
 <!-- Academic partners / News -->  
 <section class="content container-fluid col-sm-8" style="margin-top: 40px;">
-	<div class="row" style="display: flex; align-items: stretch; width: 100%;">
-  
-	  <!-- 1. Heading & Logos (First Half) -->
-	  <div style="display: flex; flex-direction: column; flex: 1; margin-right: 30px; justify-content: space-between;">
-          <div class="csi-body" style="text-align: center; padding: 20px; display:flex; align-items:center; justify-content:center;">
-            <div style="width: 100%;">
-              <h3 style="text-align: center;">Our Academic Partners</h3>
-              <div class="divider-line-center"></div>
-            </div>
-        </div>
-	    <div style="display: flex; justify-content: space-around; padding: 20px;">
-            <div style="display: flex; justify-content: center; align-items: center; width: 30%; height: 120px;">
-                <img src="/src/assets/images/logos/ut-logo.svg" alt="Partner 1" style="max-width: 100%; max-height: 100%; width: 100%; padding: 5px; object-fit: contain; background-color: black;">
-            </div>
-            <div style="display: flex; justify-content: center; align-items: center; width: 30%; height: 120px;">
-                <img src="/src/assets/images/aachen.png" alt="Partner 2" style="max-width: 100%; max-height: 100%; object-fit: contain;">
-            </div>
-            <div style="display: flex; justify-content: center; align-items: center; width: 30%; height: 120px;">
-                <img src="/src/assets/images/logos/univ-eindhoven.png" alt="Partner 3" style="max-width: 100%; max-height: 100%; object-fit: contain;">
-            </div>
-        </div>
-      </div>
-  
-	  <!-- 2. News Card (Second Half - Same Width as Laptop) -->
-        <div style="flex: 1; padding: 20px;  display: flex; align-items: center; justify-content: center; border-radius: 10%; box-shadow: 0 4px 8px #00acff; margin-left: 30px;">
-            <div style="width: 100%; ">
-                <div style="text-align: center; margin-bottom: 20px;">
-                    <h4 style="font-size: 1.5em; color: #4d5360; font-weight: bold; border-bottom: 2px solid #00acff; padding-bottom: 10px; display:inline-block; margin: 0 auto">Latest News</h4>
+    <div class="row" style="display: flex; width: 100%;">
+
+        <!-- 1. Heading & Logos (First Half) -->
+        <div style="display: flex; flex-direction: column; flex: 1; margin-right: 10px; justify-content: space-between;">
+            <div class="csi-body" style="text-align: center; padding: 10px; display:flex; align-items:center; justify-content:center;">
+                <div style="width: 100%;">
+                    <h3 style="text-align: center;">Academic Partners</h3>
+                    <div class="divider-line-center"></div>
                 </div>
-                <ul style="list-style:circle; margin: 0; display: flex; flex-direction: column; ">
-                    <li style="padding: 0; margin-bottom: 2px; font-size: 1em;">Enterprise SAFEST is being released in January 2025</li>
-                    <li style="padding: 0; margin-bottom: 2px; font-size: 1em;">SAFEST v2 has been released in November 2024</li>
+            </div>
+            <div style="display: flex; justify-content: space-around; padding: 10px;">
+                <div class="mt-3" style="display: flex; justify-content: center; align-items: center; width: 30%; height: 65px;">
+                    <img src="/src/assets/images/logos/ut-logo.svg" alt="Partner 1" style="max-width: 100%; max-height: 100%; width: 100%; padding: 2px; object-fit: contain; background-color: black;">
+                </div>
+                <div style="display: flex; justify-content: center; align-items: center; width: 30%; height: 100px;">
+                    <img src="/src/assets/images/aachen.png" alt="Partner 2" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                </div>
+                <div style="display: flex; justify-content: center; align-items: center; width: 30%; height: 80px;">
+                    <img src="/src/assets/images/logos/univ-eindhoven.png" alt="Partner 3" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. News Card (Second Half - Same Width as Laptop) -->
+        <div style="flex: 0 0 auto; width: 400px;  padding: 5px; display: flex; align-items: center; justify-content: center; border-radius: 10px; box-shadow: 0 2px 4px #00acff; margin-left: 100px; position: relative; ">
+            <div style="width: 100%;">
+                <div style="text-align: center; position: absolute; top: 1px; left: 50%; transform: translateX(-50%);">
+                    <h4 style="font-size: 1.3em; color: #4d5360; font-weight: bold; border-bottom: 2px solid #00acff; padding-bottom: 1px; display:inline-block; margin: 0 auto">Latest News</h4>
+                </div>
+                <ul style="list-style:circle; margin: 0; display: flex; flex-direction: column;">
+                    <li style="padding: 0; margin-bottom: 1px; font-size: 0.9em; line-height: 1; color: #4d5360;">Enterprise SAFEST release Jan 2025</li>
+                    <li style="padding: 0; margin-bottom: 1px; font-size: 0.9em; line-height: 1; color: #4d5360;">SAFEST v2 released Nov 2024</li>
                 </ul>
             </div>
-	  </div>
-  
-	</div>
-  </section>
+        </div>
+
+    </div>
+</section>
 <!-- Academic partners/news end here -->
 
 
@@ -229,7 +237,7 @@
 									<b>Basic</b>
 								</summary>
 								<div class="section-content">
-								  <ul style="padding-left: 20px;">
+								<ul style="padding-left: 20px;">
 									<li>Reliability: the probability of failure within a given time bound.</li>
 									<li>Unreliability: the complement of reliability (1- Reliability).</li>
 									<li>Average failure probability per hour</li>
@@ -237,9 +245,9 @@
 									 <li>Event probability within a time bound: the probability that an event occurs within a given time.</li>
 									<li>Event probability: the probability that an event occurs.</li>
 									 <li>Instantaneous probability: the probability that an event occurs at a given time.</li>
-								  </ul>
+								</ul>
 								</div>
-							  </details>
+							</details>
 			
 							<details>
 								<summary class="section-header" onclick="toggleSubSection(this)">
@@ -301,64 +309,64 @@
 								<div class="section-content">
 									<p>Custom properties can be specified using Probabilistic Computation Tree Logic (PCTL) / Continuous Stochastic Logic (CSL).</p>
 									<p>The probability measure on Markov models is typically defined on paths. These paths are defined as in temporal logic, or more specifically computation tree logic (CTL), a branching-time logic. That means that the formula alternates over descriptions of paths and descriptions of states.</p>
+			
+										<details open>
+											<summary class="section-header" onclick="toggleSubSection(this)">
+											   <span class="toggle-icon"></span>
+												<b>Path Formulae</b>
+											</summary>
+											 <div class="section-content">
+												<p>For this, we assume that <i style="font-style:italic;">a</i> and <i style="font-style:italic;">b</i> are <span style="color:red;">state formulae</span> and <span style="color:red;">{op}</span> is any one of <, <=, =, >=, >. The available path formulae are:</p>
+												<ul style="padding-left: 20px;">
+													<li><i style="font-style:italic;">a</i> U <i style="font-style:italic;">b</i> to describe paths on which at some point <i style="font-style:italic;">b</i> holds and in all prior steps <i style="font-style:italic;">a</i> holds.</li>
+													<li>F <i style="font-style:italic;">b</i> as a shortcut for <span style="color:red;">true U <i style="font-style:italic;">b</i></span>.</li>
+													<li><i style="font-style:italic;">a</i> U<span style="color:red;">{op}</span>k <i style="font-style:italic;">b</i> (where k is an expression evaluating to a number) to describe the paths on which <i style="font-style:italic;">b</i> holds within k time (where time in discrete models means steps) and <i style="font-style:italic;">a</i> holds before.</li>
+													<li>F<span style="color:red;">{op}</span>k <i style="font-style:italic;">b</i> as a shortcut for <span style="color:red;">true U<span style="color:red;">{op}</span>k <i style="font-style:italic;">b</i></span>.</li>
+													<li>G <i style="font-style:italic;">a</i> to describe paths on which <i style="font-style:italic;">a</i> holds in every step.</li>
+												</ul>
+											</div>
+										</details>
+						
+										<details open>
+											<summary class="section-header" onclick="toggleSubSection(this)">
+												<span class="toggle-icon"></span>
+												<b>State Formulae</b>
+											</summary>
+											 <div class="section-content">
+												<p>Here, we assume that <i style="font-style:italic;">a</i> and <i style="font-style:italic;">b</i> are <span style="color:red;">state formulae</span>, phi is a <span style="color:red;">path formula</span> and <span style="color:red;">{op}</span> is any one of <, <=, =, >=, >. The available state formulae are:</p>
+												<ul style="padding-left: 20px;">
+													<li>c where c is either a label or an expression over the model variables.</li>
+													<li><i style="font-style:italic;">a</i> | <i style="font-style:italic;">b</i>, <i style="font-style:italic;">a</i> & <i style="font-style:italic;">b</i> to describe all states that satisfy <i style="font-style:italic;">a</i> or <i style="font-style:italic;">b</i>, <i style="font-style:italic;">a</i> and <i style="font-style:italic;">b</i>, respectively.</li>
+													 <li>!<i style="font-style:italic;">a</i> to describe the states not satisfying <i style="font-style:italic;">a</i>.</li>
+													<li>P[<span style="color:red;">{op}</span>]t [ phi ] (where t is a threshold value) to describe the states in which the probability to satisfy phi conforms to the comparison <span style="color:red;">{op}</span> t.</li>
+													<li>LRA[<span style="color:red;">{op}</span>]t [ <i style="font-style:italic;">a</i> ] to describe states in which the long-run average probability to be in a state satisfying <i style="font-style:italic;">a</i> conforms to <span style="color:red;">{op}</span> t.</li>
+												</ul>
+											</div>
+										</details>
+						
+								  
+										<details>
+											<summary class="section-header" onclick="toggleSubSection(this)">
+												<span class="toggle-icon"></span>
+												<b>Obtaining Probabilities</b>
+											</summary>
+											 <div class="section-content">
+												<p>Although formally not allowed in PCTL/CSL, one can also request the probability of fulfilling a path formula from each state. Instead of comparing to a given value  <span style="color:red;">P{op}b [ phi ]</span> , one can write <span style="color:red;">P=? [ phi ]</span> to obtain the actual values rather then obtaining a truth value.</p>
+											</div>
+										</details>
+						
+						  				<details>
+										   <summary class="section-header" onclick="toggleSubSection(this)">
+												<span class="toggle-icon"></span>
+												<b>Nondeterministic Models</b>
+											</summary>
+											<div class="section-content">
+												<p>For nondeterministic models, the formula can (and sometimes needs to) specify whether it refers to minimal or maximal probabilities. Since there is no information on how the nondeterminism in the models is to be resolved, Storm needs information on whether it should resolve the choices to <span style="text-decoration: underline;">minimize</span> or <span style="text-decoration: underline;">maximize</span> the values. That is, you cannot write <span style="color:red;">P=? [F a]</span>, but have to either write <span style="color:red;">Pmin=? [F a]</span> or <span style="color:red;">Pmax=? [F a]</span>. While you can also specify <span style="text-decoration: underline;">min</span> and <span style="text-decoration: underline;">max</span> when comparing to a probability threshold, it's not necessary to do it. By default, if the comparison operator <span style="color:red;">{op}</span> is < or <=, then the probability is maximized and otherwise minimized. The reasoning is the following: if the property holds in a state, then no matter which resolution of nondeterminism is taken, the probability will always be below (or equal) to the threshold value.</p>
+											</div>
+										</details>
 								</div>
 							</details>
 			
-							<details open>
-								<summary class="section-header" onclick="toggleSubSection(this)">
-								   <span class="toggle-icon"></span>
-									<b>Path Formulae</b>
-								</summary>
-								 <div class="section-content">
-									<p>For this, we assume that <i style="font-style:italic;">a</i> and <i style="font-style:italic;">b</i> are <span style="color:red;">state formulae</span> and <span style="color:red;">{op}</span> is any one of <, <=, =, >=, >. The available path formulae are:</p>
-									<ul style="padding-left: 20px;">
-										<li><i style="font-style:italic;">a</i> U <i style="font-style:italic;">b</i> to describe paths on which at some point <i style="font-style:italic;">b</i> holds and in all prior steps <i style="font-style:italic;">a</i> holds.</li>
-										<li>F <i style="font-style:italic;">b</i> as a shortcut for <span style="color:red;">true U <i style="font-style:italic;">b</i></span>.</li>
-										<li><i style="font-style:italic;">a</i> U<span style="color:red;">{op}</span>k <i style="font-style:italic;">b</i> (where k is an expression evaluating to a number) to describe the paths on which <i style="font-style:italic;">b</i> holds within k time (where time in discrete models means steps) and <i style="font-style:italic;">a</i> holds before.</li>
-										<li>F<span style="color:red;">{op}</span>k <i style="font-style:italic;">b</i> as a shortcut for <span style="color:red;">true U<span style="color:red;">{op}</span>k <i style="font-style:italic;">b</i></span>.</li>
-										<li>G <i style="font-style:italic;">a</i> to describe paths on which <i style="font-style:italic;">a</i> holds in every step.</li>
-									</ul>
-								</div>
-							</details>
-			
-							<details open>
-								<summary class="section-header" onclick="toggleSubSection(this)">
-									<span class="toggle-icon"></span>
-									<b>State Formulae</b>
-								</summary>
-								 <div class="section-content">
-									<p>Here, we assume that <i style="font-style:italic;">a</i> and <i style="font-style:italic;">b</i> are <span style="color:red;">state formulae</span>, phi is a <span style="color:red;">path formula</span> and <span style="color:red;">{op}</span> is any one of <, <=, =, >=, >. The available state formulae are:</p>
-									<ul style="padding-left: 20px;">
-										<li>c where c is either a label or an expression over the model variables.</li>
-										<li><i style="font-style:italic;">a</i> | <i style="font-style:italic;">b</i>, <i style="font-style:italic;">a</i> & <i style="font-style:italic;">b</i> to describe all states that satisfy <i style="font-style:italic;">a</i> or <i style="font-style:italic;">b</i>, <i style="font-style:italic;">a</i> and <i style="font-style:italic;">b</i>, respectively.</li>
-										 <li>!<i style="font-style:italic;">a</i> to describe the states not satisfying <i style="font-style:italic;">a</i>.</li>
-										<li>P[<span style="color:red;">{op}</span>]t [ phi ] (where t is a threshold value) to describe the states in which the probability to satisfy phi conforms to the comparison <span style="color:red;">{op}</span> t.</li>
-										<li>LRA[<span style="color:red;">{op}</span>]t [ <i style="font-style:italic;">a</i> ] to describe states in which the long-run average probability to be in a state satisfying <i style="font-style:italic;">a</i> conforms to <span style="color:red;">{op}</span> t.</li>
-									</ul>
-								</div>
-							</details>
-			
-						</div>
-						<div style="font-family: sans-serif; line-height: 1.6;">
-							<details>
-								<summary class="section-header" onclick="toggleSubSection(this)">
-									<span class="toggle-icon"></span>
-									<b>Obtaining Probabilities</b>
-								</summary>
-								 <div class="section-content">
-									<p>Although formally not allowed in PCTL/CSL, one can also request the probability of fulfilling a path formula from each state. Instead of comparing to a given value  <span style="color:red;">P{op}b [ phi ]</span> , one can write <span style="color:red;">P=? [ phi ]</span> to obtain the actual values rather then obtaining a truth value.</p>
-								</div>
-							</details>
-			
-							<details>
-							   <summary class="section-header" onclick="toggleSubSection(this)">
-									<span class="toggle-icon"></span>
-									<b>Nondeterministic Models</b>
-								</summary>
-								<div class="section-content">
-									<p>For nondeterministic models, the formula can (and sometimes needs to) specify whether it refers to minimal or maximal probabilities. Since there is no information on how the nondeterminism in the models is to be resolved, Storm needs information on whether it should resolve the choices to <span style="text-decoration: underline;">minimize</span> or <span style="text-decoration: underline;">maximize</span> the values. That is, you cannot write <span style="color:red;">P=? [F a]</span>, but have to either write <span style="color:red;">Pmin=? [F a]</span> or <span style="color:red;">Pmax=? [F a]</span>. While you can also specify <span style="text-decoration: underline;">min</span> and <span style="text-decoration: underline;">max</span> when comparing to a probability threshold, it's not necessary to do it. By default, if the comparison operator <span style="color:red;">{op}</span> is < or <=, then the probability is maximized and otherwise minimized. The reasoning is the following: if the property holds in a state, then no matter which resolution of nondeterminism is taken, the probability will always be below (or equal) to the threshold value.</p>
-								</div>
-							</details>
 			
 						</div>
 					</div>
@@ -714,8 +722,8 @@
 	</div>
 
 	<div class="my-5 content container-fluid col-sm-8">
-		<div class="col-sm-12 m-auto" >
-			<div class="col-sm-12 container-fluid" style="margin-left: 80px;">
+		<div class="col-sm-12 me-auto" >
+			<div class="col-sm-10 container-fluid" style="margin-left: 80px;">
 				<div class="row mt-5 justify-content-evenly">
 					<div class="col-sm-4">
 						<img src="./src/assets/images/edf.png" alt="" width="160px">
@@ -729,8 +737,8 @@
 					<div class="col-sm-4 mt-2">
 						<img src="./src/assets/images/thalesAlenia.png" alt="" width="160px">
 					</div>
-					<div class="col-sm-4 mt-4">
-						<img src="./src/assets/images/NS.png" alt="" width="160px">
+					<div class="col-sm-3 mt-4">
+						<img src="./src/assets/images/NS.png" alt="" width="120px">
 					</div>
 					<div class="col-sm-4">
 						<img src="./src/assets/images/BMW.png" alt="" width="160px">
@@ -744,13 +752,13 @@
 					<div class="col-sm-4 mt-3">
 						<img src="./src/assets/images/airbus.png" alt="" width="160px">
 					</div>
-					<div class="col-sm-3 ml-0">
-						<img src="./src/assets/images/esa.png" alt="" width="150px">
+					<div class="col-sm-3 me-auto">
+						<img src="./src/assets/images/esa.png" alt="" width="140px">
 					</div>
-					<div class="col-sm-4 ml-0">
+					<div class="col-sm-4">
 						<img src="./src/assets/images/saudi-aramco.png" alt="" width="160px">
 					</div>
-					<div class="col-sm-3 ml-2">
+					<div class="col-sm-3 me-auto">
 						<img src="./src/assets/images/assystem-logo.png" alt="" width="160px">
 					</div>
 
@@ -821,7 +829,6 @@
 				<div style="background-color: whitesmoke; color: #24141c; width: 350px; border-radius: 7px; padding: 20px; display: flex; flex-direction: column; align-items: center; position: relative; height: 100%; padding-bottom: 70px;">
 					<div style="text-align: center;">
 						<h2 style="font-weight: 600; margin-bottom: 10px;">Basic</h2>
-						<!-- <h4 style="font-weight: 400; margin: 0; margin-bottom: 20px;">Free</h4> -->
 					</div>
 					<ul style="padding-inline-start: 20px; margin: 0 0 40px 0; list-style-type: disc; width: 80%;">
 						<li style="font-weight: 200; margin-bottom: 8px;">Free for academia</li>
@@ -837,7 +844,6 @@
 				<div style="background-color: whitesmoke; color: #24141c; width: 350px; border-radius: 7px; padding: 20px; display: flex; flex-direction: column; align-items: center; position: relative; height: 100%; padding-bottom: 70px;">
 					<div style="text-align: center;">
 						<h2 style="font-weight: 600; margin-bottom: 10px;">Enterprise</h2>
-						<!-- <h4 style="font-weight: 400; margin: 0; margin-bottom: 20px;">Schedule a Demo</h4> -->
 					</div>
 					<ul style="padding-inline-start: 20px; margin: 0 0 40px 0; list-style-type: disc; width: 80%;">
 						<li style="font-weight: 200; margin-bottom: 8px;">Fault tree analysis module</li>
@@ -860,7 +866,158 @@
 
 
 
-	<div id="footerdgb"></div>
+<!-- Footer -->
+<footer class="mt-5 text-center text-lg-start bg-white text-muted">
+	<!-- Section: Social media -->
+	<section
+	  class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+	>
+	  <!-- Left -->
+	  <div class="me-5 d-none d-lg-block">
+		<!-- <span>Get connected with us on social networks</span> -->
+	  </div>
+	  <!-- Left -->
+  
+	  <!-- Right -->
+	  <div>
+		<a
+		  href="https://github.com/DGBTechnologies/SAFEST/discussions"
+		  class="social text-decoration-none me-4 link-secondary"
+		>
+		  <i class="fa fa-google"></i>
+		</a>
+		<a
+		  href="https://www.linkedin.com/products/dgbtechnologies-safest-a-probabilistic-risk-assessment-toolchain/"
+		  class="social text-decoration-none me-4 link-secondary"
+		>
+		  <i class="fa fa-linkedin"></i>
+		</a>
+		<a
+		  href="https://github.com/DGBTechnologies/SAFEST/discussions"
+		  class="social text-decoration-none me-4 link-secondary"
+		>
+		  <i class="fa fa-github"></i>
+		</a>
+	  </div>
+	  <!-- Right -->
+	</section>
+	<!-- Section: Social media -->
+  
+	<!-- Section: Links  -->
+	<section class="">
+	  <div class="container text-center text-md-start mt-5">
+		<!-- Grid row -->
+		<div class="row mt-3">
+		  <!-- Grid column -->
+		  <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+			<!-- Content -->
+			<img
+			  src="/src/assets/images/dgb-logo.png"
+			  width="150px"
+			  alt="Dgb-logo"
+			/>
+  
+			<p class="text-justify">
+			  An independent technology research company dedicated to implementing
+			  next-generation ideas and inventing solutions in niche technology
+			  areas.
+			</p>
+		  </div>
+		  <!-- Grid column -->
+  
+		  <!-- Grid column -->
+		  <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+			<!-- Links -->
+			<h6 class="text-uppercase fw-bold mb-4">Projects</h6>
+			<p>
+			  <a href="https://www.hazardhive.dgbtek.com" class="text-reset"
+				>Hazardhive</a
+			  >
+			</p>
+			<p>
+			  <a href="https://www.storm.dgbtek.com" class="text-reset"
+				>StormGUI</a
+			  >
+			</p>
+			<p>
+			  <a href="https://www.safest.dgbtek.com" class="text-reset"
+				>SAFEST</a
+			  >
+			</p>
+		  </div>
+		  <!-- Grid column -->
+  
+		  <!-- Grid column -->
+		  <div class="col-md-2 col-lg-2 col-xl-2 px-0 mx-auto mb-4">
+			<!-- Links -->
+			<h6 class="text-uppercase fw-bold mb-4">Useful links</h6>
+			<p>
+			  <a
+				href="/src/components/installation/installation.html"
+				class="text-reset"
+				>Installation</a
+			  >
+			</p>
+			<p>
+			  <a
+				href="/src/components/documentations/dft-documentations.html"
+				class="text-reset"
+				>Resources</a
+			  >
+			</p>
+			<p>
+			  <a
+				href="/src/components/support/dft-support.html"
+				class="text-reset"
+				>Support</a
+			  >
+			</p>
+		  </div>
+		  <!-- Grid column -->
+  
+		  <!-- Grid column -->
+		  <div
+			class="col-md-5 col-lg-3 col-xl-3 mx-auto px-0 mb-md-0 mb-4"
+			style="width: 550px !important"
+		  >
+			<!-- Links -->
+			<h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+			<p>
+			  <img src="/src/assets/images/location.png" alt="" height="25px" />
+			  476 James Way, Wyckoff, New Jersey 07481, US <br />
+			  <img src="/src/assets/images/location.png" alt="" height="25px" />
+			  Keetman Str. 01, 47058 Duisburg, Germany <br />
+			  <img src="/src/assets/images/location.png" alt="" height="25px" />
+			  Unit2/5 Carlton Business Center, 104 Nechells Place Birmingham, UK
+			</p>
+			<p>
+			  <a
+				href="mailto:safest@dgbtek.com"
+				style="text-decoration: none"
+				class="text-reset"
+				><img src="/src/assets/images/mail-24.png" alt="" height="25px" />
+				safest@dgbtek.com</a
+			  >
+			</p>
+		  </div>
+		  <!-- Grid column -->
+		</div>
+		<!-- Grid row -->
+	  </div>
+	</section>
+	<!-- Section: Links  -->
+  
+	<!-- Copyright -->
+	<div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025)">
+	  © 2025 Copyright:
+	  <a class="text-reset social" href="https://www.dgbtek.com/"
+		>DGB Technologies</a
+	  >
+	</div>
+	<!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+
 
 	<script>
 		$(function () {

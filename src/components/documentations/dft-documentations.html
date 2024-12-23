@@ -20,37 +20,45 @@
   </head>
 
 <body>
-    <nav id="navbar" class="navbar navbar-light bg-light navbar-expand-sm fixed-top"
-      style="background-color:white; overflow:auto">
+  <nav id="navbar" class="navbar navbar-light bg-light navbar-expand-sm fixed-top"
+  style="background-color:white; overflow:visible">
 
-        <a class="navbar-brand" href="/index.html"><img src="/src/assets/images/SAFEST_LOGO_.png"
-          style="width: auto; height: 40px;"></a>
+    <div class="navbar-wrapper d-flex align-items-center"> 
 
-        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#collapse"
-        aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="/index.html"><img src="/src/assets/images/SAFEST_LOGO_.png"
+                              style="width: auto; height: 40px;"></a>
+
+      <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#collapse"
+          aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-        </button>
+      </button>
 
-        <div class="navbar-collapse collapse" id="collapse">
+      <div class="navbar-collapse collapse" id="collapse">
         <ul class="navbar-nav ms-auto me-auto">
           <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="/src/components/installation/installation.html" class="nav-link">Installation</a></li>
-          <li class="nav-item"><a href="/src/components/licenses/dft-licenses.html" class="nav-link">Licenses</a>
-          </li>
-          <li class="nav-item active"><a href=" /src/components/documentations/dft-documentations.html"
-            class="nav-link">Documentations</a></li>
-          <li class="nav-item"><a href="/src/components/support/dft-support.html" class="nav-link">Support</a></li>
-          <li class="nav-item"><a href="/src/components/case_studies/dft-case-studies.html" class="nav-link">Case
-            Studies</a></li>
-          <li class="nav-item"><a href="/src/components/team/dft-team.html" class="nav-link">Team</a></li>
-          <li class="nav-item"><a href="/src/components/contact/contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="/src/components/installation/installation.html" class="nav-link">Installation</a></li>
+                <li class="nav-item"><a href="/src/components/licenses/dft-licenses.html" class="nav-link">Licenses</a></li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Services
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                    <li><a class="dropdown-item" href="/src/components/services/consultancy-services.html">Consultancy services</a></li>
+                    <li><a class="dropdown-item" href="/src/components/services/implementation-services.html">Implementation & Integration Services</a></li>
+                  </ul>
+               </li>
+                <li class="nav-item active"><a href=" /src/components/documentations/dft-documentations.html" class="nav-link">Resources</a></li>
+                <li class="nav-item"><a href="/src/components/support/dft-support.html" class="nav-link">Support</a></li>
+                <li class="nav-item"><a href="/src/components/case_studies/dft-case-studies.html" class="nav-link">Case Studies</a></li>
+                <li class="nav-item"><a href="/src/components/team/dft-team.html" class="nav-link">Team</a></li>
+                <li class="nav-item"><a href="/src/components/contact/contact.html" class="nav-link">Contact</a></li>
 
         </ul>
-        </div>
-        <a class="navbar-brand " href="https://www.dgbtek.com"><img src="/src/assets/images/dgb-logo.png"
-          style="width: auto; height: 40px;"></a>
-
-    </nav>
+      </div>
+      <a class="navbar-brand " href="https://www.dgbtek.com"><img src="/src/assets/images/dgb-logo.png"
+                                    style="width: auto; height: 40px;"></a>
+    </div>
+  </nav>
   <section style="margin-top: 4rem;">
     <div class="content ">
       <div class="doc-content col-sm-8 m-auto">

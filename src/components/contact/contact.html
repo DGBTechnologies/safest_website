@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Contact - DGB</title>
-    <link rel="icon" href="images/title.png" type="image/png type" />
+    <title>Contact - SAFEST</title>
+    <link rel="icon" href="/src/assets/images/fav_icon.png" type="image/png type" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -16,12 +16,6 @@
     <!-- <link href="./header.css" rel="stylesheet" /> -->
     <link rel="stylesheet" href="/index.css" />
 
-    <!-- <link href="css/footer.css" rel="stylesheet"> -->
-    <link rel="stylesheet" href="./animate.css-master/animate.min.css" />
-    <link
-      rel="stylesheet"
-      href="./fakeLoader.js-master/dist/fakeLoader.min.css"
-    />
     <link
       href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
       rel="stylesheet"
@@ -49,84 +43,46 @@
   </head>
 
   <body>
-    <nav
-      id="navbar"
-      class="navbar navbar-light bg-light navbar-expand-sm fixed-top"
-      style="background-color: white; overflow: auto"
-    >
-      <a class="navbar-brand" href="/index.html"
-        ><img
-          src="/src/assets/images/SAFEST_LOGO_.png"
-          style="width: auto; height: 40px"
-      /></a>
-
-      <button
-        type="button"
-        class="navbar-toggler"
-        data-bs-toggle="collapse"
-        data-bs-target="#collapse"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="navbar-collapse collapse" id="collapse">
-        <ul class="navbar-nav ms-auto me-auto">
-          <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
-          <li class="nav-item">
-            <a
-              href="/src/components/installation/installation.html"
-              class="nav-link"
-              >Installation</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              href="/src/components/licenses/dft-licenses.html"
-              class="nav-link"
-              >Licenses</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              href=" /src/components/documentations/dft-documentations.html"
-              class="nav-link"
-              >Documentations</a
-            >
-          </li>
-          <li class="nav-item">
-            <a href="/src/components/support/dft-support.html" class="nav-link"
-              >Support</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              href="/src/components/case_studies/dft-case-studies.html"
-              class="nav-link"
-              >Case Studies</a
-            >
-          </li>
-          <li class="nav-item">
-            <a href="/src/components/team/dft-team.html" class="nav-link"
-              >Team</a
-            >
-          </li>
-          <li class="nav-item">
-            <a href="/src/components/contact/contact.html" class="nav-link active"
-              >Contact</a
-            >
-          </li>
-        </ul>
+    <nav id="navbar" class="navbar navbar-light bg-light navbar-expand-sm fixed-top"
+    style="background-color:white; overflow:visible">
+  
+      <div class="navbar-wrapper d-flex align-items-center"> 
+  
+        <a class="navbar-brand" href="/index.html"><img src="/src/assets/images/SAFEST_LOGO_.png"
+                                style="width: auto; height: 40px;"></a>
+  
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#collapse"
+            aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="navbar-collapse collapse" id="collapse">
+          <ul class="navbar-nav ms-auto me-auto">
+            <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+                  <li class="nav-item"><a href="/src/components/installation/installation.html" class="nav-link">Installation</a></li>
+                  <li class="nav-item"><a href="/src/components/licenses/dft-licenses.html" class="nav-link">Licenses</a></li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Services
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                      <li><a class="dropdown-item" href="/src/components/services/consultancy-services.html">Consultancy services</a></li>
+                      <li><a class="dropdown-item" href="/src/components/services/implementation-services.html">Implementation & Integration Services</a></li>
+                    </ul>
+                 </li>
+                  <li class="nav-item"><a href=" /src/components/documentations/dft-documentations.html" class="nav-link">Resources</a></li>
+                  <li class="nav-item"><a href="/src/components/support/dft-support.html" class="nav-link">Support</a></li>
+                  <li class="nav-item"><a href="/src/components/case_studies/dft-case-studies.html" class="nav-link">Case Studies</a></li>
+                  <li class="nav-item"><a href="/src/components/team/dft-team.html" class="nav-link">Team</a></li>
+                  <li class="nav-item active"><a href="/src/components/contact/contact.html" class="nav-link">Contact</a></li>
+  
+          </ul>
+        </div>
+        <a class="navbar-brand " href="https://www.dgbtek.com"><img src="/src/assets/images/dgb-logo.png"
+                                      style="width: auto; height: 40px;"></a>
       </div>
-      <a class="navbar-brand" href="https://www.dgbtek.com"
-        ><img
-          src="/src/assets/images/dgb-logo.png"
-          style="width: auto; height: 40px"
-      /></a>
     </nav>
-
-    <div class="service-section container mt-5" style="margin-top: 4rem">
+    <div class="service-section col-sm-8 m-auto container mt-5" style="margin-top: 4rem">
       <div
         class="row"
         style="margin-top: 90px; margin-left: auto; margin-right: auto"
@@ -199,7 +155,7 @@
     </div>
     <!-- <div class="header-border"></div> -->
 
-    <section style="width: 80%; margin-left: auto; margin-right: auto">
+    <section class="col-sm-8 m-auto" style="width: 80%; margin-left: auto; margin-right: auto">
       <div class="service-section container">
         <div class="csi-body">
           <h3 style="text-align: center">Offices</h3>
@@ -374,7 +330,7 @@
                 <a
                   href="/src/components/documentations/dft-documentations.html"
                   class="text-reset"
-                  >Documentations</a
+                  >Resources</a
                 >
               </p>
               <p>
