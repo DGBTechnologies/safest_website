@@ -12,7 +12,7 @@ body {
   width: 100%;
   background-color: white;
   transition: top 0.3s;
-    z-index: 1030; /* Ensure it is above other elements */
+  z-index: 1030; /* Ensure it is above other elements */
 }
 
 .navbar-wrapper {
