@@ -89,12 +89,15 @@
 						<div class="header-buttons">
 							<a
 							href="/src/components/installation/installation.html"
-							class="btn-primary"
+							class="btn-secondary p-3 h-25 text-lg-center"
 							>Get started now</a
 							>
-							<a href="#" class="btn-secondary">Schedule a Demo ➡️</a>
+							<a href="#" class="btn-secondary p-3 h-25 text-lg-center">Schedule a Demo</a>
+							<a href="/src/components/services/implementation-services.html" class="btn-secondary p-3 h-25 text-lg-center">Integrate with your workflows</a>
+							<a href="/src/components/services/consultancy-services.html" class="btn-secondary p-3 h-25 text-lg-center">Need consultancy</a>
 						</div>
 					</div>
+
 
 					<div class="header-image">
 						<div class="badge-container">
@@ -766,9 +769,125 @@
 <!-- Academic partners end here -->
 
 
+<!-- comments section start here -->
+
+	<div class="container-fluid col-sm-8 my-5 ">
+		<div class="row" style="margin-top: 40px; margin-left: auto; margin-right: auto">
+			<div class="csi-body">
+				<h3 style="text-align: center">Users appreciate SAFEST</h3>
+				<div class="divider-line-center"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="my-5 content container-fluid col-sm-8">
+		<div class="responsive-container-block blocks">
+			<div class="slider-container">
+			  <div class="testimonial-slider">
+				<div class="testimonial-card">
+					<p class="text-blk info-block">
+						"SAFEST's dynamic analysis is a game changer! Finally, a tool that handles complex, fault-tolerant systems effectively."
+					</p>
+					<div class="person-info">
+					  <p class="text-blk name">
+						Vasmicka
+					  </p>
+					  <p class="text-blk desig">
+						Deputy Chair
+					  </p>
+					</div>
+				</div>
+				<div class="testimonial-card">
+					<p class="text-blk info-block">
+						"The flexibility in modeling and the inclusion of all DFT gates are exceptional. It's significantly more powerful than other tools I've used."
+					</p>
+					<div class="person-info">
+					  <p class="text-blk name">
+						Tim
+					  </p>
+					  <p class="text-blk desig">
+						Researcher, Formal Methods
+					  </p>
+					</div>
+				</div>
+				 <div class="testimonial-card">
+					<p class="text-blk info-block">
+						"We've significantly improved our risk assessments using SAFEST. The ability to model decision-making capabilities is invaluable for our dynamic systems."
+					</p>
+					<div class="person-info">
+					  <p class="text-blk name">
+						Jane Sydney
+					  </p>
+					  <p class="text-blk desig">
+						Formal Verificaftion Engineer
+					  </p>
+					</div>
+				</div>
+				 <div class="testimonial-card">
+					<p class="text-blk info-block">
+						"The scalability of SAFEST is impressive. It provides accurate and insightful analysis, even for our very complex systems."
+					</p>
+					<div class="person-info">
+					  <p class="text-blk name">
+						Marvick
+					  </p>
+					  <p class="text-blk desig">
+						Senior Developer
+					  </p>
+					</div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+	</div>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+		const sliderContainer = document.querySelector('.slider-container');
+		const slider = document.querySelector('.testimonial-slider');
+		const cards = document.querySelectorAll('.testimonial-card');
+
+		let cardWidth;	
+		let cardCount = cards.length;
+		let currentIndex = 0;
+
+		const updateLayout = () => {
+			cardWidth = cards[0].offsetWidth;
+			if (window.innerWidth <= 768) {
+				sliderContainer.style.maxWidth = cardWidth + 'px';
+			} else {
+				sliderContainer.style.maxWidth = (cardWidth * 3) + 'px';
+				}
+			updateSlider();
+		}
+
+		const updateSlider = () => {
+			slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+		}
+
+		const nextSlide = () => {
+			currentIndex = (currentIndex + 1) % cardCount;
+			updateSlider();
+		}
+
+		let slideInterval = setInterval(nextSlide, 5000);
+
+			window.addEventListener('resize', () => {
+				updateLayout();
+				clearInterval(slideInterval);
+				slideInterval = setInterval(nextSlide, 5000);
+			})
+
+
+			updateLayout();
+		});
+	</script>
+<!-- comments section ends here -->
+
 
 
 <!-- performance counters -->
+
 	<div class="content container-fluid col-sm-12">
 		<div class="col-sm-10 m-auto container-fluid">
 
