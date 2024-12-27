@@ -235,12 +235,19 @@ a.social {
   margin-bottom: 30px;
   text-align: justify;
 }
-
 .header-buttons {
   display: flex;
-  gap: 8px;
+  flex-wrap: wrap; /* Ensure buttons wrap on smaller screens */
+  gap: 10px; /* Gap between buttons */
+  justify-content: flex-start; /* Align buttons to start */
 }
 
+.header-buttons a.btn-secondary {
+  white-space: nowrap; /* Prevent text from wrapping */
+  padding: 8px 16px; /* Reduce padding to shrink button size*/
+  font-size: 14px; /* reduce font size to make text fit */
+  display:inline-block;/* making sure text remains in single line*/
+}
 .btn-primary {
   background-color: #007ac3;
   color: #fff;
@@ -546,17 +553,6 @@ details summary.section-header {
   transition: transform 0.5s ease-in-out;
   width: fit-content;
 }
-.testimonial-card {
-  flex-shrink: 0; /* prevent items from shrinking */
-  background-color: #fff;
-  border: 1px solid #f0f0f0;
-  border-radius: 8px;
-  padding: 20px;
-  width: 300px; /* fixed card size */
-  margin-right: 20px;
-  box-sizing: border-box;
-}
-
 .testimonial-card:last-child {
   margin-right: 0;
 }
@@ -583,4 +579,33 @@ display: flex;
 .person-info .text-blk.desig {
   line-height: 16px;
   font-size: 15px;
+}
+
+.testimonial-card {
+  display: flex; /* Add this */
+  flex-direction: column; /* Add this */
+  align-items: flex-start;/* Add this */
+  flex-shrink: 0;
+  background-color: #fff;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: justify;
+  width: 300px;
+  margin-right: 20px;
+  box-sizing: border-box;
+}
+
+.testimonial-avatar {
+    width: 50px; /* Example size */
+    height: 50px;
+    border-radius: 50%; /* Makes it round */
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.testimonial-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
