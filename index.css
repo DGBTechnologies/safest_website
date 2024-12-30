@@ -238,8 +238,8 @@ a.social {
 .header-buttons {
   display: flex;
   flex-wrap: wrap; /* Ensure buttons wrap on smaller screens */
-  gap: 10px; /* Gap between buttons */
-  justify-content: flex-start; /* Align buttons to start */
+  gap: 100px; /* Gap between buttons */
+  justify-content:center; /* Align buttons to start */
 }
 
 .header-buttons a.btn-secondary {
@@ -546,16 +546,18 @@ details summary.section-header {
 .slider-container {
   overflow: hidden;
   width: 100%;
+  padding: 0 20px;
+
 }
 
 .testimonial-slider {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  width: fit-content;
+  width: 100%;
 }
-.testimonial-card:last-child {
+/* .testimonial-card:last-child {
   margin-right: 0;
-}
+} */
 
 
 .text-blk.info-block {

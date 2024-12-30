@@ -1,59 +1,60 @@
 .feature-section {
-    background-color: #fff; /* White background */
-    padding: 40px 20px; /* padding */
+  padding: 20px;
+  /* background-color: #f9f9f9; */
 }
-
 .feature-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust minmax as needed */
+  gap: 20px;
 }
 
 .feature-item {
-    display: flex;
-    flex-direction: row; /* Align icon and text horizontally */
-    align-items: start; /* Align items at the top */
-    padding-bottom:20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
 }
-
+.feature-item.card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
 .feature-item-icon {
-    width: 40px; /* Adjust the icon size as needed */
-    height: 40px;
-    margin-right: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  color: #6366F1;
+  font-size: 30px;
 }
 
-.feature-item-icon i {
-  font-size: 24px; /* adjust size as needed */
-  color: #3498db; /* Default icon color, can be customized */
+.feature-item-content h3 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  text-align: center;
 }
 
-.feature-item-content {
-   display: flex;
-   flex-direction: column;
-
+.feature-item-content p {
+  font-size: 0.9em;
+  color: #555;
 }
 
-.feature-item h3 {
-    color: #4d5360; /* Heading color */
-    font-size: 1.2em;
-    margin-bottom: 8px;
-    margin-top: 0;
-}
-
-.feature-item p {
-    margin: 0;
-    font-size: 1em;
-    line-height: 1.5;
-  text-align: justify;
-}
-
-/* Optional styling for better alignment of content */
-.feature-item-content {
-     flex: 1; /* Allow text to occupy remaining space */
-    }
+.icon-blue { background-color: #007bff; } /* Blue */
+.icon-orange { background-color: #fd7e14; } /* Orange */
+.icon-green { background-color: #28a745; } /* Green */
+.icon-light-blue { background-color: #17a2b8; } /* Cyan */
+.icon-purple { background-color: #6f42c1; } /* Purple */
 
     .contact-section {
       background-color: #fff; /* White background */

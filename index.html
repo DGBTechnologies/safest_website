@@ -86,12 +86,6 @@
 								It is equally competitive with existing commercial tools (for static fault trees analysis), but offers more flexible 
 								modeling and analyses, going beyond the capabilities of other tools, of dynamic systems as it <span class="bluehighlight-text">covers all DFT gates</span>.
 							</p>
-							<div class="header-buttons">
-								<a href="/src/components/installation/installation.html" class="btn-secondary p-3 h-25 text-lg-center">Get started now</a>
-								<a href="#" class="btn-secondary p-3 h-25 text-lg-center">Schedule a Demo</a>
-								<a href="/src/components/services/implementation-services.html" class="btn-secondary p-3 h-25 text-lg-center">Integrate with your workflows</a>
-								<a href="/src/components/services/consultancy-services.html" class="btn-secondary p-3 h-25 text-lg-center">Need consultancy</a>
-							  </div>
 					</div>
 
 
@@ -154,6 +148,13 @@
 				</div>
 
 			</div>
+
+			<div class="header-buttons">
+				<a href="/src/components/installation/installation.html" class="btn-secondary p-3 h-25 text-lg-center">Get started now</a>
+				<a href="#" class="btn-secondary p-3 h-25 text-lg-center">Schedule a Demo</a>
+				<a href="/src/components/services/implementation-services.html" class="btn-secondary p-3 h-25 text-lg-center">Integrate with your workflows</a>
+				<a href="/src/components/services/consultancy-services.html" class="btn-secondary p-3 h-25 text-lg-center">Need consultancy</a>
+			  </div>
 		</div>
 	</div>
 <!-- SAFEST features overview -->
@@ -843,7 +844,7 @@
 	style=" box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 	border-radius: 8px; 
 	padding: 30px 20px; 
-	background-color: #fff;">
+	background-color: whitesmoke;">
 		<div class="responsive-container-block blocks">
 			<div class="slider-container">
 			  <div class="testimonial-slider">
@@ -868,11 +869,20 @@
 					  <img src="/src/assets/images/man2.png" alt="Tim Avatar">
 					</div>
 					<p class="text-blk info-block">
-					  "The flexibility in modeling and the inclusion of all DFT gates are exceptional. It's significantly more powerful than other tools I've used."
+					  "I believe SAFEST is an exceptional PRA toolchain, especially for nuclear R&D.
+					   SAFEST enables me to confirm the dependability of nuclear safety systems during
+					    a time period that is divided into phases, such as pre-LOCA and post-LOCA,
+						 because of its complex reliability measures. In all my professional experience,
+						  I have never encountered a tool like this. Bravo, the SAFEST team!"
 					</p>
 					<div class="person-info">
 					  <p class="text-blk name">
-						Tim
+						Dr Masood Akmali 				<a
+						href="https://www.linkedin.com/in/masood-888/"
+						class="text-reset"
+						 style="display: inline-block; margin-right: 10px;"
+						><img src="/src/assets/images/linkedin_.png" alt="" height="20px" />
+					  </a>
 					  </p>
 					  <p class="text-blk desig">
 						Researcher, Formal Methods
@@ -918,32 +928,75 @@
 
 	<script>
 		document.addEventListener('DOMContentLoaded', function () {
-		const sliderContainer = document.querySelector('.slider-container');
-		const slider = document.querySelector('.testimonial-slider');
-		const cards = document.querySelectorAll('.testimonial-card');
+			const sliderContainer = document.querySelector('.slider-container');
+			const slider = document.querySelector('.testimonial-slider');
+			const cards = document.querySelectorAll('.testimonial-card');
 
-		let cardWidth;	
-		let cardCount = cards.length;
-		let currentIndex = 0;
+			let cardWidth;
+			let cardCount = cards.length;
+			let currentIndex = 0;
+			let isTransitioning = false;
+			let offset = 0;
 
-		const updateLayout = () => {
+			const updateLayout = () => {
 			cardWidth = cards[0].offsetWidth;
 			if (window.innerWidth <= 768) {
 				sliderContainer.style.maxWidth = cardWidth + 'px';
 			} else {
 				sliderContainer.style.maxWidth = (cardWidth * 3) + 'px';
-				}
+			}
 			updateSlider();
-		}
+			};
 
-		const updateSlider = () => {
-			slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-		}
+
+			const updateSlider = () => {
+			slider.style.transform = `translateX(-${(currentIndex * cardWidth) + offset}px)`;
+			};
+
 
 		const nextSlide = () => {
+			if(isTransitioning) return;
+			isTransitioning = true;
+
 			currentIndex = (currentIndex + 1) % cardCount;
-			updateSlider();
-		}
+				if (currentIndex === 0 ) {
+				offset -= cardWidth;
+					slider.style.transition = 'none';
+					updateSlider();
+						setTimeout(() => {
+						slider.style.transition = 'transform 0.5s ease-in-out';
+							isTransitioning=false;
+					},10);
+
+			} else {
+				updateSlider();
+				setTimeout(() => {
+							isTransitioning=false;
+						}, 500); // Transition time
+			}
+			};
+
+
+		const prevSlide = () => {
+			if (isTransitioning) return; // Prevent simultaneous clicks
+			isTransitioning = true;
+			currentIndex = (currentIndex - 1 + cardCount) % cardCount;
+				if (currentIndex === cardCount-1 ) {
+				offset += cardWidth;
+				slider.style.transition = 'none';
+					updateSlider();
+					setTimeout(() => {
+						slider.style.transition = 'transform 0.5s ease-in-out';
+						isTransitioning=false;
+					},10);
+
+				} else {
+				updateSlider();
+					setTimeout(() => {
+						isTransitioning=false;
+						}, 500); // Transition time
+				}
+			};
 
 		let slideInterval = setInterval(nextSlide, 5000);
 
@@ -951,10 +1004,9 @@
 				updateLayout();
 				clearInterval(slideInterval);
 				slideInterval = setInterval(nextSlide, 5000);
-			})
-
-
+			});
 			updateLayout();
+
 		});
 	</script>
 <!-- comments section ends here -->
