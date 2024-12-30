@@ -240,6 +240,7 @@ a.social {
   flex-wrap: wrap; /* Ensure buttons wrap on smaller screens */
   gap: 100px; /* Gap between buttons */
   justify-content:center; /* Align buttons to start */
+  background-color: #00acff;
 }
 
 .header-buttons a.btn-secondary {
@@ -259,7 +260,7 @@ a.social {
 }
 
 .btn-secondary {
-  background-color: #007ac3;
+  background-color: #00acff;
   color: #fff;
   /* padding: 15px 30px; */
   border-radius: 5px;
