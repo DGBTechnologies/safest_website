@@ -664,7 +664,7 @@ figure.snip1390 h4 {
 }
 figure.snip1390 blockquote {
   font-size: 1em;
-  padding: 45px 20px 40px 50px;
+  padding: 35px 10px 20px 30px;
   margin-top: 30px;
   background-color: #ffffff;
   border-radius: 5px;
@@ -676,11 +676,11 @@ figure.snip1390 blockquote:before {
   font-family: 'FontAwesome';
   content: "\201C";
   position: absolute;
-  font-size: 70px;
+  font-size: 50px;
   opacity: 0.25;
   font-style: normal;
   top: 0px;
-  left: 20px;
+  left: 15px;
 }
 figure.snip1390 .profile {
   width: 100px;
