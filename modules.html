@@ -80,7 +80,7 @@
 	
 		<div class="row" style="margin-top: 70px; margin-left: auto; margin-right: auto">
 			<div class="csi-body">
-				<h3 style="text-align: center">SAFEST Features Overview</h3>
+				<h3 style="text-align: center">SAFEST Modules</h3>
 				<div class="divider-line-center"></div>
 			</div>
 		</div>
@@ -90,59 +90,26 @@
 			<div class="section">
 				<div class="section-header" onclick="toggleSection(this)">
 					<span class="toggle-icon"></span>
-					<h3>Faithful modeling and analysis of complex systems</h3>
-				</div>
-				<div class="section-content">
-					<div class="m-auto" style="padding: 0px 60px 0px 50px">
-						<div style="font-family: sans-serif; line-height: 1.6;">
-							<p>In order to accurately model large systems with <span class="bluehighlight-text">redundancies, (probabilistic) functional dependencies, and temporal ordering among malfunctioning components</span>—such as power plants, railroads, drones, medical equipment, satellites, and self-driving cars—static fault trees are too simplistic a formalism.</p>
-						
-							<p>Similarly, event trees are unable to quantify losses such as the number of injuries, monetary loss, etc., or represent, for example, operators’ judgments following an accident, which may be necessary to lessen the impact of severe repercussions.</p>
-						
-							<p><span class="bluehighlight-text">Dynamic fault trees and event trees overcome the above-mentioned shortcomings</span> and, thus, enable the modeling and analysis of fail-operational/fault-tolerant dynamic systems.</p>
-							<div class="image-wrapper">
-								<img src="/src/assets/images/fault-tolerance.png"
-								alt="Structure knowledge example"/>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>	
-			<div class="section">
-				<div class="section-header" onclick="toggleSection(this)">
-					<span class="toggle-icon"></span>
-					<h3>A tool for compliance with safety standards of high-tech industries</h3>
+					<h3>FMECA</h3>
 				</div>
 				<div class="section-content">
 					<div class="m-auto" style="padding: 0px 60px 0px 50px">
 							<div style="font-family: sans-serif; line-height: 1.6;">
-								<p>SAFEST is a unique tool that allows probabilistic risk assessments of complex dynamic systems, which is required by high-tech agencies like NASA, ESA, the Federal Aviation Authority (FAA), and the Nuclear Regulatory Commission (NRC). Additionally, it aids in fulfilling the requirements of global standards like ISO 26262, which demands rigorous risk assessment in the automotive industry:</p>
-								<div style="display: flex; align-items: flex-start;">
-								<img src="/src/assets/images/iso-certification.png" alt="ISO 26262 Logo" style="width: 100px; margin-right: 10px; margin-top: 5px; height:auto; flex-shrink:0;">
-									<ul style="padding-left: 20px;">
-										<li>Metrics are verifiable and precise enough to differentiate between different system architectures.</li>
-										<li>[For systems where the] concept is based on redundant safety mechanisms, multiple-point failures of a higher order than two are considered in the analysis.</li>
-									</ul>
+								<div class="image-wrapper">
+									<img src="/src/assets/images/safest-fmea.png"
+									alt="Structure knowledge example"/>
 								</div>
-							</div>
-							<div class="row  m-auto mt-5 mb-4">
-								<div class="col-sm-1"></div>
-								<div class="col-sm-2">
-									<img src="/src/assets/images/USNRC.png" width="60%">
-								</div>
-								<div class="col-sm-2 ">
-									<img src="/src/assets/images/NASA.png" width="60%">
-								</div>
-								<div class="col-sm-2 ">
-									<img src="/src/assets/images/esa.png" width="60%">
-								</div>
-								<div class="col-sm-2 ">
-									<img src="/src/assets/images/FAA.png" width="60%">
-								</div>
-								<div class="col-sm-2 ">
-									<img src="/src/assets/images/ENSREG.png" width="100%">
-								</div>
-								<div class="col-sm-1"></div>
+								<p>
+								<ul style="padding-left: 20px;">
+									<li> System hierarchy: It allows defining system components in a hierarchical way, allowing to specify parameter (boundry) diagram and FMECA table of each 
+										sub-system independently.</li>
+									<li> Parameter Diagram: It enables drawing parameter diagram of each sub-system of a system in a graphical editor.</li>
+									<li> FMECA table: It enables specifying FMECA table of each sub-system.</li>
+									<li> Automatic generation of fault trees: It enables automatic generation of fault trees from FMECA tables.</li>
+									<li> Automatic generation of master logic diagrams: It enables automatic generation of master logic diagram from FMECA tables.</li>
+										</ul>
+								</ul>
+								</p>
 							</div>
 					</div>
 				</div>
@@ -150,58 +117,76 @@
 			<div class="section">
 				<div class="section-header" onclick="toggleSection(this)">
 					<span class="toggle-icon"></span>
-					<h3>Specification (CSL logic) & quantification of advanced reliability metrics</h3>
+					<h3>Fault Tree Analysis</h3>
 				</div>
 				<div class="section-content">
 					<div class="m-auto" style="padding: 0px 60px 0px 50px">
-						Apart from traditional reliability metrics, SAFEST allows the computing of advanced dependability metrics. It
-						categorizes metrics based on their complexity: Basic, Advanced, Importance, and Custom.
-						<div style="font-family: sans-serif; line-height: 1.6;">
-			
-							<details>
-								<summary class="section-header" onclick="toggleSubSection(this)">
-									<span class="toggle-icon"></span>
-									<b>Basic</b>
-								</summary>
-								<div class="section-content">
-								<ul style="padding-left: 20px;">
-									<li>Reliability: the probability of failure within a given time bound.</li>
-									<li>Unreliability: the complement of reliability (1- Reliability).</li>
-									<li>Average failure probability per hour</li>
-									<li>Mean-time-to-failure: the expected time to system failure or scenario occurrence.</li>
-									 <li>Event probability within a time bound: the probability that an event occurs within a given time.</li>
-									<li>Event probability: the probability that an event occurs.</li>
-									 <li>Instantaneous probability: the probability that an event occurs at a given time.</li>
-								</ul>
+							<div style="font-family: sans-serif; line-height: 1.6;">
+								<div class="image-wrapper">
+									<img src="/src/assets/images/safest-fta.png"
+									alt="Structure knowledge example"/>
 								</div>
-							</details>
+								<p>
+								<ul style="padding-left: 20px;">
+									<li> Static & dynamic fault trees: It supports all static and dynamic fault tree gates for modeling fault-tolerant dynamic systems having redundancy, 
+										probabilistic functional dependencies, and temporal failure-ordering.</li>
+									<li> Spare races: It can model and analyze situations where two or more subsystems try to get a shared spare component simultaneously, which might generate different analysis results, e.g., reliability.</li>
+									<li>Automatic fault trees generation: It supports automatic generation of fault trees from FMEA data.</li>
+									<li> Boolean logic definable events: It allows the definition of failure events through Boolean logic equations over fault tree gates.</li>
+									<li> Model-based safety analysis: It allows for automatically extracting DFTs out of SysML v2 models annotated with safety information.</li>
+									<li> Interactive simulation: It provides a graphical interface to simulate DFTs interactively. This allows us to validate DFTs and understand the behavior of dynamic gates.</li>
+
+									<li> Exact & 100% bounded results: Its analysis results are exact or bounded with a 100% guarantee (thanks to probabilistic model-checking and BDDs) in contrast to statistical 
+										results via e.g., Monte-Carlo simulation. Moreover, the precision of results can be adjusted up to 16 decimal places.</li>
+									<li> Rich set of importance measures: It verifies a range of importance measures like Birnbaum Index, Criticality Index, RAW, RRW, Diagnostics Importance Factor, 
+										Fussell-Vesely, BAGT+, BAGT-, etc., on DFTs.</li>
+									<li> Embedding Markov chains: It allows defining failure probabilities of basic events in fault trees using Markov chains.</li>
+									<li> Wide range of measures: It allows for verifying a range of measures specified in continuous stochastic logic (CSL) instead of only two measures, Reliability and MTTF. It categorizes metrics 
+										based on their complexity: Basic, Advanced, Importance, and Custom.
+
+										<details>
+											<summary class="section-header" onclick="toggleSubSection(this)">
+											<span class="toggle-icon"></span>
+											<b>Basic</b>
+											</summary>
+											<div class="section-content">
+												<ul style="padding-left: 20px;">
+													<li>Reliability: the probability of failure within a given time bound.</li>
+													<li>Unreliability: the complement of reliability (1- Reliability).</li>
+													<li>Average failure probability per hour</li>
+													<li>Mean-time-to-failure: the expected time to system failure or scenario occurrence.</li>
+													<li>Event probability within a time bound: the probability that an event occurs within a given time.</li>
+													<li>Event probability: the probability that an event occurs.</li>
+									 				<li>Instantaneous probability: the probability that an event occurs at a given time.</li>
+												</ul>
+											</div>
+										</details>
 			
-							<details>
-								<summary class="section-header" onclick="toggleSubSection(this)">
-									 <span class="toggle-icon"></span>
-									<b>Advanced</b>
-								</summary>
-								<div class="section-content">
-									<ul style="padding-left: 20px;">
-										<li>Full function availability (FFA): the time-bounded probability that the system provides full functionality, indicating it has neither failed nor degraded.</li>
-										<li>Failure without degradation (FWD): the time-bounded probability that the system fails without being degraded first.</li>
-										<li>Mean time from degradation to failure (MTDF): The expected time from the moment of degradation to system failure.</li>
-										<li>Minimal degraded reliability (MDR): the worst-case failure probability when using the system in a degraded state.</li>
-										<li>Failure under limited operation in degradation (FLOD_1): the probability of failure when imposing a time limit for using a degraded system.</li>
-										<li>Failure under limited operation in degradation (FLOD_2): similar to FLOD_1, but with additional conditions of avoiding prior system failure.</li>
-										<li>System integrity under limited fail-operation (SILFO): it considers the system-wide impact of limiting the degraded operation time, with aspects FWD and FLOD_1.</li>
-										<li>Reach-avoid probability: the probability of one event occurring without another event happening before.</li>
-										<li>Time-bounded reach-avoid probability: the probability of an event occurring within a time limit without another event happening beforehand.</li>
-									</ul>
-									<div class="image-wrapper">
-										<img src="/src/assets/images/tool-features/feat-screens/csl-advanced.png"
-											alt="Structure knowledge example"/>
-									</div>
-							   </div>
-							</details>
+										<details>
+											<summary class="section-header" onclick="toggleSubSection(this)">
+									 		<span class="toggle-icon"></span>
+											<b>Advanced</b>
+											</summary>
+											<div class="section-content">
+												<ul style="padding-left: 20px;">
+													<li>Full function availability (FFA): the time-bounded probability that the system provides full functionality, indicating it has neither failed nor degraded.</li>
+													<li>Failure without degradation (FWD): the time-bounded probability that the system fails without being degraded first.</li>
+													<li>Mean time from degradation to failure (MTDF): The expected time from the moment of degradation to system failure.</li>
+													<li>Minimal degraded reliability (MDR): the worst-case failure probability when using the system in a degraded state.</li>
+													<li>Failure under limited operation in degradation (FLOD_1): the probability of failure when imposing a time limit for using a degraded system.</li>
+													<li>Failure under limited operation in degradation (FLOD_2): similar to FLOD_1, but with additional conditions of avoiding prior system failure.</li>
+													<li>System integrity under limited fail-operation (SILFO): it considers the system-wide impact of limiting the degraded operation time, with aspects FWD and FLOD_1.</li>
+													<li>Reach-avoid probability: the probability of one event occurring without another event happening before.</li>
+													<li>Time-bounded reach-avoid probability: the probability of an event occurring within a time limit without another event happening beforehand.</li>
+												</ul>
+												<div class="image-wrapper">
+													<img src="/src/assets/images/tool-features/feat-screens/csl-advanced.png"
+													alt="Structure knowledge example"/>
+												</div>
+							   				</div>
+										</details>
 			
-						</div>
-						<div style="font-family: sans-serif; line-height: 1.6;">
+					
 			
 							<details>
 								<summary class="section-header" onclick="toggleSubSection(this)">
@@ -225,8 +210,7 @@
 							   </div>
 							</details>
 			
-						</div>
-						<div style="font-family: sans-serif; line-height: 1.6;">
+						
 			
 							<details>
 								<summary class="section-header" onclick="toggleSubSection(this)">
@@ -293,13 +277,230 @@
 										</details>
 								</div>
 							</details>
-			
-			
-						</div>
+
+									</li>
+								</ul>
+								</p>
+							</div>
+	
 					</div>
 				</div>
 			</div>
+			<div class="section">
+				<div class="section-header" onclick="toggleSection(this)">
+					<span class="toggle-icon"></span>
+					<h3>Event Tree Analysis</h3>
+				</div>
+				<div class="section-content">
+					<div class="m-auto" style="padding: 0px 60px 0px 50px">
+							<div style="font-family: sans-serif; line-height: 1.6;">
+								<div class="image-wrapper">
+									<img src="/src/assets/images/safest-eta.png"
+									alt="Structure knowledge example"/>
+								</div>
+								<p>
+								<ul style="padding-left: 20px;">
+									<li> Embedding DFTs: It allows for the embedding of DFTs in event trees.</li>
+									<li> Quantification of figures: It allows for quantifying figures like monetary loss, radioactive emission, etc., in event trees that may result as a consequence of accidental events.</li>
+									<li> Sequence of decisions: It allows for modeling and analyzing a sequence of decisions, each having probabilistic outcomes, by system operators, allowing for worst- and best-case analysis in event trees.</li>
+									<li> Living PRA: It allows for analyzing dynamic event trees/risk models in an interactive fashion. At each node of the model, users can figure out which decision will maximize/minimize the probability of 
+									consequences under the current environmental conditions (e.g., temperature, pressure, etc.). Note that the environmental conditions may not remain static throughout the analysis; 
+									rather, they may change as we move from one node to another in the model.</li>
+									<li> Analysis: By analyzing event trees, we get:
+
+										<ul style="padding-left: 40px;">
+											<li>Expected gains or losses, such as radioactive leakage, fatalities, etc.,</li>
+											<li>Max/min limits on the frequencies of the consequences, and</li>
+											<li>Wise choices to, for example, lessen the unfavorable effects/outcomes.</li>
+										</ul>
+								</ul>
+								</p>
+							</div>
+					</div>
+				</div>
+			</div>	
+						<div class="section">
+				<div class="section-header" onclick="toggleSection(this)">
+					<span class="toggle-icon"></span>
+					<h3>Master Logic Diagram  Analysis</h3>
+				</div>
+				<div class="section-content">
+					<div class="m-auto" style="padding: 0px 60px 0px 50px">
+							<div style="font-family: sans-serif; line-height: 1.6;">
+								<div class="image-wrapper">
+									<img src="/src/assets/images/safest-mld.png"
+									alt="Structure knowledge example"/>
+								</div>
+								<p>
+									SAFEST enables the graphic construction of master logic diagrams (MLDs). MLD is a logical decomposition of the general undesirable end state that is 
+									displayed at the top of the tree and progresses to more precise event descriptions at lower levels. The leaves of the tree represent the fundamental 
+									initiating events (IEs).
+
+									
+								<ul style="padding-left: 20px;">
+									<li>IEs are attached to event trees that model all possible consequences of IEs along with the control functions and the decisions of operators 
+											to mitigate the impact of bad consequences.</li>
+									<li> The control functions in event trees are attached to dynamic event trees (DFTs) modeling their 
+											failure behavior. Quantities like radioactive emissions, casualties, monetary loss, etc, can also be specified in event trees.</li>
+									<li>Analysis: The analysis of MLD computes the maximum and minimum probabilities (expected values) of consequences (quantities), allowing for the analysis of best 
+										and worst-case scenarios. </li>
+									<li>Autmatic generation of models: SAFEST enables automatic generation of master logic diagrams from FMECA tables.</li>
+								</ul>
+											 
+								
+
+								</p>
+							</div>
+	
+					</div>
+				</div>
+			</div>
+						<div class="section">
+				<div class="section-header" onclick="toggleSection(this)">
+					<span class="toggle-icon"></span>
+					<h3>Markov Analysis</h3>
+				</div>
+				<div class="section-content">
+					<div class="m-auto" style="padding: 0px 60px 0px 50px">
+							<div style="font-family: sans-serif; line-height: 1.6;">
+								<div class="image-wrapper">
+									<img src="/src/assets/images/safest-ma.png"
+									alt="Structure knowledge example"/>
+								</div>
+								<p>
+								<ul style="padding-left: 20px;">
+									<li> Scalability: It is highly optimized for scalability and can analyze very large Markov chains — even those with billions of states — depending on the model type, encoding, and 
+										available hardware.</li>
+									<li>  Graphical Modeling: It enables graphical modeling of Markov chains – even those with billions of states – in a compact way. One can assign labels to any state using Boolean logic 
+										equations on state variables.</li> 
+									<li>  System Rewards: It enables attaching rewards to states and transitions of Markov chains, and can compute their expected values.</li> 
+									<li>  Compositional Modeling: It supports compositional modeling of systems, i.e., sub-systems of a system are modeled independently, which can then synchronize on common actions to generate a 
+											monolithic model of the overall system.</li> 
+									<li>  Interactive Simulation: It provides a graphical interface to interactively simulate Markov models. One can decide which sub-system will change its state (perform a transition) in the next time-step. 
+											If a transition is synchronous, then every participating sub-system will change its state. It is extremely useful for debugging extremely large Markov chains.</li> 
+									<li>  Wide Range of Measures in CSL logic: It supports continuous stochastic logic to write properties to be verified on Markov chains. Most commonly used properties are predefined in the tool. 
+											A few examples are:
+											<ul style="padding-left: 30px;">
+												<li> Steady-state analysis</li> 
+												<li>Expected visiting time analysis</li> 
+												<li> Reachability properties</li> 
+												<li> Step/time-bounded reach-avoid probabilities</li> 
+												<li> Expected cumulative rewards</li> 
+												<li> Steady-state probability</li> 
+												<li> Instantaneous probabilities</li> 
+												<li> etc.</li> 
+											</ul>
+										</li>
+									<li>  Formally Verified Algos: All analysis algorithms in SAFEST are formally verified and published internationally.</li> 
+								</ul>
+								</p>
+							</div>
+	
+					</div>
+				</div>
+			</div>
+						<div class="section">
+				<div class="section-header" onclick="toggleSection(this)">
+					<span class="toggle-icon"></span>
+					<h3>Bowtie Analysis</h3>
+				</div>
+				<div class="section-content">
+					<div class="m-auto" style="padding: 0px 60px 0px 50px">
+							<div style="font-family: sans-serif; line-height: 1.6;">
+								<div class="image-wrapper">
+									<img src="/src/assets/images/safest-bta.png"
+									alt="Structure knowledge example"/>
+								</div>
+
+								<p>Bowtie analysis is the most used risk assessment method. It is unique in its ability to visualize complex risks in a way that is understandable, 
+									yet also allows for detailed risk-based improvement plans. A bowtie diagram presents the danger you face in a single, understandable picture. It is simple to 
+									discern between the proactive and reactive facets of risk management thanks to the diagram's bowtie-like shape. It summarises several possible event scenarios and 
+									shows the measures you have in place to handle them. Designed with the end user in mind, the software is among the most user-friendly risk assessment tools. 
+									Using it to create a diagram is easy, and the application lets you update the diagram to reflect the current condition of your safety barriers.
+								
+								<ul style="padding-left: 20px;">
+									<li>Protocals visualization: The bowtie technique clearly shows your risk management plan and arranges the major hazards facing your organization. 
+										The barriers in the bowtie diagram show the controls you have in place to prevent, reduce, or eliminate serious outcomes. Holding barriers accountable makes 
+										it obvious what everyone needs to do to operate safely. By giving precise daily operating information, operational staff can take ownership of the bowties when 
+										they are involved in their construction.
+										You can use models to see your safety protocols on the diagram. Every action can be connected to the barrier it supports. Finding safety-critical actions that are 
+										performed to guarantee the ongoing integrity of risk barriers is the primary goal of the SMS. When all the data is shown on the bowtie, everyone can see the full 
+										risk context and the tasks they are responsible for.</li>
+									<li> Assessment & accountability: Once a bowtie diagram has been created, you can assess and look over the safety measures you've implemented. Among other things, 
+										these barriers can be classified according to their type, effectiveness, and accountability. Examine the efficacy of your barriers to obtain instant visual 
+										insight into their strength. By examining the various types of obstacles, you can increase the organization's resilience and reduce the chance of common 
+										mode failure. Color coding is commonly used to show how effective hazardhive barriers are, which can be customized to your needs.
+										Customizable job titles can be used to connect accountability to barriers. This makes it easier to understand who is in charge of maintaining safety barriers. 
+										It increases ownership of barrier performance and makes clear what everyone must do to operate safely.</li>
+									
+
+								</ul>
+								</p>
+							</div>
+	
+					</div>
+				</div>
+			</div>
+						<div class="section">
+				<div class="section-header" onclick="toggleSection(this)">
+					<span class="toggle-icon"></span>
+					<h3>Weibull Analysis</h3>
+				</div>
+				<div class="section-content">
+					<div class="m-auto" style="padding: 0px 60px 0px 50px">
+							<div style="font-family: sans-serif; line-height: 1.6;">
+								<div class="image-wrapper">
+									<img src="/src/assets/images/safest-wba.png"
+									alt="Structure knowledge example"/>
+								</div>
+								<p>
+								<ul style="padding-left: 20px;">
+									<li>Parameter estimation: It allows for estimation of (parameters of) failure distributions from the failure data of components.
+									<li>Mixture distribution: It enables combining failure distributions by assigning weights to them, which helps combining, for example, failure distributions from international reliability standards with empirical distributions (calculated from field data) 
+										allowing for having more meaningful insights of systems.</li>
+
+								</ul>
+								</p>
+							</div>
+	
+					</div>
+				</div>
+			</div>
+						<div class="section">
+				<div class="section-header" onclick="toggleSection(this)">
+					<span class="toggle-icon"></span>
+					<h3>Reliability Block Diagram Analysis</h3>
+				</div>
+				<div class="section-content">
+					<div class="m-auto" style="padding: 0px 60px 0px 50px">
+							<div style="font-family: sans-serif; line-height: 1.6;">
+								<div class="image-wrapper">
+									<img src="/src/assets/images/safest-rbd.png"
+									alt="Structure knowledge example"/>
+								
+								</div>
+							</div>
+					</div>
+				</div>
+						<div class="section">
+				<div class="section-header" onclick="toggleSection(this)">
+					<span class="toggle-icon"></span>
+					<h3>Attack-Fault Tree Analysis</h3>
+				</div>
+				<div class="section-content">
+					<div class="m-auto" style="padding: 0px 60px 0px 50px">
+							<div style="font-family: sans-serif; line-height: 1.6;">
+								<div class="image-wrapper">
+									<img src="/src/assets/images/safest-aft.png"
+									alt="Structure knowledge example"/>
 			
+	
+								</div>
+							</div>
+					</div>
+			</div>
+			
+<!--			
 			<div class="section">
 			<div class="section-header" onclick="toggleSection(this)">
 				<span class="toggle-icon"></span>
@@ -318,7 +519,8 @@
 				</div>
 			</div>
 			</div>
-	
+-->
+<!--	
 			<div class="section">
 			<div class="section-header" onclick="toggleSection(this)">
 				<span class="toggle-icon"></span>
@@ -337,79 +539,12 @@
 			</div>
 			</div>
 	
-			<div class="section">
-			<div class="section-header" onclick="toggleSection(this)">
-				<span class="toggle-icon"></span>
-				<h3>Exact analysis of dynamic systems using probabilistic model-checking</h3>
-			</div>
-			<div class="section-content">
-				<p>
-					Complex systems usually have dynamic behaviour because of e.g. spare components, failure sequence among components, functional dependencies, etc. The analysis of such systems is usually quite complex which is usually based on simulation or generalization techniques. Unlike others we implement formal verification techniques e.g. probabilistic model-checking, and thus provide exact results on measures of interest. For systems having large state space, we provide an iterative analysis approach providing upper and lower bounds on the exact values of measures as discussed below.
-				</p>
-				<div class="image-wrapper">
-				<img
-				src="/src/assets/images/tool-features/feat-screens/analysis.png"
-				alt="Structure knowledge example"
-				/>
-				</div>
-			</div>
-			</div>
+		-->
+
+
 	
-			<div class="section">
-			<div class="section-header" onclick="toggleSection(this)">
-				<span class="toggle-icon"></span>
-				<h3>Sound-bounded analysis for dynamic systems having very large state-space</h3>
-			</div>
-			<div class="section-content">
-				<p>
-					In order to compute exact results for measures, first the full state space is constructed, and then analyzed. However, many states in the state space only marginally contribute to the result. If one is interested in an approximation of the MTTF (or the reliability), these states are of minor interest. SAFEST provides an approach that generates the state-space on-the-fly, and then compute an upper and a lower bound to the exact results on a partially unfolded system, which might be much smaller as compared to the fully unfolded system. The approximation is sound ensuring the exact result lies between these two bounds.
-				</p>
-				<div class="image-wrapper">
-				<img
-				src="/src/assets/images/tool-features/feat-screens/bounded-analysis.png"
-				alt="Structure knowledge example"
-				/>
-				</div>
-			</div>
-			</div>
-	
-			<div class="section">
-			<div class="section-header" onclick="toggleSection(this)">
-				<span class="toggle-icon"></span>
-				<h3>Graphs on (advanced) measures</h3>
-			</div>
-			<div class="section-content">
-				<p>
-					Reliability measures help figuring out optimal maintenance schedules of systems thus reducing their downtimes and saving cost at the same time. Fault trees that model sub-systems of systems can even predict their health individually thus helping make even more detailed maintenance schedules. We provide a graphical interface to plot and compare measures of interest e.g. reliability of different sub-systems, which is helpful in deciding maintenance schedules.
-				</p>
-				<div class="image-wrapper">
-				<img
-				src="/src/assets/images/tool-features/feat-screens/graph.png"
-				alt="Structure knowledge example"
-				/>
-				</div>
-			</div>
-			</div>
 
-			<div class="section">
-			<div class="section-header" onclick="toggleSection(this)">
-				<span class="toggle-icon"></span>
-				<h3>Understanding semantics of all DFT gates through graphical simulation</h3>
-			</div>
-			<div class="section-content">
-				<p>
-					The idea is to interactively visualize a sequence of failures in a DFT. The user would start with a usual DFT and could select one of the basic events (BE) that should fail first. Based on this, the status of each DFT element (failed, operational, fail-safe, claiming in SPAREs, etc.) is redetermined and then visualized. Afterwards, another BE can be selected to fail and so forth. The main benefit of this feature is that the semantics of all gates of DFTs become much clearer to undertand as users can try out the behaviour by themselves.
-				</p>
-				<div class="image-wrapper">
-				<img
-				src="/src/assets/images/tool-features/feat-screens/sim_gui.png"
-				alt="Structure knowledge example"
-				/>
-				</div>
-			</div>
-			</div>
-
-
+<!--
 			<div class="section">
 			<div class="section-header" onclick="toggleSection(this)">
 				<span class="toggle-icon"></span>
@@ -441,13 +576,11 @@
 					</figure>
 				
 				</div>
-				<!-- <div class="image-wrapper">
-					
-				</div> -->
+		
 			</div>
-			</div>
+			</div> -->
 
-
+<!--
 			<div class="section">
 			<div class="section-header" onclick="toggleSection(this)">
 				<span class="toggle-icon"></span>
@@ -465,115 +598,10 @@
 				</div>
 			</div>
 			</div>
+-->
 
-			<div class="section">
-			<div class="section-header" onclick="toggleSection(this)">
-				<span class="toggle-icon"></span>
-				<h3>Model-based safety assessment (DFTs extraction from SysML v2 models)</h3>
-			</div>
-			<div class="section-content">
-				<p>
-					SAFEST automates model-based risk assessment (MBRA) in parallel with model-based systems engineering (MBSE). By annotating safety aspects (e.g. redundancy, functional dependencies, failure ordering, etc.) in SysML 2.0 models, aur algorithm automatically extract relevant DFTs out of them. This reduces a lot of effort required in building DFTS manually from SysML 2.0 models.
-				</p>
-				<div class="image-wrapper">
-				<img
-				src="/src/assets/images/tool-features/feat-screens/sysml-dft.png"
-				alt="Structure knowledge example"
-				/>
-				</div>
-			</div>
-			</div>
 
-			<div class="section">
-			<div class="section-header" onclick="toggleSection(this)">
-				<span class="toggle-icon"></span>
-				<h3>Parametric fault trees and event trees & (empirical) failure distributions</h3>
-			</div>
-			<div class="section-content">
-				<p>
-					Model parameters can be provided in the form of constants, real expressions, and failure distributions. Failure distributions can be specified manually or evaluated from data sets that are generated during system operations. Furthermore, weighted failure distributions are also supported, allowing combining two or more failure distributions into one failure distribution. For example, combining failure distributions from international reliability standards with empirical distributions (calculated from field data) allows for having more meaningful distributions for system analysis in production.
-				</p>
-				<div class="image-wrapper">
-				<img
-				src="src/assets/images/tool-features/feat-screens/empirical.png"
-				/>
-				</div>
-			</div>
-			</div>
-
-			<div class="section">
-			<div class="section-header" onclick="toggleSection(this)">
-				<span class="toggle-icon"></span>
-				<h3>Event trees embedded with dynamic fault trees </h3>
-			</div>
-			<div class="section-content">
-				<div style="font-family: sans-serif; line-height: 1.6;">
-					<p>We extend classical event trees with non-deterministic choices and decision-making at states and allow the addition of state rewards and/or losses. Moreover, DFTs can be embedded into RETs and provide transition probabilities (of RETs). By analyzing RETs, one can determine</p>
-					<ul style="padding-left: 20px;">
-						<li>Expected gains or losses, such as radioactive leakage, fatalities, etc.,</li>
-						<li>Max/min limits on the frequencies and probability of the outcomes in event trees, and</li>
-						<li>Wise choices to, for example, lessen the unfavorable effects/outcomes.</li>
-					</ul>
-				</div>
-				<div class="image-wrapper">
-				<img
-				src="/src/assets/images/tool-features/feat-screens/rets.png"
-				alt="Structure knowledge example"
-				/>
-				</div>
-			</div>
-			</div>
-
-			<div class="section">
-			<div class="section-header" onclick="toggleSection(this)">
-				<span class="toggle-icon"></span>
-				<h3>Powered by Storm model-checker as the backend computational engine</h3>
-			</div>
-			<div class="section-content">
-				<p style="text-align: justify">
-					The Backend Computational Engine
-					SAFEST is powered by 
-					<a href="https://www.stormchecker.org" target="_blank">[Storm]</a>     
-					-- a state-of-the-art probabilistic model checker.
-					Storm is a tool for the analysis of systems involving random or probabilistic phenomena.
-						Given an input model and a quantitative specification, 
-						it can determine whether the input model conforms to the specification.
-						It has been designed with performance and modularity in mind. SAFEST interacts with
-						the DFT module of Storm -- storm-dft -- 
-						using a Python binding
-						<a href="https://github.com/moves-rwth/stormpy" target="_blank">[stormpy]</a>
-						and utilizes the rich features of 
-						<a href="https://github.com/volkm/dftlib/" target="_blank">[diftlib]</a>
-							library. </p>
-				<div class="image-wrapper">
-				<img src="/src/assets/images/chrat.png" alt="Structure knowledge example"/>
-				</div>
-				<div style="text-align: center;">Comparison of Tools for the Analysis of Quantitative Formal Models (QComp 2020)</div>
-			</div>
-			</div>
-
-			<div class="section">
-			<div class="section-header" onclick="toggleSection(this)">
-				<span class="toggle-icon"></span>
-				<h3>SAFEST is validated against a DFT benchmark</h3>
-			</div>
-			<div class="section-content">
-				<p>
-					The SAFEST tool has been validated against multiple fault
-					trees in the <a href="https://dftbenchmarks.utwente.nl" target="_blank">[FFORT fault tree forest]</a>, a DFT
-					benchmark suite maintained at University of Twente. FFORT is a collection of fault trees gathered from scientific
-					literature and open industrial reports. One can find the analysis results for
-					the fault trees verifiable by our tool in the suite in comparison with other
-					tools (if any).
-				</p>
-				<div class="image-wrapper">
-				<img
-				src="/src/assets/images/safest_validation.png"
-				alt="Structure knowledge example"
-				/>
-				</div>
-			</div>
-			</div>
+	
 			
 		</div>
 	</div>
@@ -630,25 +658,7 @@
 		  <!-- Grid column -->
   
 		  <!-- Grid column -->
-		  <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-			<!-- Links -->
-			<h6 class="text-uppercase fw-bold mb-4">Projects</h6>
-			<p>
-			  <a href="https://www.hazardhive.dgbtek.com" class="text-reset"
-				>Hazardhive</a
-			  >
-			</p>
-			<p>
-			  <a href="https://www.storm.dgbtek.com" class="text-reset"
-				>StormGUI</a
-			  >
-			</p>
-			<p>
-			  <a href="https://www.safest.dgbtek.com" class="text-reset"
-				>SAFEST</a
-			  >
-			</p>
-		  </div>
+
 		  <!-- Grid column -->
   
 		  <!-- Grid column -->

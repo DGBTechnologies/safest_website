@@ -82,10 +82,11 @@
 							<h1 class="header-title">Risk Assessment Toolchain
 							</h1>
 							<p class="header-description">
-								A fully automatic, scalable, and state-of-the-art tool that is based on <span class="bluehighlight-text">dynamic fault trees (DFT) and event trees</span> and, thus, 
-								can faithfully assess the risk of <span class="bluehighlight-text">fail-operational/fault-tolerant dynamic systems with decision-making capabilities.</span> 
-								It is equally competitive with existing commercial tools (for static fault trees analysis), but offers more flexible 
-								modeling and analyses, going beyond the capabilities of other tools, of dynamic systems as it <span class="bluehighlight-text">covers all DFT gates</span>.
+
+								A fully automatic, scalable, and state-of-the-art tool that can faithfully assess the risk of <span class="bluehighlight-text">fail-operational/fault-tolerant dynamic systems 
+								with decision-making capabilities</span>. Unlike others, it <span class="bluehighlight-text">computes exact results, based on formal methods techniques such as probabilistic model-checking, 
+								with 100% mathematical guarantees</span>. It is equally competitive with existing commercial tools, but offers more flexible modeling and analyses, going 
+								beyond the capabilities of other tools.
 							</p>
 					</div>
 
@@ -182,7 +183,7 @@
 						
 							<p>Similarly, event trees are unable to quantify losses such as the number of injuries, monetary loss, etc., or represent, for example, operators’ judgments following an accident, which may be necessary to lessen the impact of severe repercussions.</p>
 						
-							<p><span class="bluehighlight-text">Dynamic fault trees and event trees overcome the above-mentioned shortcomings</span> and, thus, enable the modeling and analysis of fail-operational/fault-tolerant dynamic systems.</p>
+							<p><span class="bluehighlight-text">Markov chains, dynamic fault trees, event trees and reliability block diagrams overcome the above-mentioned shortcomings</span> and, thus, enable the modeling and analysis of fail-operational/fault-tolerant dynamic systems.</p>
 							<div class="image-wrapper">
 								<img src="/src/assets/images/fault-tolerance.png"
 								alt="Structure knowledge example"/>
@@ -237,148 +238,7 @@
 				</div>
 				<div class="section-content">
 					<div class="m-auto" style="padding: 0px 60px 0px 50px">
-						Apart from traditional reliability metrics, SAFEST allows the computing of advanced dependability metrics. It
-						categorizes metrics based on their complexity: Basic, Advanced, Importance, and Custom.
-						<div style="font-family: sans-serif; line-height: 1.6;">
-			
-							<details>
-								<summary class="section-header" onclick="toggleSubSection(this)">
-									<span class="toggle-icon"></span>
-									<b>Basic</b>
-								</summary>
-								<div class="section-content">
-								<ul style="padding-left: 20px;">
-									<li>Reliability: the probability of failure within a given time bound.</li>
-									<li>Unreliability: the complement of reliability (1- Reliability).</li>
-									<li>Average failure probability per hour</li>
-									<li>Mean-time-to-failure: the expected time to system failure or scenario occurrence.</li>
-									 <li>Event probability within a time bound: the probability that an event occurs within a given time.</li>
-									<li>Event probability: the probability that an event occurs.</li>
-									 <li>Instantaneous probability: the probability that an event occurs at a given time.</li>
-								</ul>
-								</div>
-							</details>
-			
-							<details>
-								<summary class="section-header" onclick="toggleSubSection(this)">
-									 <span class="toggle-icon"></span>
-									<b>Advanced</b>
-								</summary>
-								<div class="section-content">
-									<ul style="padding-left: 20px;">
-										<li>Full function availability (FFA): the time-bounded probability that the system provides full functionality, indicating it has neither failed nor degraded.</li>
-										<li>Failure without degradation (FWD): the time-bounded probability that the system fails without being degraded first.</li>
-										<li>Mean time from degradation to failure (MTDF): The expected time from the moment of degradation to system failure.</li>
-										<li>Minimal degraded reliability (MDR): the worst-case failure probability when using the system in a degraded state.</li>
-										<li>Failure under limited operation in degradation (FLOD_1): the probability of failure when imposing a time limit for using a degraded system.</li>
-										<li>Failure under limited operation in degradation (FLOD_2): similar to FLOD_1, but with additional conditions of avoiding prior system failure.</li>
-										<li>System integrity under limited fail-operation (SILFO): it considers the system-wide impact of limiting the degraded operation time, with aspects FWD and FLOD_1.</li>
-										<li>Reach-avoid probability: the probability of one event occurring without another event happening before.</li>
-										<li>Time-bounded reach-avoid probability: the probability of an event occurring within a time limit without another event happening beforehand.</li>
-									</ul>
-									<div class="image-wrapper">
-										<img src="/src/assets/images/tool-features/feat-screens/csl-advanced.png"
-											alt="Structure knowledge example"/>
-									</div>
-							   </div>
-							</details>
-			
-						</div>
-						<div style="font-family: sans-serif; line-height: 1.6;">
-			
-							<details>
-								<summary class="section-header" onclick="toggleSubSection(this)">
-									<span class="toggle-icon"></span>
-									<b>Importance</b>
-								</summary>
-								<div class="section-content">
-									<ul style="padding-left: 20px;">
-										<li>Birnbaum index (BI): it measures how much the system's unreliability depends on a specific component's unreliability.</li>
-										<li>Criticality importance (CI): similar to BI, scaled by the ratio of component and system unreliability.</li>
-										<li>Risk achievement worth (RAW): the impact of a component's total degradation on system unreliability.</li>
-										<li>Risk reduction worth (RRW): the impact of making a component fully reliable on system unreliability.</li>
-										<li>Diagnostics importance factor (DIF): the frequency of a component's failure in states where the system has failed.</li>
-										<li>BAGT+: the change in mean time-to-failure (MTTF) if the component fully degrades.</li>
-										<li>BAGT-: the change in mean time-to-failure (MTTF) if the component is fully reliable.</li>
-									</ul>
-									<div class="image-wrapper">
-										<img src="/src/assets/images/tool-features/feat-screens/csl-importance.png"
-											alt="Structure knowledge example"/>
-									</div>
-							   </div>
-							</details>
-			
-						</div>
-						<div style="font-family: sans-serif; line-height: 1.6;">
-			
-							<details>
-								<summary class="section-header" onclick="toggleSubSection(this)">
-									<span class="toggle-icon"></span>
-									<b>Custom</b>
-								</summary>
-								<div class="section-content">
-									<p>Custom properties can be specified using Probabilistic Computation Tree Logic (PCTL) / Continuous Stochastic Logic (CSL).</p>
-									<p>The probability measure on Markov models is typically defined on paths. These paths are defined as in temporal logic, or more specifically computation tree logic (CTL), a branching-time logic. That means that the formula alternates over descriptions of paths and descriptions of states.</p>
-			
-										<details open>
-											<summary class="section-header" onclick="toggleSubSection(this)">
-											   <span class="toggle-icon"></span>
-												<b>Path Formulae</b>
-											</summary>
-											 <div class="section-content">
-												<p>For this, we assume that <i style="font-style:italic;">a</i> and <i style="font-style:italic;">b</i> are <span style="color:red;">state formulae</span> and <span style="color:red;">{op}</span> is any one of <, <=, =, >=, >. The available path formulae are:</p>
-												<ul style="padding-left: 20px;">
-													<li><i style="font-style:italic;">a</i> U <i style="font-style:italic;">b</i> to describe paths on which at some point <i style="font-style:italic;">b</i> holds and in all prior steps <i style="font-style:italic;">a</i> holds.</li>
-													<li>F <i style="font-style:italic;">b</i> as a shortcut for <span style="color:red;">true U <i style="font-style:italic;">b</i></span>.</li>
-													<li><i style="font-style:italic;">a</i> U<span style="color:red;">{op}</span>k <i style="font-style:italic;">b</i> (where k is an expression evaluating to a number) to describe the paths on which <i style="font-style:italic;">b</i> holds within k time (where time in discrete models means steps) and <i style="font-style:italic;">a</i> holds before.</li>
-													<li>F<span style="color:red;">{op}</span>k <i style="font-style:italic;">b</i> as a shortcut for <span style="color:red;">true U<span style="color:red;">{op}</span>k <i style="font-style:italic;">b</i></span>.</li>
-													<li>G <i style="font-style:italic;">a</i> to describe paths on which <i style="font-style:italic;">a</i> holds in every step.</li>
-												</ul>
-											</div>
-										</details>
-						
-										<details open>
-											<summary class="section-header" onclick="toggleSubSection(this)">
-												<span class="toggle-icon"></span>
-												<b>State Formulae</b>
-											</summary>
-											 <div class="section-content">
-												<p>Here, we assume that <i style="font-style:italic;">a</i> and <i style="font-style:italic;">b</i> are <span style="color:red;">state formulae</span>, phi is a <span style="color:red;">path formula</span> and <span style="color:red;">{op}</span> is any one of <, <=, =, >=, >. The available state formulae are:</p>
-												<ul style="padding-left: 20px;">
-													<li>c where c is either a label or an expression over the model variables.</li>
-													<li><i style="font-style:italic;">a</i> | <i style="font-style:italic;">b</i>, <i style="font-style:italic;">a</i> & <i style="font-style:italic;">b</i> to describe all states that satisfy <i style="font-style:italic;">a</i> or <i style="font-style:italic;">b</i>, <i style="font-style:italic;">a</i> and <i style="font-style:italic;">b</i>, respectively.</li>
-													 <li>!<i style="font-style:italic;">a</i> to describe the states not satisfying <i style="font-style:italic;">a</i>.</li>
-													<li>P[<span style="color:red;">{op}</span>]t [ phi ] (where t is a threshold value) to describe the states in which the probability to satisfy phi conforms to the comparison <span style="color:red;">{op}</span> t.</li>
-													<li>LRA[<span style="color:red;">{op}</span>]t [ <i style="font-style:italic;">a</i> ] to describe states in which the long-run average probability to be in a state satisfying <i style="font-style:italic;">a</i> conforms to <span style="color:red;">{op}</span> t.</li>
-												</ul>
-											</div>
-										</details>
-						
-								  
-										<details>
-											<summary class="section-header" onclick="toggleSubSection(this)">
-												<span class="toggle-icon"></span>
-												<b>Obtaining Probabilities</b>
-											</summary>
-											 <div class="section-content">
-												<p>Although formally not allowed in PCTL/CSL, one can also request the probability of fulfilling a path formula from each state. Instead of comparing to a given value  <span style="color:red;">P{op}b [ phi ]</span> , one can write <span style="color:red;">P=? [ phi ]</span> to obtain the actual values rather then obtaining a truth value.</p>
-											</div>
-										</details>
-						
-						  				<details>
-										   <summary class="section-header" onclick="toggleSubSection(this)">
-												<span class="toggle-icon"></span>
-												<b>Nondeterministic Models</b>
-											</summary>
-											<div class="section-content">
-												<p>For nondeterministic models, the formula can (and sometimes needs to) specify whether it refers to minimal or maximal probabilities. Since there is no information on how the nondeterminism in the models is to be resolved, Storm needs information on whether it should resolve the choices to <span style="text-decoration: underline;">minimize</span> or <span style="text-decoration: underline;">maximize</span> the values. That is, you cannot write <span style="color:red;">P=? [F a]</span>, but have to either write <span style="color:red;">Pmin=? [F a]</span> or <span style="color:red;">Pmax=? [F a]</span>. While you can also specify <span style="text-decoration: underline;">min</span> and <span style="text-decoration: underline;">max</span> when comparing to a probability threshold, it's not necessary to do it. By default, if the comparison operator <span style="color:red;">{op}</span> is < or <=, then the probability is maximized and otherwise minimized. The reasoning is the following: if the property holds in a state, then no matter which resolution of nondeterminism is taken, the probability will always be below (or equal) to the threshold value.</p>
-											</div>
-										</details>
-								</div>
-							</details>
-			
-			
-						</div>
+						In addition to traditional reliability metrics, SAFEST enables computing of advanced dependability metrics expressable in continuous stochastic logic (CSL).
 					</div>
 				</div>
 			</div>
@@ -390,40 +250,19 @@
 			</div>
 			<div class="section-content">
 				<p>
-					The tool provides a drag-&-drop interface to model fault trees graphically, specify and verify measures of interest, plot results, and do step-by-step simulation of fault trees. Advanced users can use features like specifying custom properties, characterizing complex system behaviours (states using Boolean equations) and quantifying their probabilities.
+					The tool provides a drag-&-drop interface to model systems graphically, specify and verify measures of interest, plot results, and do step-by-step simulation of models. 
+					Advanced users can use features like specifying custom properties, characterizing complex system behaviours (states using Boolean equations) and quantifying their probabilities.
 
 				</p>
-				<div class="image-wrapper">
-				<img
-				src="/src/assets/images/tool-features/feat-screens/safest_gui.png"
-				alt="Structure knowledge example"
-				/>
-				</div>
+
 			</div>
 			</div>
 	
 			<div class="section">
 			<div class="section-header" onclick="toggleSection(this)">
 				<span class="toggle-icon"></span>
-				<h3>BDD, Markov and hybrid analysis of complex systems</h3>
-			</div>
-			<div class="section-content">
-				<p>
-					Fault trees are a key model in reliability analysis. Classical static fault trees (SFT) can best be analysed using binary decision diagrams (BDD) whereas state-based techniques are favorable for the more expressive dynamic fault trees (DFT). We combine the best of both worlds by following Dugan’s approach: dynamic sub-trees are analysed via model checking Markov models and replaced by basic events capturing the obtained failure probabilities. The resulting SFT is then analysed via BDDs. Our implementation of Dugan’s approach significantly outperforms pure Markovian analysis of DFTs.
-				</p>
-				<div class="image-wrapper">
-				<img
-				src="/src/assets/images/tool-features/feat-screens/dft-sft-analysis.png"
-				alt="Structure knowledge example"
-				/>
-				</div>
-			</div>
-			</div>
-	
-			<div class="section">
-			<div class="section-header" onclick="toggleSection(this)">
-				<span class="toggle-icon"></span>
-				<h3>Exact analysis of dynamic systems using probabilistic model-checking</h3>
+			
+				<h3>Exact analysis using formal methods (probabilistic model-checking)</h3>
 			</div>
 			<div class="section-content">
 				<p>
@@ -441,7 +280,7 @@
 			<div class="section">
 			<div class="section-header" onclick="toggleSection(this)">
 				<span class="toggle-icon"></span>
-				<h3>Sound-bounded analysis for dynamic systems having very large state-space</h3>
+				<h3>Sound analysis of very large systems</h3>
 			</div>
 			<div class="section-content">
 				<p>
@@ -455,100 +294,6 @@
 				</div>
 			</div>
 			</div>
-	
-			<div class="section">
-			<div class="section-header" onclick="toggleSection(this)">
-				<span class="toggle-icon"></span>
-				<h3>Graphs on (advanced) measures</h3>
-			</div>
-			<div class="section-content">
-				<p>
-					Reliability measures help figuring out optimal maintenance schedules of systems thus reducing their downtimes and saving cost at the same time. Fault trees that model sub-systems of systems can even predict their health individually thus helping make even more detailed maintenance schedules. We provide a graphical interface to plot and compare measures of interest e.g. reliability of different sub-systems, which is helpful in deciding maintenance schedules.
-				</p>
-				<div class="image-wrapper">
-				<img
-				src="/src/assets/images/tool-features/feat-screens/graph.png"
-				alt="Structure knowledge example"
-				/>
-				</div>
-			</div>
-			</div>
-
-			<div class="section">
-			<div class="section-header" onclick="toggleSection(this)">
-				<span class="toggle-icon"></span>
-				<h3>Understanding semantics of all DFT gates through graphical simulation</h3>
-			</div>
-			<div class="section-content">
-				<p>
-					The idea is to interactively visualize a sequence of failures in a DFT. The user would start with a usual DFT and could select one of the basic events (BE) that should fail first. Based on this, the status of each DFT element (failed, operational, fail-safe, claiming in SPAREs, etc.) is redetermined and then visualized. Afterwards, another BE can be selected to fail and so forth. The main benefit of this feature is that the semantics of all gates of DFTs become much clearer to undertand as users can try out the behaviour by themselves.
-				</p>
-				<div class="image-wrapper">
-				<img
-				src="/src/assets/images/tool-features/feat-screens/sim_gui.png"
-				alt="Structure knowledge example"
-				/>
-				</div>
-			</div>
-			</div>
-
-
-			<div class="section">
-			<div class="section-header" onclick="toggleSection(this)">
-				<span class="toggle-icon"></span>
-				<h3>Automatic simplification of large fault trees before analysis</h3>
-			</div>
-			<div class="section-content">
-				<p>
-					Fault trees are a popular industrial technique for reliability modelling and analysis. Their extension with common reliability patterns, such as spare management, functional dependencies, and sequencing — known as dynamic fault trees (DFTs) — has an adverse effect on scalability, prohibiting the analysis of complex, industrial cases by, e.g., probabilistic model checkers. SAFEST makes use of reduction techniques for DFTs. Experiments on a large set of benchmarks show substantial fault tree simplifications, yielding state space reductions and timing gains of up to two orders of magnitude.
-				</p>
-				<div style="display: flex; gap: 20px; align-items:flex-start; flex-wrap: wrap; justify-content: space-around;">
-
-					<figure style="text-align:center; max-width: 48%; padding-bottom: 5px;">
-					  
-						<img
-							src="/src/assets/images/before_simplification_resized.png"
-							alt="Structure knowledge example"
-							style="max-width: 100%; max-height: 400px; object-fit: contain; display: block; margin-bottom: 5px;"
-						/>
-						<figcaption style="margin-top: 5px;">Before Simplification</figcaption>
-					</figure>
-				
-					<figure style="text-align:center; max-width: 48%; padding-bottom: 5px;">
-					  <img
-							src="/src/assets/images/after_simplification_resized.png"
-							alt="Structure knowledge example"
-						   style="max-width: 100%; max-height: 400px; object-fit: contain; display: block; margin-bottom: 5px;"
-						/>
-						<figcaption style="margin-top: 5px;">After Simplification</figcaption>
-					</figure>
-				
-				</div>
-				<!-- <div class="image-wrapper">
-					
-				</div> -->
-			</div>
-			</div>
-
-
-			<div class="section">
-			<div class="section-header" onclick="toggleSection(this)">
-				<span class="toggle-icon"></span>
-				<h3>Scalable analysis of large systems using modularization</h3>
-			</div>
-			<div class="section-content">
-				<p>
-					It allows evaluating subsystems individually and simplifying the large systems into smaller ones. It helps analysing large fault trees in an iterative way. Moreover, the rendering of large fault trees on canvas sometimes does not give a true picture/understanding of the underlying fault model. We, therefore, allow interactive breakdown of large fault trees into independent modules, static or dynamic, organized in a hierarchical manner. This improves the readability of the model and allows verification of metrics on individual models easily.
-				</p>
-				<div class="image-wrapper">
-				<img
-				src="/src/assets/images/tool-features/feat-screens/modularization.png"
-				alt="Structure knowledge example"
-				/>
-				</div>
-			</div>
-			</div>
-
 			<div class="section">
 			<div class="section-header" onclick="toggleSection(this)">
 				<span class="toggle-icon"></span>
@@ -566,10 +311,52 @@
 				</div>
 			</div>
 			</div>
+			<div class="section">
+			<div class="section-header" onclick="toggleSection(this)">
+				<span class="toggle-icon"></span>
+				<h3>Graphs on (advanced) measures</h3>
+			</div>
+			<div class="section-content">
+				<p>
+					SAFEST provides a graphical interface to plot and compare measures of interest e.g. reliability of different sub-systems, which is helpful in deciding maintenance schedules.
+				</p>
+				<div class="image-wrapper">
+				<img
+				src="/src/assets/images/tool-features/feat-screens/graph.png"
+				alt="Structure knowledge example"
+				/>
+				</div>
+			</div>
+			</div>
 
 			<div class="section">
 			<div class="section-header" onclick="toggleSection(this)">
 				<span class="toggle-icon"></span>
+				<h3>Understanding models through graphical simulation</h3>
+			</div>
+			<div class="section-content">
+				<p>
+					The idea is to interactively visualize the impact of a sequence of events in a model. For example, in DFTs the user selects one of the 
+					basic events (BE) that should fail first. Based on this, the status of other DFT elements is 
+					redetermined and then visualized (failed, operational, fail-safe, claiming in SPAREs, etc.). Afterwards, another BE is selected to fail and so forth. 
+					The main benefit of this feature is the understandaing of the behaviour of dynamic gates of DFTs, thus helping in building realistic models of systems.
+				</p>
+				<div class="image-wrapper">
+				<img
+				src="/src/assets/images/tool-features/feat-screens/sim_gui.png"
+				alt="Structure knowledge example"
+				/>
+				</div>
+			</div>
+			</div>
+
+
+			<div class="section">
+			<div class="section-header" onclick="toggleSection(this)">
+				<span class="toggle-icon"></span>
+				
+				
+				
 				<h3>Parametric fault trees and event trees & (empirical) failure distributions</h3>
 			</div>
 			<div class="section-content">
@@ -587,29 +374,7 @@
 			<div class="section">
 			<div class="section-header" onclick="toggleSection(this)">
 				<span class="toggle-icon"></span>
-				<h3>Event trees embedded with dynamic fault trees </h3>
-			</div>
-			<div class="section-content">
-				<div style="font-family: sans-serif; line-height: 1.6;">
-					<p>We extend classical event trees with non-deterministic choices and decision-making at states and allow the addition of state rewards and/or losses. Moreover, DFTs can be embedded into RETs and provide transition probabilities (of RETs). By analyzing RETs, one can determine</p>
-					<ul style="padding-left: 20px;">
-						<li>Expected gains or losses, such as radioactive leakage, fatalities, etc.,</li>
-						<li>Max/min limits on the frequencies and probability of the outcomes in event trees, and</li>
-						<li>Wise choices to, for example, lessen the unfavorable effects/outcomes.</li>
-					</ul>
-				</div>
-				<div class="image-wrapper">
-				<img
-				src="/src/assets/images/tool-features/feat-screens/rets.png"
-				alt="Structure knowledge example"
-				/>
-				</div>
-			</div>
-			</div>
-
-			<div class="section">
-			<div class="section-header" onclick="toggleSection(this)">
-				<span class="toggle-icon"></span>
+				
 				<h3>Powered by Storm model-checker as the backend computational engine</h3>
 			</div>
 			<div class="section-content">
@@ -642,19 +407,13 @@
 			</div>
 			<div class="section-content">
 				<p>
-					The SAFEST tool has been validated against multiple fault
-					trees in the <a href="https://dftbenchmarks.utwente.nl" target="_blank">[FFORT fault tree forest]</a>, a DFT
-					benchmark suite maintained at University of Twente. FFORT is a collection of fault trees gathered from scientific
-					literature and open industrial reports. One can find the analysis results for
-					the fault trees verifiable by our tool in the suite in comparison with other
-					tools (if any).
+					The SAFEST tool has been validated against multiple models given on the <a href="https://qcomp.org/benchmarks/" target="_blank">Quantitative Verification Benchmark Set</a> 
+					as well as on <a href="https://dftbenchmarks.utwente.nl" target="_blank">FFORT fault tree forest</a> websites. The Quantitative Verification Benchmark Set is a collection of 
+					probabilistic models to serve as a benchmark set for the benefit of algorithm and tool developers.
+					Whereas, FFORT is a collection of fault trees gathered from scientific
+					literature and open industrial reports by University of Twente, the Netherlands.
 				</p>
-				<div class="image-wrapper">
-				<img
-				src="/src/assets/images/safest_validation.png"
-				alt="Structure knowledge example"
-				/>
-				</div>
+				
 			</div>
 			</div>
 			
@@ -1103,7 +862,7 @@
 				<div class="col-sm-3">
 					<div class="card" id="card">
 						<p style="color: rgb(84, 84, 84);"><i class="fa fa-user fa-4x"></i></p>
-						<h3>13+</h3>
+						<h3>25+</h3>
 						<p>Partners</p>
 					</div>
 				</div>
@@ -1111,7 +870,7 @@
 				<div class="col-sm-3">
 					<div class="card " id="card">
 						<p style="color: green;"><i class="fa fa-check fa-4x"></i></p>
-						<h3>15+</h3>
+						<h3>20+</h3>
 						<p>Projects</p>
 					</div>
 				</div>
@@ -1119,7 +878,7 @@
 				<div class="col-sm-3">
 					<div class="card " id="card">
 						<p style="color: rgb(215, 215, 60);"><i class="fa fa-smile-o fa-4x"></i></p>
-						<h3>4+</h3>
+						<h3>8+</h3>
 						<p>Happy Clients</p>
 					</div>
 				</div>
@@ -1127,7 +886,7 @@
 				<div class="col-sm-3">
 					<div class="card " id="card">
 						<p style="color: rgb(84, 84, 84);"><i class="fa fa-coffee fa-4x"></i></p>
-						<h3>30+</h3>
+						<h3>200+</h3>
 						<p>Meetings</p>
 					</div>
 				</div>
@@ -1151,14 +910,23 @@
 	
 		<!-- 2. Logos -->
 		<div style="display: flex; justify-content: space-around; padding: 20px; flex: 3;  gap: 200px; background-color: #4d5360;">
-				<div style="background-color: whitesmoke; color: #24141c; width: 350px; border-radius: 7px; padding: 20px; display: flex; flex-direction: column; align-items: center; position: relative; height: 100%; padding-bottom: 70px;">
+				<div style="background-color: whitesmoke; color: #24141c; width: 400px; border-radius: 7px; padding: 20px; display: flex; flex-direction: column; align-items: center; position: relative; height: 100%; padding-bottom: 70px;">
 					<div style="text-align: center;">
-						<h2 style="font-weight: 600; margin-bottom: 10px;">Basic</h2>
+						<h2 style="font-weight: 600; margin-bottom: 10px;">SAFEST Modules</h2>
+						Modules are integrated with each other.
 					</div>
 					<ul style="padding-inline-start: 20px; margin: 0 0 40px 0; list-style-type: disc; width: 80%;">
-						<li style="font-weight: 200; margin-bottom: 8px;">Free for academia</li>
-						<li style="font-weight: 200; margin-bottom: 8px;">Fault tree analysis module</li>
-						<li style="font-weight: 200; margin-bottom: 8px;">Event tree analysis module</li>
+						<li style="font-weight: 200; margin-bottom: 8px;">FMEA </li>
+						<li style="font-weight: 200; margin-bottom: 8px;">Fault tree analysis </li>
+						<li style="font-weight: 200; margin-bottom: 8px;">Event tree analysis </li>
+						<li style="font-weight: 200; margin-bottom: 8px;">Master logic diagram analysis </li>
+						<li style="font-weight: 200; margin-bottom: 8px;">Markov analysis </li>
+						<li style="font-weight: 200; margin-bottom: 8px;">Bowtie analysis </li>
+						<li style="font-weight: 200; margin-bottom: 8px;">Weibull analysis </li>
+						<li style="font-weight: 200; margin-bottom: 8px;">Reliability block diagram analysis</li>
+						<li style="font-weight: 200; margin-bottom: 8px;">Attack-Fault tree analysis </li>
+						<li style="font-weight: 200; margin-bottom: 8px;">Analysis reports </li>
+
 					</ul>
 					<button style="outline: none; border: none; background: #00acff; color: #ffffff; width: 80%; height: 40px; border-radius: 5px; font-family: 'Nunito', sans-serif; cursor: pointer; position: absolute; bottom: 20px;">
 						Schedule a Demo
@@ -1166,16 +934,18 @@
 				</div>
 			
 			
-				<div style="background-color: whitesmoke; color: #24141c; width: 350px; border-radius: 7px; padding: 20px; display: flex; flex-direction: column; align-items: center; position: relative; height: 100%; padding-bottom: 70px;">
+				<div style="background-color: whitesmoke; color: #24141c; width: 400px; border-radius: 7px; padding: 20px; display: flex; flex-direction: column; align-items: center; position: relative; height: 100%; padding-bottom: 70px;">
 					<div style="text-align: center;">
-						<h2 style="font-weight: 600; margin-bottom: 10px;">Enterprise</h2>
+						<h2 style="font-weight: 600; margin-bottom: 10px;">Enterprise Features</h2>
 					</div>
 					<ul style="padding-inline-start: 20px; margin: 0 0 40px 0; list-style-type: disc; width: 80%;">
-						<li style="font-weight: 200; margin-bottom: 8px;">Fault tree analysis module</li>
-						<li style="font-weight: 200; margin-bottom: 8px;">Event tree analysis module</li>
-						<li style="font-weight: 200; margin-bottom: 8px;">Markov analysis module</li>
-						<li style="font-weight: 200; margin-bottom: 8px;">Integration among modules</li>
-						<li style="font-weight: 200; margin-bottom: 8px;">User management & workspaces</li>
+
+						<li style="font-weight: 200; margin-bottom: 8px;">Provides users & workspaces management</li>
+						<li style="font-weight: 200; margin-bottom: 8px;">Enables R&D collaboration among academic & industrial researchers</li>
+						<li style="font-weight: 200; margin-bottom: 8px;">Enables simultaneous editing of projects by users working in teams</li>
+						<li style="font-weight: 200; margin-bottom: 8px;">Enables resusability of previous results</li>
+						<li style="font-weight: 200; margin-bottom: 8px;">Supports docker-based deployment on MacOS, Linux, Windows, etc.</li>
+						<li style="font-weight: 200; margin-bottom: 8px;">Supports deploymnet on desktops, laptops, servers, and clouds</li>
 					</ul>
 					<button style="outline: none; border: none; background: #00acff; color: #ffffff; width: 80%; height: 40px; border-radius: 5px; font-family: 'Nunito', sans-serif; cursor: pointer; position: absolute; bottom: 20px;">
 						Schedule a Demo
@@ -1229,25 +999,7 @@
 		  <!-- Grid column -->
   
 		  <!-- Grid column -->
-		  <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-			<!-- Links -->
-			<h6 class="text-uppercase fw-bold mb-4">Projects</h6>
-			<p>
-			  <a href="https://www.hazardhive.dgbtek.com" class="text-reset"
-				>Hazardhive</a
-			  >
-			</p>
-			<p>
-			  <a href="https://www.storm.dgbtek.com" class="text-reset"
-				>StormGUI</a
-			  >
-			</p>
-			<p>
-			  <a href="https://www.safest.dgbtek.com" class="text-reset"
-				>SAFEST</a
-			  >
-			</p>
-		  </div>
+
 		  <!-- Grid column -->
   
 		  <!-- Grid column -->
