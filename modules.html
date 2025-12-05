@@ -319,7 +319,7 @@
 					</div>
 				</div>
 			</div>	
-						<div class="section">
+			<div class="section">
 				<div class="section-header" onclick="toggleSection(this)">
 					<span class="toggle-icon"></span>
 					<h3>Master Logic Diagram  Analysis</h3>
@@ -355,7 +355,7 @@
 					</div>
 				</div>
 			</div>
-						<div class="section">
+			<div class="section">
 				<div class="section-header" onclick="toggleSection(this)">
 					<span class="toggle-icon"></span>
 					<h3>Markov Analysis</h3>
@@ -399,7 +399,7 @@
 					</div>
 				</div>
 			</div>
-						<div class="section">
+			<div class="section">
 				<div class="section-header" onclick="toggleSection(this)">
 					<span class="toggle-icon"></span>
 					<h3>Bowtie Analysis</h3>
@@ -441,7 +441,7 @@
 					</div>
 				</div>
 			</div>
-						<div class="section">
+			<div class="section">
 				<div class="section-header" onclick="toggleSection(this)">
 					<span class="toggle-icon"></span>
 					<h3>Weibull Analysis</h3>
@@ -466,7 +466,7 @@
 					</div>
 				</div>
 			</div>
-						<div class="section">
+			<!-- <div class="section">
 				<div class="section-header" onclick="toggleSection(this)">
 					<span class="toggle-icon"></span>
 					<h3>Reliability Block Diagram Analysis</h3>
@@ -481,8 +481,9 @@
 								</div>
 							</div>
 					</div>
-				</div>
-						<div class="section">
+			</div>
+
+			<div class="section">
 				<div class="section-header" onclick="toggleSection(this)">
 					<span class="toggle-icon"></span>
 					<h3>Attack-Fault Tree Analysis</h3>
@@ -498,8 +499,75 @@
 								</div>
 							</div>
 					</div>
+			</div> -->
+			
+			<div class="section">
+				<div class="section-header" onclick="toggleSection(this)">
+					<span class="toggle-icon"></span>
+					<h3>Reliability Block Diagram Analysis</h3>
+				</div>
+				<div class="section-content">
+					<div class="m-auto" style="padding: 0px 60px 0px 50px">
+							<div style="font-family: sans-serif; line-height: 1.6;">
+								<div class="image-wrapper">
+									<img src="/src/assets/images/safest-rbd-new.png"
+									alt="Structure knowledge example"/>
+								</div>
+								<p>
+									<ul style="padding-left: 20px;">
+										<li>Static & dynamic reliability block diagrams (RBDs): It supports modeling fault-tolerant dynamic systems having (multi-level) redundancy, probabilistic functional dependencies, and temporal failure-ordering.</li>
+										<li>Spare races: It can model and analyze situations where two or more subsystems try to get a shared spare component simultaneously, which might generate different analysis results, e.g., reliability.</li>
+										<li>Automatic RBD generation: It supports automatic generation of RBDs from FMECA data.</li>
+										<li>Boolean logic definable events: It allows the definition of failure events through Boolean logic equations over RBD elements.</li>
+										<li>Model-based safety analysis: coming soon</li>
+										<li>Interactive simulation: coming soon</li>
+										<li>Exact & 100% bounded results: Its analysis results are exact or bounded with a 100% guarantee in contrast to statistical results via e.g., Monte-Carlo simulation. Moreover, the precision of results can be adjusted up to 16 decimal places.</li>
+										<li>Rich set of importance measures: It verifies a range of importance measures like Birnbaum Index, Criticality Index, RAW, RRW, Diagnostics Importance Factor, Fussell-Vesely, BAGT+, BAGT-, etc., on DFTs.</li>
+										<li>Embedding Markov chains: It allows defining failure probabilities of basic elements in RBDs using Markov chains.</li>
+										<li>Wide range of  dependability measures: It allows for verifying a range of measures specified in continuous stochastic logic (CSL) instead of only two measures, Reliability and MTTF. It categorizes metrics based on their complexity: Basic, Advanced, Importance, and Custom. In fact, all measures that can be verified on dynamic fault trees can be done for RBDs.</li>
+									</ul>
+								</p>
+							</div>
+	
+					</div>
+				</div>
+			</div>
+
+			<div class="section">
+				<div class="section-header" onclick="toggleSection(this)">
+					<span class="toggle-icon"></span>
+					<h3>Attack-Fault Tree Analysis</h3>
+				</div>
+				<div class="section-content">
+					<div class="m-auto" style="padding: 0px 60px 0px 50px">
+							<div style="font-family: sans-serif; line-height: 1.6;">
+								<div class="image-wrapper">
+									<img src="/src/assets/images/safest-aft-new.png"
+									alt="Structure knowledge example"/>
+								</div>
+								<p>
+									<ul style="padding-left: 20px;">
+										<li>Static & dynamic Attack-Fault Trees: It supports modeling random failures and malicious attacks on fault-tolerant dynamic systems having (multi-level) redundancy, probabilistic functional dependencies, and temporal failure-ordering.</li>
+										<li>Attacker Profiles: It allows modeling profiles of multiple attackers based on different attributes like technical skill, money, number of personals, etc.</li>
+										<li>Spare races: It can model and analyze situations where two or more subsystems try to get a shared spare component/resource simultaneously, which might generate different analysis results, e.g., reliability.</li>
+										<li>Automatic AFTs generation: It supports automatic generation of fault trees from FMEA data.</li>
+										<li>Boolean logic definable events: It allows the definition of failure events through Boolean logic equations over AFFs elements.</li>
+										<li>Model-based safety analysis: coming soon</li>
+										<li>Interactive simulation: coming soon</li>
+										<li>Exact & 100% bounded results: Its analysis results are exact or bounded with a 100% guarantee in contrast to statistical results via e.g., Monte-Carlo simulation. Moreover, the precision of results can be adjusted up to 16 decimal places.</li>
+										<li>Rich set of importance measures: It verifies a range of importance measures like Birnbaum Index, Criticality Index, RAW, RRW, Diagnostics Importance Factor, Fussell-Vesely, BAGT+, BAGT-, etc., on DFTs.</li>
+										<li>Embedding Markov chains: It allows defining failure probabilities of basic elements in AFTs using Markov chains.</li>
+										<li>Wide range of dependability measures: It allows for verifying a range of measures specified in continuous stochastic logic (CSL) instead of only two measures, Reliability and MTTF. It categorizes metrics based on their complexity: Basic, Advanced, Importance, and Custom. In fact, all measures that can be verified on dynamic fault trees can be done for AFTs.</li>
+										<li>Wide range of quantitative measures: coming soon</li>
+									</ul>
+								</p>
+							</div>
+	
+					</div>
+				</div>
 			</div>
 			
+
 <!--			
 			<div class="section">
 			<div class="section-header" onclick="toggleSection(this)">
